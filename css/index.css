@@ -1031,12 +1031,14 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
         left: 0;
 
         transform: translateY(-100%);
-        transition: transform 1s ease;
+        transition: transform 1s ease, opacity 1s ease;
 
-        display: none;
+        opacity: 0;
+        pointer-events: none;
     }
     .Header-nav.isVisible{
-        display: block;
+        opacity: 1;
+        pointer-events: auto;
         transform: translateY(0%);
     }
     .Header-ul{
