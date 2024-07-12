@@ -1,0 +1,280 @@
+.Main-a{
+    background-color: var(--color-green);
+    color: var(--color-white);
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: var(--border-radius-big);
+    border: solid .0625rem var(--color-white);
+    padding: 1.25rem 1rem;
+}
+.Main-a{
+    font-family: var(--primary-font);
+    font-size: var(--font-size-16);
+    width: 13.625rem;
+}
+
+
+
+
+
+
+.Main-section{
+    width: 100%;
+    padding: var(--padding-section);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.Main-section--white{
+    background-color: var(--color-white);
+    gap: 2.5rem;}
+.Main-sectionWrapper{
+    width: 70%;
+    gap: 2.5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.Main-h4{
+    font-family: var(--primary-font);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+}
+.Main-h4--green{
+    color: var(--color-green);
+    text-align: center;
+}
+.Main-h3{
+    font-family: var(--secondary-font);
+    color: var(--color-black);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--font-size-48);
+}
+.Main-p--section{
+    color: var(--color-black);
+    font-size: var(--font-size-20);
+    text-align: center;
+}
+
+
+
+/* POPULAR DESTINATIONS CAROUSEL */
+
+.Main-carousel{
+    width: 100%;
+
+    overflow: hidden;
+    /* Para que se vea solo un "frame" a la vez */
+}
+.Main-carouselContainer{
+    width: 200%;
+    margin-bottom: 2.5rem;
+    /* gap: 95px; */
+    /* gap entre frames */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    transition: transform 1s ease;
+}
+.Main-carouselFrame{
+    width: 100%;
+    gap: 2rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.Main-carouselDots,
+.Main-carouselReviewsDots{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+}
+.Main-carouselDot,
+.Main-carouselReviewsDot{
+    width: 1rem;
+    min-height: 1rem;
+    border-radius: 50%;
+    background-color: var(--color-grey);
+}
+.Main-carouselDot--tablet,
+.Main-carouselDot--mobile{
+    display: none;
+}
+.Main-carouselDot.isClicked,
+.Main-carouselReviewsDot.isClicked{
+    background-color: var(--color-green);
+}
+
+
+
+/* POPULAR DESTINATIONS CARD */
+
+.Main-cardDestination{
+    width: calc(100% / 3);
+    min-height: 31.5rem;
+    padding: 1rem;
+
+    border-radius: var(--border-radius-big);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    position: relative;
+
+    /* transition: transform 0.5s ease; */
+}
+/* .Main-cardDestination:hover{
+    transform: scale(1.05);
+} */
+
+/* Despues de poner las imagenes dentro de la etiqueta picture empezé a tener problemas porque la imagen solo cubria la mitad de la card
+así que en lugar de "min-height" añadi "height" a la etiqueta Main-picture y tambien a la Main-cardImage y me solucionó el problema */
+.Main-picture{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-radius: var(--border-radius-big);
+    overflow: hidden;
+    z-index: 1;
+}
+.Main-cardImage{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+/* Aquí tuve que dividir las propiedades de .Main-cardContent en varios fragmentos porque el validador CSS decía 
+que tenía demasiadas declaraciones en un solo conjunto de reglas. */
+.Main-cardContent{
+    width: 90%;
+    min-height: 15.75rem;   
+    gap: 1rem;
+    padding: 3rem 1.5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.Main-cardContent{
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-big);
+}
+.Main-cardContent{
+    position: absolute;
+    bottom: 1rem;
+    /* left: 1.5rem; */
+    z-index: 2; 
+}
+/* Aquí tuve que dividir las propiedades de .Main-starRating en dos fragmentos porque el validador CSS decía 
+que tenía demasiadas declaraciones en un solo conjunto de reglas. */
+.Main-starRating{
+    background-color: var(--color-green);
+    padding: .25rem .5rem;
+    gap: 4px;
+    border-radius: var(--border-radius-big);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.Main-starRating{
+    position: absolute;
+    top: calc(-23px/2);
+    /* Quiero que la etiqueta .Main-starRating se coloque visualmente encima del borde superior de .Main-cardContent (su contenedora) 
+    y que su height esté centrado con este borde. Es decir, para que la etiqueta .Main-starRating se pegue del borde superior de su 
+    contenedora le daría un top = 0. Pero quiero que se "salga" un poco de su contenedora hacia arriba con una distancia equivalente 
+    a mitad de su height. El height de .Main-starRating es de 23px. Así qué le tendré que dar un top con valor negativo y la distancia 
+    que se tiene que "deslocar" es la mitad de 23px.*/
+    right: 3.125rem;
+    z-index: 3;
+}
+.Main-h6{
+    font-family: var(--primary-font);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-green);
+    text-transform: uppercase;
+}
+.Main-h5{
+    font-family: var(--primary-font);
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-black);
+    text-transform: uppercase;
+}
+.Main-p--destinations{
+    font-size: var(--font-size-16);
+    color: var(--color-black);
+}
+
+.Main-button--section{
+    width: 14.5rem;
+}
+
+@media(max-width:1440px){
+    .Main-h5{
+        font-size: var(--font-size-20);
+    }
+}
+
+@media(max-width:1130px){
+    .Main-cardDestination{
+        min-height: 25rem;
+    }
+
+}
+
+@media(max-width:1000px){
+    .Main-carouselDot--tablet{
+        display: block;
+    }
+    .Main-carouselContainer{
+        width: 300%;
+    }
+    .Main-cardDestination{
+        width: calc(100% / 2);
+        min-height: 31.5rem;
+    }
+    .Main-h5{
+        font-size: var(--font-size-32);
+    }
+
+}
+
+@media(max-width:768px){
+    .Main-cardDestination{
+        min-height: 25rem;
+    }
+
+}
+
+@media(max-width:640px){
+    .Main-carouselDot--mobile{
+        display: block;
+    }
+    .Main-carouselContainer{
+        width: 600%;
+    }
+}
