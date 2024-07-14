@@ -62,14 +62,14 @@
 
 @media(max-width:1130px){
     .Main-wrapper{
-        top: 18.75rem;
+        top: 9.375rem;
         /* El wrapper esta centrado verticalmente dentro de la sección Hero pero en este breakpoint, el "form" empieza a 
         ocupar más espacio hacia arriba y cubre el texto del wrapper. Así que le di un top de 350px para subirlo un poco */
     }
 }
 @media(max-width:768px){
     .Main-wrapper{
-        top: 12.5rem;
+        top: 9.375rem;
     }
 }
 @media(max-width:480px){
@@ -202,6 +202,10 @@ label{
         width: 100%;
         grid-column: span 2;
     }
+    .Main-select,
+    .Main-input,
+    .Main-button{
+        min-height: 1.5rem;
 }
 
 @media(max-width:480px){
