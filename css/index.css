@@ -1,84 +1,10 @@
-/* HEADER */
-
-/* Aquí tuve que dividir las propiedades de .Header en varios fragmentos porque el validador CSS decía 
-que tenía demasiadas declaraciones en un solo conjunto de reglas. */
-.Header{
-    width: 100%;
-    min-height: 6.25rem;
-    background-color: transparent;
-    padding: 1.875rem var(--padding-section);
-}
-.Header{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
-.Header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    /* Quiero que el Header esté encima de la "imagen hero" y pegada de los bordes de la ventana, así que le di una posición absoluta 
-    y z-index de 2. La "imagen hero" tendrá un z-index de 1.  */
-    /* A la hora de hacer responsive tuve que cambiar el z-index del Header a 3 porque en pantallas más pequeñas el .Main-wrapper cubria
-    el menu hamburguesa cuando este estaba abierto */
-}
-.Header-a--home{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-
-    gap: .5rem;
-}
-.Header-svg{
-    width: 2.5rem;
-    min-height: 2.5rem;
-}
-.Header-h1{
-    font-family: var(--secondary-font);
-    font-size: var(--font-size-24);
-    color: var(--color-white);
-}
-.Header-button{
-    width: 1.25rem;
-    min-height: 1.25rem;
-
-    display: none;
-}
-.Header-hamburger{
-    color: var(--color-white);
-    /* transition? */
-}
-.Header-ul{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    
-    gap: 3rem;
-}
-.Header-li{
-    font-family: var(--primary-font);
-    font-size: var(--font-size-20);
-    font-weight: var(--font-weight-medium);
-    color: var(--color-white);
-    text-transform: uppercase;
-}
-.Header-li:hover,
-.Header-li:active{
-    text-decoration: underline;
-    text-underline-offset: .25rem;
-    /* Efecto de hover y active sobre los items del nav */
-}
-
 
 /* HERO SECTION */
 
 .Main-sectionHero{
     width: 100%;
     min-height: 100vh;
+    /* background-image: url(../assets/images/webp/hero/hero_2000x1500.webp); */
 
     display: flex;
     flex-flow: row nowrap;
@@ -134,6 +60,28 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     object-fit: cover;
 }
 
+@media(max-width:1130px){
+    .Main-wrapper{
+        top: 18.75rem;
+        /* El wrapper esta centrado verticalmente dentro de la sección Hero pero en este breakpoint, el "form" empieza a 
+        ocupar más espacio hacia arriba y cubre el texto del wrapper. Así que le di un top de 350px para subirlo un poco */
+    }
+}
+@media(max-width:768px){
+    .Main-wrapper{
+        top: 12.5rem;
+    }
+}
+@media(max-width:480px){
+
+    .Main-wrapper{
+        top: 6.25rem;
+        /* Ajustando el wrapper otra vez para que se suba un poco */
+    }
+    .Main-p--hero{
+        line-height: 1.5rem;
+    }
+}
 
 
 /* FORMULARIO */
@@ -161,14 +109,8 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 .Main-destination,
 .Main-pax,
 .Main-checkin,
-.Main-checkout,
-.Main-button{
-    width: calc( 100% / 5 );
-}
-.Main-destination,
-.Main-pax,
-.Main-checkin,
 .Main-checkout{
+    background-color: lightblue;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -196,6 +138,14 @@ label{
     appearance: none;
     /* Para que no se vea la "flechita" del campo select porque se veía muy pegada del borde */
 }
+.Main-select,
+.Main-input,
+.Main-button{
+    background-color: lightcoral;
+    width: 13.625rem;
+    min-height: 4rem;
+
+}
 .Main-button,
 .Main-a{
     background-color: var(--color-green);
@@ -210,6 +160,62 @@ label{
     font-family: var(--primary-font);
     font-size: var(--font-size-16);
     width: 13.625rem;
+}
+
+@media(max-width:1440px){
+    .Main-select,
+    .Main-input,
+    .Main-button{
+        background-color: lightcoral;
+        width: 11.25rem;
+        min-height: 4rem;
+    }
+}
+
+@media(max-width:1250px){
+    .Main-select,
+    .Main-input,
+    .Main-button{
+        background-color: lightcoral;
+        width: 10rem;
+        min-height: 4rem;
+    }
+}
+
+@media(max-width:1130px){
+  
+    .Main-form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Main-destination,
+    .Main-pax,
+    .Main-checkin,
+    .Main-checkout{
+        width: 100%;
+    }
+    .Main-select,
+    .Main-input{
+        width: 100%;
+    }
+    .Main-button{
+        width: 100%;
+        grid-column: span 2;
+    }
+}
+
+@media(max-width:480px){
+    .Main-form{
+        display: flex;
+        flex-direction: column;
+    }
+    .Main-select,
+    .Main-input,
+    .Main-button{
+        min-height: 2rem;
+        padding: 1rem 1rem;
+        /* Para que los campos de input se vean un poco más pequeños */
+    }
 }
 
 
@@ -739,160 +745,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     opacity: 1;
 }
 
-/* FOOTER */
 
-.Footer{
-    width: 100%;
-    padding: 4rem var(--padding-section);
-    background-color: var(--color-green);
-    color: var(--color-white);
-
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 2rem;
-    
-}
-.Footer-wanderlust{
-    width: 100%;
-    gap: 2.5rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.Footer-logo{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-
-    gap: .5rem;
-}
-.Footer-h2{
-    font-family: var(--secondary-font);
-    color: var(--color-white);
-    font-size: var(--font-size-32);
-}
-.Footer-p{
-    font-family: var(--primary-font);
-    font-size: var(--font-size-16);
-}
-.Footer-h4{
-    font-family: var(--primary-font);
-    font-size: var(--font-size-20);
-    font-weight: var(--font-weight-bold);
-    text-transform: uppercase;
-    color: var(--color-white);
-}
-.Footer-span{
-    font-family: var(--primary-font);
-    font-size: var(--font-size-20);
-    color: var(--color-white);
-}
-.Footer-icon{
-    width: 1.5rem;
-    height: 1.5rem;
-}
-.Footer-world{
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
-.Footer-contacts{
-    width: 100%;
-    gap: 2rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.Footer-phone,
-.Footer-email,
-.Footer-address{
-    width: 100%;
-    gap: 1rem;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-.Footer-phoneNumber,
-.Footer-emailAddress,
-.Footer-direction{
-    width: 100%;
-    font-family: var(--primary-font);
-    font-size: var(--font-size-16);
-}
-
-.Footer-subscribe{
-    width: 100%;
-    gap: 2rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.Footer-spanSubscribe{
-    font-family: var(--primary-font);
-    font-size: var(--font-size-16);
-}
-.Footer-form{
-    width: 100%;
-}
-.Footer-input{
-    width: 100%;
-    background-color: var(--color-white);
-    border-radius: var(--border-radius-big);
-    padding: .625rem 1rem;
-
-    font-family: var(--primary-font);
-    font-size: var(--font-size-20);
-}
-.Footer-a--button{
-    width: 100%;
-    padding: 0.625rem 1rem;
-    background-color: var(--color-green);
-    border: solid .0625rem var(--color-white);
-    color: var(--color-white);
-    border-radius: var(--border-radius-big);
-
-    font-family: var(--primary-font);
-    text-transform: uppercase;
-    text-align: center;
-    font-size: var(--font-size-20);
-    font-weight: var(--font-weight-medium);
-}
-.Footer-social{
-    width: 100%;
-    gap: 1.5rem;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-.Footer-svg{
-    width: 2rem;
-    height: 2rem;
-    color: var(--color-white);
-
-    transition: transform 0.5s ease;
-}
-.Footer-svg:hover{
-    transform: scale(1.2);
-}
-.Copyright{
-    font-family: var(--primary-font);
-    font-size: var(--font-size-16);
-    color: var(--color-grey);
-    text-align: center;
-    background-color: var(--color-white);
-    padding: 1rem 0rem;
-}
 
 
 /* @ media */
@@ -932,25 +785,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 }
 
 @media(max-width:1130px){
-    .Main-wrapper{
-        top: 21.875rem;
-        /* El wrapper esta centrado verticalmente dentro de la sección Hero pero en este breakpoint, el "form" empieza a 
-        ocupar más espacio hacia arriba y cubre el texto del wrapper. Así que le di un top de 350px para subirlo un poco */
-    }
-    .Main-form{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .Main-destination,
-    .Main-pax,
-    .Main-checkin,
-    .Main-checkout{
-        width: 100%;
-    }
-    .Main-button{
-        width: 100%;
-        grid-column: span 2;
-    }
+  
 
     .Main-cardDestination{
         min-height: 25rem;
@@ -983,68 +818,11 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
         padding: 2.5rem 0rem;
     }
 
-    .Footer-wanderlust,
-    .Footer-contacts,
-    .Footer-subscribe{
-        width: 15.625rem;
-    }
-}
-@media(max-width:960px){
-    .Header-ul{
-        gap: 1.5rem;
-    }
     
-    .Footer{
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: flex-start;
-
-        gap: 3.125rem;
-    }
-    .Footer-wanderlust,
-    .Footer-contacts,
-    .Footer-subscribe{
-        width: 100%;
-        gap: 1rem;
-    }
-  
 }
+
 
 @media(max-width:768px){
-    .Header{
-        flex-wrap: wrap;
-    }
-    .Header-svg{
-        width: 1.5rem;
-        min-height: 1.5rem;
-    }
-    .Header-button{
-        display: block;
-    }
-    .Header-nav{
-        background-color: var(--color-green);
-        width: 100%;
-
-        position: absolute;
-        top: 6.25rem;
-        left: 0;
-
-        transform: translateY(-100%);
-        transition: transform 1s ease, opacity 1s ease;
-
-        opacity: 0;
-        pointer-events: none;
-    }
-    .Header-nav.isVisible{
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0%);
-    }
-    .Header-ul{
-        flex-direction: column;
-        margin: 1.25rem 0rem;
-    }
 
     .Main-cardDestination{
         min-height: 25rem;
@@ -1077,33 +855,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     }
 }
 
-@media(max-width:480px){
-    .Header-svg{
-        width: 1rem;
-        min-height: 1rem;
-    }
 
-    .Main-wrapper{
-        top: 12.5rem;
-        /* Ajustando el wrapper otra vez para que se suba un poco */
-    }
-
-    .Main-form{
-        display: flex;
-        flex-direction: column;
-    }
-    .Main-select,
-    .Main-input,
-    .Main-button{
-        padding: 1rem 1rem;
-        /* Para que los campos de input se vean un poco más pequeños */
-    }
-
-    .Footer{
-        flex-direction: column;
-    }
-
-}
 
 
 

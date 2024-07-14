@@ -17,8 +17,22 @@ if(carouselDot){
         carouselDot[index].addEventListener('click' , ()=>{
     
             let counter = index
-            let operation = counter * -50
+            // let operation = counter * -50
+            let operation
+
+            if( window.innerWidth >= 1000 ){
+              // Ordenador
+              operation = counter * -50
+            }else if( window.innerWidth >= 640 && window.innerWidth < 1000){
+              // Tablet
+             operation = counter * -33.3
+            }else{
+              // Móvil
+              operation = counter * -16.6
+            }
     
+            console.log({ counter , operation })
+            
             carouselContainer.style.transform = `translateX(${operation}%)`
     
             carouselDot.forEach(( _ , index ) =>{
@@ -38,66 +52,66 @@ if(carouselDot){
 // CAROUSEL POPULAR DESTINATIONS 2 CARDS (TABLET)
 
 
-(() => {
+// (() => {
 
-const carouselDot = document.querySelectorAll('.Main-carouselDot')
-const carouselContainer = document.querySelector('.Main-carouselContainer')
-const carouselDotTablet = document.querySelector('.Main-carouselDot Main-carouselDot--tablet')
+// const carouselDot = document.querySelectorAll('.Main-carouselDot')
+// const carouselContainer = document.querySelector('.Main-carouselContainer')
+// const carouselDotTablet = document.querySelector('.Main-carouselDot Main-carouselDot--tablet')
 
-    if(carouselDotTablet){
+//     if(carouselDotTablet){
 
-        carouselDot.forEach(( _ , index) =>{
-            carouselDot[index].addEventListener('click' , ()=>{
+//         carouselDot.forEach(( _ , index) =>{
+//             carouselDot[index].addEventListener('click' , ()=>{
         
-                let counter = index
-                let operation = counter * -33.3
+//                 let counter = index
+//                 let operation = counter * -33.3
         
-                carouselContainer.style.transform = `translateX(${operation}%)`
+//                 carouselContainer.style.transform = `translateX(${operation}%)`
         
-                carouselDot.forEach(( _ , index ) =>{
-                    carouselDot[index].classList.remove('isClicked')
-                })
+//                 carouselDot.forEach(( _ , index ) =>{
+//                     carouselDot[index].classList.remove('isClicked')
+//                 })
         
-                carouselDot[index].classList.add('isClicked')
+//                 carouselDot[index].classList.add('isClicked')
         
-            })
-        })
+//             })
+//         })
     
-    }
+//     }
 
-})();
+// })();
 
 // CAROUSEL POPULAR DESTINATIONS 1 CARD (MOBILE)
 
 
-(() => {
+// (() => {
 
-    const carouselDot = document.querySelectorAll('.Main-carouselDot')
-    const carouselContainer = document.querySelector('.Main-carouselContainer')
-    const carouselDotMobile = document.querySelector('.Main-carouselDot Main-carouselDot--mobile')
+//     const carouselDot = document.querySelectorAll('.Main-carouselDot')
+//     const carouselContainer = document.querySelector('.Main-carouselContainer')
+//     const carouselDotMobile = document.querySelector('.Main-carouselDot Main-carouselDot--mobile')
     
-        if(carouselDotMobile){
+//         if(carouselDotMobile){
     
-            carouselDot.forEach(( _ , index) =>{
-                carouselDot[index].addEventListener('click' , ()=>{
+//             carouselDot.forEach(( _ , index) =>{
+//                 carouselDot[index].addEventListener('click' , ()=>{
             
-                    let counter = index
-                    let operation = counter * -16.6
+//                     let counter = index
+//                     let operation = counter * -16.6
             
-                    carouselContainer.style.transform = `translateX(${operation}%)`
+//                     carouselContainer.style.transform = `translateX(${operation}%)`
             
-                    carouselDot.forEach(( _ , index ) =>{
-                        carouselDot[index].classList.remove('isClicked')
-                    })
+//                     carouselDot.forEach(( _ , index ) =>{
+//                         carouselDot[index].classList.remove('isClicked')
+//                     })
             
-                    carouselDot[index].classList.add('isClicked')
+//                     carouselDot[index].classList.add('isClicked')
             
-                })
-            })
+//                 })
+//             })
         
-        }
+//         }
     
-    })();
+//     })();
 
 
 
