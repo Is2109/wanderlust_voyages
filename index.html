@@ -36,7 +36,6 @@
     <!-- Enlaces a archivos de Javascript -->
     <!-- Utilizamos el atributo "defer" para permitir que la página HTML se cargue completamente antes de ejecutar Javascript -->
     <script src="js/app.js" defer></script>
-    <script src="js/carousel_popular_destinations.js" defer></script>
     <!-- <script src="js/accordion_faq.js" defer></script> -->
     
     <!-- Para mejorar el rendimiento de la página le añadi el preload de las tipografías -->
@@ -183,14 +182,11 @@
                 <h3 class="Main-h3">Popular Destinations</h3>
                 <p class="Main-p Main-p--section">At Wanderlust Travels, we specialize in creating bespoke travel experiences that cater to your every desire, ensuring an unforgettable journey filled with elegance, comfort, and unparalleled service.</p>
             </div>
-    
+
             <!-- POPULAR DESTINATIONS CAROUSEL -->
-    
+
             <div class="Main-carousel">
                 <div class="Main-carouselContainer">
-    
-                    <!-- FIRST "FRAME" OF THE CAROUSEL 
-                     (Tengo 6 cards de "popular destinations". El carousel tendrá 2 "frames" con 3 cards en cada "frame") -->
                     
                     <div class="Main-carouselFrame">
                         
@@ -292,7 +288,7 @@
                                 <p class="Main-p Main-p--destinations">Bora Bora is renowned for its stunning overwater bungalows, turquoise lagoons, and breathtaking views.</p>
                             </div>
                         </article>
-    
+
                         <!-- CARD 4 -->
                         <article class="Main-cardDestination">
                             <picture class="Main-picture">
@@ -393,7 +389,7 @@
                         </article>
                     </div> 
                 </div>
-    
+
                 <div class="Main-carouselDots">
                     <div class="Main-carouselDot"></div>
                     <div class="Main-carouselDot"></div>
@@ -401,6 +397,9 @@
                     <div class="Main-carouselDot Main-carouselDot--mobile"></div>
                     <div class="Main-carouselDot Main-carouselDot--mobile"></div>
                     <div class="Main-carouselDot Main-carouselDot--mobile"></div>
+                    <!-- En dimensiones de ordenador tengo 2 "puntos" y se ve 3 cards a la vez -->
+                    <!-- En dimensiones de tablet tengo 3 "puntos" y se ve 2 cards a la vez -->
+                    <!-- En dimensiones mobile tengo 6 "puntos" y se ve 1 card a la vez -->
                 </div>
             </div>
             
@@ -477,8 +476,8 @@
                             <span class="Main-cardPrice">€5,500</span>
                             <span class="Main-cardPerPerson">/per person</span>
                         </div>
-                        <!-- falta href enlace -->
-                        <a href="#" class="Main-a Main-a--button" title="Book now">book now</a>
+            
+                        <a href="packages.html" class="Main-a Main-a--button" title="Book now">book now</a>
                     </div>
                 </article>
 
@@ -541,8 +540,8 @@
                             <span class="Main-cardPrice">€4,200</span>
                             <span class="Main-cardPerPerson">/per person</span>
                         </div>
-                       <!-- falta href enlace -->
-                       <a href="#" class="Main-a Main-a--button" title="Book now">book now</a>
+                     
+                       <a href="packages.html" class="Main-a Main-a--button" title="Book now">book now</a>
                     </div>
                 </article>
 
@@ -605,8 +604,8 @@
                             <span class="Main-cardPrice">€4,800</span>
                             <span class="Main-cardPerPerson">/per person</span>
                         </div>
-                        <!-- falta href enlace -->
-                        <a href="#" class="Main-a Main-a--button" title="Book now">book now</a>
+                        
+                        <a href="packages.html" class="Main-a Main-a--button" title="Book now">book now</a>
                     </div>
                 </article>
             </div> 

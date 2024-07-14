@@ -28,33 +28,49 @@
         // .Main.carouselContainer hace un translateX
         // REMOVE la clase .isClicked a todos los puntos
         // ADD la clase .isClicked al punto que esta "clicado"
-        
-        (()=>{
 
-        const carouselDot = document.querySelectorAll('.Main-carouselDot')
-        const carouselContainer = document.querySelector('.Main-carouselContainer')
+        (() => {
 
-        // Verificar si los elementos existen
-        if(carouselDot){
-
-            carouselDot.forEach(( _ , index) =>{
-                carouselDot[index].addEventListener('click' , ()=>{
+            const carouselDot = document.querySelectorAll('.Main-carouselDot')
+            const carouselContainer = document.querySelector('.Main-carouselContainer')
             
-                    let counter = index
-                    let operation = counter * -50
+            if(carouselDot){
             
-                    carouselContainer.style.transform = `translateX(${operation}%)`
+                carouselDot.forEach(( _ , index) =>{
+                    carouselDot[index].addEventListener('click' , ()=>{
+                
+                        let counter = index
+                        // let operation = counter * -50
+                        let operation
             
-                    carouselDot.forEach(( _ , index ) =>{
-                        carouselDot[index].classList.remove('isClicked')
+                        if( window.innerWidth >= 1000 ){
+                          // Ordenador
+                          operation = counter * -50
+                        }else if( window.innerWidth >= 640 && window.innerWidth < 1000){
+                          // Tablet
+                         operation = counter * -33.333
+                        }else{
+                          // Móvil
+                          operation = counter * -16.666
+                        }
+                
+                        console.log({ counter , operation })
+                        
+                        carouselContainer.style.transform = `translateX(${operation}%)`
+                
+                        carouselDot.forEach(( _ , index ) =>{
+                            carouselDot[index].classList.remove('isClicked')
+                        })
+                
+                        carouselDot[index].classList.add('isClicked')
+                
                     })
-            
-                    carouselDot[index].classList.add('isClicked')
-            
                 })
-            })
-        }
-        })();
+            
+            
+            }
+            
+            })();
 
     
 // CLIENT REVIEWS CAROUSEL

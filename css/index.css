@@ -65,6 +65,7 @@
     }
     .Main-p--hero{
         font-size: var(--font-size-20);
+        line-height: 1.5rem;
     }
 }
 
@@ -84,18 +85,11 @@
 
     font-family: var(--primary-font);
     font-size: var(--font-size-16);
-
-    /* position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 2; */
-    /* Quiero que el Form quede encima de la "imagen hero", por eso le di una posición absoluta y z-index de 2  */
 }
 .Main-destination,
 .Main-pax,
 .Main-checkin,
 .Main-checkout{
-    background-color: lightblue;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -126,7 +120,6 @@ label{
 .Main-select,
 .Main-input,
 .Main-button{
-    background-color: lightcoral;
     width: 13.625rem;
     min-height: 4rem;
 
@@ -151,7 +144,6 @@ label{
     .Main-select,
     .Main-input,
     .Main-button{
-        background-color: lightcoral;
         width: 11.25rem;
         min-height: 4rem;
     }
@@ -161,7 +153,6 @@ label{
     .Main-select,
     .Main-input,
     .Main-button{
-        background-color: lightcoral;
         width: 10rem;
         min-height: 4rem;
     }
@@ -223,7 +214,8 @@ label{
 }
 .Main-section--white{
     background-color: var(--color-white);
-    gap: 2.5rem;}
+    gap: 2.5rem;
+}
 .Main-sectionWrapper{
     width: 70%;
     gap: 2.5rem;
@@ -264,13 +256,11 @@ label{
     width: 100%;
 
     overflow: hidden;
-    /* Para que se vea solo un "frame" a la vez */
+    /* Para que no se vean las cards que están "fuera" del carousel  */
 }
 .Main-carouselContainer{
     width: 200%;
     margin-bottom: 2.5rem;
-    /* gap: 95px; */
-    /* gap entre frames */
 
     display: flex;
     flex-flow: row nowrap;
@@ -330,12 +320,7 @@ label{
     align-items: center;
 
     position: relative;
-
-    /* transition: transform 0.5s ease; */
 }
-/* .Main-cardDestination:hover{
-    transform: scale(1.05);
-} */
 
 /* Despues de poner las imagenes dentro de la etiqueta picture empezé a tener problemas porque la imagen solo cubria la mitad de la card
 así que en lugar de "min-height" añadi "height" a la etiqueta Main-picture y tambien a la Main-cardImage y me solucionó el problema */
@@ -425,6 +410,59 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
 .Main-button--section{
     width: 14.5rem;
+}
+
+
+@media(max-width:1440px){
+    .Main-h5{
+        font-size: var(--font-size-20);
+    }
+}
+
+@media(max-width:1130px){
+    .Main-cardDestination{
+        min-height: 25rem;
+    }
+}
+
+@media(max-width:1000px){
+    .Main-carouselDot--tablet{
+        display: block;
+    }
+    .Main-carouselContainer{
+        width: 300%;
+    }
+    .Main-cardDestination{
+        width: calc(100% / 2);
+        min-height: 31.5rem;
+    }
+    .Main-h5{
+        font-size: var(--font-size-32);
+    }
+}
+
+@media(max-width:768px){
+    .Main-cardDestination{
+        min-height: 25rem;
+    }
+}
+
+@media(max-width:640px){
+    .Main-carouselDot--mobile{
+        display: block;
+    }
+    .Main-carouselContainer{
+        width: 600%;
+    }
+}
+
+@media(max-width:480px){
+    .Main-section{
+        padding: var(--padding-section) var(--padding-section-mobile);
+    }
+    .Main-sectionWrapper{
+        width: 90%;
+    }
 }
 
 
@@ -594,7 +632,45 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     text-align: center;
 }
 
+@media(max-width:1130px){
+    .Main-cardPackage{
+        flex-direction: column;
+        min-height: 10rem;
+    }
+    .Main-picturePackage,
+    .Main-cardInfo,
+    .Main-cardDetails{
+        width: 100%;
+        min-height: 10rem;
+    }
+    .Main-picturePackage{
+        border-top-left-radius: var(--border-radius-big);
+        border-top-right-radius: var(--border-radius-big);
+        border-bottom-left-radius: 0;
+    }
+    .Main-cardInfoWrapper{
+        margin: 2.5rem 0rem;
+    }
+    .Main-cardDetails{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: var(--border-radius-big);
+        border-bottom-left-radius: var(--border-radius-big);
 
+        gap: 1.25rem;
+        padding: 2.5rem 0rem;
+    }
+}
+
+@media(max-width:480px){
+    .Main-cardLabel{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .Main-cardLine{
+        display: none;
+    }
+}
 
 /* CLIENT REVIEWS CAROUSEL */
 
@@ -641,7 +717,6 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 }
 
 
-
 /* CALL TO ACTION SECTION */
 
 .Main-section--callToAction{
@@ -670,6 +745,12 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     text-align: left;
 }
 
+@media(max-width:768px){
+    .Main-section--callToAction{
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+}
 
 
 /* FAQ ACCORDION SECTION */
@@ -735,8 +816,69 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     opacity: 1;
 }
 
+/* Aquí tuve que hacer muchos "@media" para ajustar el tamaño de cada bloque a medida que cambia el tamaño de la pantalla. */
 
+@media(max-width:1300px){
+    .Main-p--accordion.isVisible{
+        height: 5rem;
+    }
+}
 
+@media(max-width:1030px){
+    .Main-p--accordion.isVisible{
+        height: 6.5rem;
+    }
+}
+
+@media(max-width:900px){
+    .Main-p--accordion.isVisible{
+        height: 7.5rem;
+    }
+}
+
+@media(max-width:768px){
+    .Main-p--accordion.isVisible{
+        height: 9rem;
+    }
+
+    .Main-accordionBlock{
+        padding: 1.75rem 3rem;
+    }
+}
+
+@media(max-width:680px){
+    .Main-p--accordion.isVisible{
+        height: 10rem;
+    }
+}
+
+@media(max-width:550px){
+    .Main-p--accordion.isVisible{
+        height: 11.5rem;
+    }
+}
+
+@media(max-width:490px){
+    .Main-accordionBlock{
+        padding: 1.75rem 2rem;
+    }
+
+    .Main-p--accordion.isVisible{
+        height: 12rem;
+    }
+}
+
+@media(max-width:410px){
+    .Main-p--accordion.isVisible{
+        height: 14rem;
+    }
+}
+
+@media(max-width:385px){
+    .Main-p--accordion.isVisible{
+        height: 15rem;
+    }
+}
 
 /* @ media */
 /* Los principales breakpoints son
@@ -746,102 +888,16 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
         - Mobile: 480px */
 /* Además de los principales, tuve que crear breakpoints adicionales para arreglar ciertos elementos en ciertos tamaños que lo necesitaban. */
 
-@media(max-width:1440px){
-    .Main-h5{
-        font-size: var(--font-size-20);
-    }
-}
-@media(max-width:1328px){
-    /* .Main-p--accordion.isVisible{
-        height: 100px;
-    } */
-}
-
-@media(max-width:1000px){
-    .Main-carouselDot--tablet{
-        display: block;
-    }
-    .Main-carouselContainer{
-        width: 300%;
-    }
-    .Main-cardDestination{
-        width: calc(100% / 2);
-        min-height: 31.5rem;
-    }
-    .Main-h5{
-        font-size: var(--font-size-32);
-    }
-
-}
-
-@media(max-width:1130px){
-  
-
-    .Main-cardDestination{
-        min-height: 25rem;
-    }
-
-    .Main-cardPackage{
-        flex-direction: column;
-        min-height: 10rem;
-    }
-    .Main-picturePackage,
-    .Main-cardInfo,
-    .Main-cardDetails{
-        width: 100%;
-        min-height: 10rem;
-    }
-    .Main-picturePackage{
-        border-top-left-radius: var(--border-radius-big);
-        border-top-right-radius: var(--border-radius-big);
-        border-bottom-left-radius: 0;
-    }
-    .Main-cardInfoWrapper{
-        margin: 2.5rem 0rem;
-    }
-    .Main-cardDetails{
-        border-top-right-radius: 0;
-        border-bottom-right-radius: var(--border-radius-big);
-        border-bottom-left-radius: var(--border-radius-big);
-
-        gap: 1.25rem;
-        padding: 2.5rem 0rem;
-    }
-
-    
-}
 
 
-@media(max-width:768px){
 
-    .Main-cardDestination{
-        min-height: 25rem;
-    }
 
-    .Main-section--callToAction{
-        flex-direction: column;
-        gap: 2.5rem;
-    }
 
-}
 
-@media(max-width:640px){
-    .Main-carouselDot--mobile{
-        display: block;
-    }
-    .Main-carouselContainer{
-        width: 600%;
-    }
-}
 
-@media(max-width:480px){
-    .Main-cardLabel{
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .Main-cardLine{
-        display: none;
-    }
-}
+
+
+
+
+
 
