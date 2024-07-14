@@ -135,44 +135,45 @@
                 <img src="assets/images/jpg/hero/hero_2000x1500.jpg" alt="Aerial view of a tropical beach with turquoise water and white sand" class="Main-imgHero">
             </picture>
             
-            <!-- FORMULARIO -->
-            
-            <form action="#" method="get" class="Main-form">
-               <!-- En este caso no es necesario tener el atributo "enctype" porque no tengo inputs de tipo "file" -->
-                <div class="Main-destination">
-                     <!-- El validator de html me dice que el atributo "for" de la etiqueta "label" debe ser igual al id
-                      en este caso de la etiqueta "select". Así que le creé un id a la etiqueta "select" con el mismo nombre
-                      que tiene el atributo "for" de la etiqueta "label"  -->
-                    <label for="destination">Search Destination</label>
-                    <select name="destination" class="Main-select" id="destination" required>
-                        <option value="" disabled selected hidden>Destination</option>
-                        <option value="Amalfi Coast">Amalfi Coast</option>
-                        <option value="Bora Bora">Bora Bora</option>
-                        <option value="Loire Valley">Loire Valley</option>
-                        <option value="Maldives">Maldives</option>
-                        <option value="Santorini">Santorini</option>
-                        <option value="Seychelles">Seychelles</option>
-                    </select>
-                </div>
-                
-                <div class="Main-pax">
-                    <label for="number">Pax Number</label>
-                    <input type="number" name="number of people" placeholder="No. of People" required class="Main-input" id="number">
-                </div>
-                
-                <div class="Main-checkin">
-                    <label for="checkin">Check-in Date</label>
-                    <input type="date" name="check-in" required class="Main-input" id="checkin" placeholder="checkin" value="2018-07-22">
-                </div>
-                
-                <div class="Main-checkout">
-                    <label for="checkout">Check-out Date</label>
-                    <input type="date" name="check-out" required class="Main-input" id="checkout" placeholder="checkout" value="2018-07-22">
-                </div>
-                
-                <button type="submit" class="Main-button">Search</button>
-            </form>
         </section>
+
+        <!-- FORMULARIO -->
+            
+        <form action="#" method="get" class="Main-form">
+            <!-- En este caso no es necesario tener el atributo "enctype" porque no tengo inputs de tipo "file" -->
+             <div class="Main-destination">
+                  <!-- El validator de html me dice que el atributo "for" de la etiqueta "label" debe ser igual al id
+                   en este caso de la etiqueta "select". Así que le creé un id a la etiqueta "select" con el mismo nombre
+                   que tiene el atributo "for" de la etiqueta "label"  -->
+                 <label for="destination">Search Destination</label>
+                 <select name="destination" class="Main-select" id="destination" required>
+                     <option value="" disabled selected hidden>Destination</option>
+                     <option value="Amalfi Coast">Amalfi Coast</option>
+                     <option value="Bora Bora">Bora Bora</option>
+                     <option value="Loire Valley">Loire Valley</option>
+                     <option value="Maldives">Maldives</option>
+                     <option value="Santorini">Santorini</option>
+                     <option value="Seychelles">Seychelles</option>
+                 </select>
+             </div>
+             
+             <div class="Main-pax">
+                 <label for="number">Pax Number</label>
+                 <input type="number" name="number of people" placeholder="No. of People" required class="Main-input" id="number">
+             </div>
+             
+             <div class="Main-checkin">
+                 <label for="checkin">Check-in Date</label>
+                 <input type="date" name="check-in" required class="Main-input" id="checkin" placeholder="checkin" value="2018-07-22">
+             </div>
+             
+             <div class="Main-checkout">
+                 <label for="checkout">Check-out Date</label>
+                 <input type="date" name="check-out" required class="Main-input" id="checkout" placeholder="checkout" value="2018-07-22">
+             </div>
+             
+             <button type="submit" class="Main-button">Search</button>
+         </form>
 
         <!-- POPULAR DESTINATIONS SECTION -->
 

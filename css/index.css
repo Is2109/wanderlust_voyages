@@ -3,8 +3,7 @@
 
 .Main-sectionHero{
     width: 100%;
-    min-height: 100vh;
-    /* background-image: url(../assets/images/webp/hero/hero_2000x1500.webp); */
+    min-height: 85vh;
 
     display: flex;
     flex-flow: row nowrap;
@@ -48,38 +47,24 @@
 }
 .Main-imgHero{
     width: 100%;
-    height: 100vh;
+    height: 85vh;
 
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-    /* Para que esta imagen quede abajo del Header, del Wrapper y del Form */
+    /* Para que esta imagen quede abajo del Header y del Wrapper */
 
     overflow: hidden;
     object-fit: cover;
 }
 
-@media(max-width:1130px){
-    .Main-wrapper{
-        top: 9.375rem;
-        /* El wrapper esta centrado verticalmente dentro de la sección Hero pero en este breakpoint, el "form" empieza a 
-        ocupar más espacio hacia arriba y cubre el texto del wrapper. Así que le di un top de 350px para subirlo un poco */
-    }
-}
-@media(max-width:768px){
-    .Main-wrapper{
-        top: 9.375rem;
-    }
-}
 @media(max-width:480px){
-
-    .Main-wrapper{
-        top: 6.25rem;
-        /* Ajustando el wrapper otra vez para que se suba un poco */
+    .Main-h2{
+        font-size: var(--font-size-48);
     }
     .Main-p--hero{
-        line-height: 1.5rem;
+        font-size: var(--font-size-20);
     }
 }
 
@@ -100,10 +85,10 @@
     font-family: var(--primary-font);
     font-size: var(--font-size-16);
 
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 2;
+    z-index: 2; */
     /* Quiero que el Form quede encima de la "imagen hero", por eso le di una posición absoluta y z-index de 2  */
 }
 .Main-destination,
@@ -206,6 +191,7 @@ label{
     .Main-input,
     .Main-button{
         min-height: 1.5rem;
+}
 }
 
 @media(max-width:480px){
@@ -858,15 +844,4 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
         display: none;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
