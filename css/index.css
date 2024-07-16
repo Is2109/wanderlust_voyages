@@ -1,64 +1,71 @@
+/* NOTAS */
+
+/* @ media */
+/* Los principales breakpoints son
+        - Pantallas grandes: 1600px
+        - Desktop: 1024px
+        - Tablet: 768px
+        - Mobile: 480px */
+/* Además de los principales, tuve que crear breakpoints adicionales para arreglar ciertos elementos en ciertos tamaños que lo necesitaban. */
+/* Los @media están situados despues de cada sección */
+
+
+/* Los estilos que se reutilizan en todas las páginas se encuentran en la hoja de estilos general.css. Esto sucede con los títulos, párrafos, 
+elementos con la apariencia de boton y hero section.  */
+
 
 /* HERO SECTION */
 
 .Main-sectionHero{
     width: 100%;
     min-height: 85vh;
-
+    
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-
+    
     position: relative;
     /* Etiqueta contenedora tiene posición relative para poder darle a las hijas posición absolute */
-   
 }
 .Main-wrapper{
     max-width: 65%;
     /* Para que no se extienda más en pantallas más grandes */
     gap: 1.5rem;
-
+    
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-
+    
     position: absolute;
     z-index: 2;
     /* Para que el wrapper quede encima de la "imagen hero" */
 }
-.Main-h2{
-    font-family: var(--secondary-font);
-    color: var(--color-white);
-    font-size: var(--font-size-64);
-    text-align: center;
-    text-transform: uppercase;
-}
-.Main-p{
-    font-family: var(--primary-font);
-}
-.Main-p--hero{
-    font-size: var(--font-size-24);
-    font-weight: var(--font-weight-medium);
-    text-align: center;
-    color: var(--color-white);
-    line-height: 2.5rem;
+.Main-pictureHero{
+    width: 100%;
+    min-height: 85vh;
+
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
 }
 .Main-imgHero{
     width: 100%;
-    height: 85vh;
-
+    min-height: 85vh;
+    
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
     /* Para que esta imagen quede abajo del Header y del Wrapper */
-
+    
     overflow: hidden;
     object-fit: cover;
 }
-
+    
+/* @media HERO SECTION*/
+    
 @media(max-width:480px){
     .Main-h2{
         font-size: var(--font-size-48);
@@ -68,6 +75,9 @@
         line-height: 1.5rem;
     }
 }
+    
+
+
 
 
 /* FORMULARIO */
@@ -118,32 +128,18 @@ label{
     /* Para que no se vea la "flechita" del campo select porque se veía muy pegada del borde */
 }
 .Main-select,
-.Main-input,
-.Main-button{
+.Main-input{
     width: 13.625rem;
     min-height: 4rem;
+}
 
-}
-.Main-button,
-.Main-a{
-    background-color: var(--color-green);
-    color: var(--color-white);
-    text-align: center;
-    text-transform: uppercase;
-    border-radius: var(--border-radius-big);
-    border: solid .0625rem var(--color-white);
-    padding: 1.25rem 1rem;
-}
-.Main-a{
-    font-family: var(--primary-font);
-    font-size: var(--font-size-16);
-    width: 13.625rem;
-}
+
+/* @media FORMULARIO*/
 
 @media(max-width:1440px){
     .Main-select,
     .Main-input,
-    .Main-button{
+    .Main-button--form{
         width: 11.25rem;
         min-height: 4rem;
     }
@@ -152,7 +148,7 @@ label{
 @media(max-width:1250px){
     .Main-select,
     .Main-input,
-    .Main-button{
+    .Main-button--form{
         width: 10rem;
         min-height: 4rem;
     }
@@ -174,15 +170,15 @@ label{
     .Main-input{
         width: 100%;
     }
-    .Main-button{
+    .Main-button--form{
         width: 100%;
         grid-column: span 2;
     }
     .Main-select,
     .Main-input,
-    .Main-button{
+    .Main-button--form{
         min-height: 1.5rem;
-}
+    }
 }
 
 @media(max-width:480px){
@@ -192,12 +188,15 @@ label{
     }
     .Main-select,
     .Main-input,
-    .Main-button{
+    .Main-button--form{
         min-height: 2rem;
         padding: 1rem 1rem;
         /* Para que los campos de input se vean un poco más pequeños */
     }
 }
+
+
+
 
 
 
@@ -225,28 +224,9 @@ label{
     justify-content: center;
     align-items: center;
 }
-.Main-h4{
-    font-family: var(--primary-font);
-    font-size: var(--font-size-16);
-    font-weight: var(--font-weight-medium);
-    text-transform: uppercase;
-}
-.Main-h4--green{
-    color: var(--color-green);
-    text-align: center;
-}
-.Main-h3{
-    font-family: var(--secondary-font);
-    color: var(--color-black);
-    text-align: center;
-    text-transform: uppercase;
-    font-size: var(--font-size-48);
-}
-.Main-p--section{
-    color: var(--color-black);
-    font-size: var(--font-size-20);
-    text-align: center;
-}
+
+
+
 
 
 
@@ -302,6 +282,9 @@ label{
 .Main-carouselReviewsDot.isClicked{
     background-color: var(--color-green);
 }
+
+
+
 
 
 
@@ -389,29 +372,8 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     right: 3.125rem;
     z-index: 3;
 }
-.Main-h6{
-    font-family: var(--primary-font);
-    font-size: var(--font-size-16);
-    font-weight: var(--font-weight-medium);
-    color: var(--color-green);
-    text-transform: uppercase;
-}
-.Main-h5{
-    font-family: var(--primary-font);
-    font-size: var(--font-size-32);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-black);
-    text-transform: uppercase;
-}
-.Main-p--destinations{
-    font-size: var(--font-size-16);
-    color: var(--color-black);
-}
 
-.Main-button--section{
-    width: 14.5rem;
-}
-
+/* @media POPULAR DESTINATIONS SECTION*/
 
 @media(max-width:1440px){
     .Main-h5{
@@ -467,6 +429,9 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
 
 
+
+
+
 /* TRAVEL PACKAGES SECTION */
 
 .Main-section--lightgreen{
@@ -476,7 +441,6 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 .Main-cardWrapper{
     width: 100%;
     gap: 5rem;
-    /* ou 40px? */
 
     display: flex;
     flex-flow: column nowrap;
@@ -517,7 +481,6 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     width: calc(100% / 3);
     min-height: 20rem;
     background-color: var(--color-card-background);
-    /* padding: 48px 32px; */
 
     display: flex;
     flex-flow: row nowrap;
@@ -533,11 +496,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: center;
     align-items: flex-start;
 }
-.Main-p--packages{
-    font-size: var(--font-size-16);
-    font-weight: var(--font-weight-medium);
-    color: var(--color-grey);
-}
+
 .Main-cardLabel{
     padding: .5rem 1rem;
     gap: 1.5rem;
@@ -632,6 +591,8 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     text-align: center;
 }
 
+/* @media TRAVEL PACKAGES SECTION*/
+
 @media(max-width:1130px){
     .Main-cardPackage{
         flex-direction: column;
@@ -671,6 +632,11 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
         display: none;
     }
 }
+
+
+
+
+
 
 /* CLIENT REVIEWS CAROUSEL */
 
@@ -717,6 +683,10 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 }
 
 
+
+
+
+
 /* CALL TO ACTION SECTION */
 
 .Main-section--callToAction{
@@ -738,12 +708,12 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
     gap: 2.5rem;
 }
-.Main-h4--white,
-.Main-h5--white,
 .Main-p--white{
     color: var(--color-white);
     text-align: left;
 }
+
+/* @media CALL TO ACTION SECTION*/
 
 @media(max-width:768px){
     .Main-section--callToAction{
@@ -751,6 +721,10 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
         gap: 2.5rem;
     }
 }
+
+
+
+
 
 
 /* FAQ ACCORDION SECTION */
@@ -784,12 +758,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: space-between;
     align-items: center;
 }
-.Main-h4--black{
-    width: 100%;
-    color: var(--color-black);
-    text-align: left;
-    font-weight: var(--font-weight-bold);
-}
+
 .Main-accordionIcon{
     width: 1.5rem;
     height: 1.5rem;
@@ -816,6 +785,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     opacity: 1;
 }
 
+/* @media ACCORDION SECTION */
 /* Aquí tuve que hacer muchos "@media" para ajustar el tamaño de cada bloque a medida que cambia el tamaño de la pantalla. */
 
 @media(max-width:1300px){
@@ -880,13 +850,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     }
 }
 
-/* @ media */
-/* Los principales breakpoints son
-        - Pantallas grandes: 1600px
-        - Desktop: 1024px
-        - Tablet: 768px
-        - Mobile: 480px */
-/* Además de los principales, tuve que crear breakpoints adicionales para arreglar ciertos elementos en ciertos tamaños que lo necesitaban. */
+
 
 
 

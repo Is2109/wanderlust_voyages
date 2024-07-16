@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
+    <!-- Para mejorar el SEO de la página y renderizarla en diferentes dispositivos y navegadores, crée metatags en la página metatags.io -->
+    <!-- Meta Tags Generated with https://metatags.io -->
+
+    <!-- Primary Meta Tags -->
+    <title>Exclusive Travel Packages</title>
+    <meta name="title" content="Exclusive Travel Packages" >
+    <meta name="description" content="Discover meticulously curated travel packages by Wanderlust Voyages. Experience unparalleled luxury and unforgettable journeys tailored to your desires. Explore our exclusive itineraries today!" >
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" >
+    <meta property="og:url" content="https://metatags.io/" >
+    <meta property="og:title" content="Exclusive Travel Packages" >
+    <meta property="og:description" content="Discover meticulously curated travel packages by Wanderlust Voyages. Experience unparalleled luxury and unforgettable journeys tailored to your desires. Explore our exclusive itineraries today!" >
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" >
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" >
+    <meta property="twitter:url" content="https://metatags.io/" >
+    <meta property="twitter:title" content="Exclusive Travel Packages" >
+    <meta property="twitter:description" content="Discover meticulously curated travel packages by Wanderlust Voyages. Experience unparalleled luxury and unforgettable journeys tailored to your desires. Explore our exclusive itineraries today!" >
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" >
+
+   <!-- Enlaces a hojas de estilo CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/packages.css">
+
+    <!-- Enlaces a archivos de Javascript -->
+    <!-- Utilizamos el atributo "defer" para permitir que la página HTML se cargue completamente antes de ejecutar Javascript -->
+    <script src="js/app.js" defer></script>
+
+    <!-- Para mejorar el rendimiento de la página le añadi el preload de las tipografías -->
+    <!-- Nota: Al final no usé estos "preloads" porque estaba en conflicto con "font-display: swap" que usé en "@font-face" en CSS -->
+
+    <!-- <link rel="preload" href="Assets/Fonts/Antic_Didone/antic-didone-v16-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="Assets/Fonts/Montserrat/montserrat-v26-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="Assets/Fonts/Montserrat/montserrat-v26-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="Assets/Fonts/Montserrat/montserrat-v26-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="Assets/Fonts/Montserrat/montserrat-v26-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
 
 </head>
 <body>
@@ -38,7 +73,7 @@
         </div>
 
         <!-- Aquí es un button porque activa Javascript -->
-        <button class="Header-button">
+        <button class="Header-button" title="responsive menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="Header-hamburger" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
               </svg>
@@ -63,8 +98,116 @@
     </header>
 
 
+    <!-- MAIN -->
 
+    <main class="Main">
 
+        <!-- HERO SECTION -->
+
+        <section class="Main-sectionHero">
+            <div class="Main-wrapper">
+                <h2 class="Main-h2">Discover Your Dream Getaway</h2>
+                <p class="Main-p Main-p--hero">Explore our exclusive travel packages designed to offer you unforgettable memories. Whether you're dreaming of the pristine beaches of Bora Bora or the serene beauty of the Seychelles, Wanderlust Voyages has meticulously curated each itinerary to cater to your every desire. </p>
+            </div>
+            <picture class="Main-pictureHero">
+                <source srcset="assets/images/jpg/packages_page/packages_hero_1500x1000.jpg" type="image/jpeg" media="(max-width:1024px)">
+                <source srcset="assets/images/webp/packages_page/packages_hero_1500x1000.webp" type="image/webp" media="(max-width:1024px)">
+                <source srcset="assets/images/jpg/packages_page/packages_hero_2000x1333.jpg" type="image/jpeg" media="(min-width:1600px)">
+                <source srcset="assets/images/webp/packages_page/packages_hero_2000x1333.webp" type="image/webp" media="(min-width:1600px)">
+                <img src="assets/images/jpg/packages_page/packages_hero_2000x1333.jpg" alt="View of a plam tree leave" class="Main-imgHero">
+                <!-- Esta imagen en concreto no tiene loading lazy porque es la primera que aparece al abrir la pagina web -->
+            </picture>
+            <!-- Añadi este "overlay" para hacer la imagen más oscura porque el texto no era muy legible -->
+            <div class="Main-overlay"></div>
+        </section>
+
+        <!-- PACKAGES SECTION -->
+
+        <section class="Main-sectionPackages">
+            <div class="Main-sectionWrapper">
+                <h3 class="Main-h3 Main-h3--green">Handpicked Travel Packages for Unforgettable Experiences</h3>
+                <h4 class="Main-h4">Discover Your Dream Getaway</h4>
+                <p class="Main-p Main-p--section">Explore our exclusive travel packages designed to offer you unparalleled luxury and unforgettable memories. Whether you're dreaming of the pristine beaches of Bora Bora, the stunning cliffs of the Amalfi Coast, or the serene beauty of the Seychelles, Wanderlust Voyages has meticulously curated each itinerary to cater to your every desire. Let us take you on a journey of a lifetime with our expertly crafted travel experiences.</p>
+            </div>
+
+            <!-- PACKAGE 1 -->
+            <article class="Main-packageRow">
+                <picture class="Main-picture">
+                    <source srcset="assets/images/jpg/packages/packages_one_1500x1000.jpg" type="image/jpeg" media="(max-width:1024px)">
+                    <source srcset="assets/images/webp/packages/packages_one_1500x1000.webp" type="image/webp" media="(max-width:1024px)">
+                    <source srcset="assets/images/jpg/packages/packages_one_2000x1333.jpg" type="image/jpeg" media="(min-width:1600px)">
+                    <source srcset="assets/images/webp/packages/packages_one_2000x1333.webp" type="image/webp" media="(min-width:1600px)">
+                    <img src="assets/images/jpg/packages/packages_one_2000x1333.jpg" alt="View of a beach and nature in Bora Bora" class="Main-cardImage" loading="lazy">
+                </picture>
+                <div class="Main-content">
+                    <h3 class="Main-h3 Main-h3--green">7 nights package</h3>
+                    <h4 class="Main-h4">Maldives</h4>
+                    <p class="Main-p Main-p--section">Your package includes:</p>
+                    <p class="Main-p Main-p--packages">Luxury overwater bungalow accommodation</p>
+                    <p class="Main-p Main-p--packages">Private airport transfers</p>
+                    <p class="Main-p Main-p--packages">Daily breakfast and dinner</p>
+                    <p class="Main-p Main-p--packages">Snorkeling and diving excursions</p>
+                    <p class="Main-p Main-p--packages">Guided island tour</p>
+                    <p class="Main-p Main-p--packages">Traditional Polynesian dinner show</p>
+                    <p class="Main-p Main-p--packages">Sunset cruise</p>
+                    <span class="Main-spanPrice">€5,500 per person</span>
+                    <div class="Main-button Main-button--bookNow">book now</div>  
+                </div>      
+                 
+            </article>
+
+            <!-- PACKAGE 2 -->
+            <article class="Main-packageRowReverse">
+                <picture class="Main-picture">
+                    <source srcset="assets/images/jpg/packages/packages_two_1500x1127.jpg" type="image/jpeg" media="(max-width:1024px)">
+                    <source srcset="assets/images/webp/packages/packages_two_1500x1127.webp" type="image/webp" media="(max-width:1024px)">
+                    <source srcset="assets/images/jpg/packages/packages_two_2000x1502.jpg" type="image/jpeg" media="(min-width:1600px)">
+                    <source srcset="assets/images/webp/packages/packages_two_2000x1502.webp" type="image/webp" media="(min-width:1600px)">
+                    <img src="assets/images/jpg/packages/packages_two_2000x1502.jpg" alt="View of the Amalfi Coast during the day" class="Main-cardImage" loading="lazy">
+                </picture>
+                <div class="Main-content">
+                    <h3 class="Main-h3 Main-h3--green">5 nights package</h3>
+                    <h4 class="Main-h4">Amalfi Coast</h4>
+                    <p class="Main-p Main-p--section">Your package includes:</p>
+                    <p class="Main-p Main-p--packages">Boutique hotel accommodation with sea views</p>
+                    <p class="Main-p Main-p--packages">Daily breakfast and gourmet dinners</p>
+                    <p class="Main-p Main-p--packages">Private car transfers from Naples</p>
+                    <p class="Main-p Main-p--packages">Guided tour of Pompeii and Mount Vesuvius</p>
+                    <p class="Main-p Main-p--packages">Boat trip to Capri</p>
+                    <p class="Main-p Main-p--packages">Cooking class with a local chef</p>
+                    <p class="Main-p Main-p--packages">Wine tasting tour in a local vineyard</p>
+                    <span class="Main-spanPrice">€4,200 per person</span>
+                    <div class="Main-button Main-button--bookNow">book now</div>  
+                </div>
+            </article>
+            
+            <!-- PACKAGE 3 -->
+            <article class="Main-packageRow">
+                <picture class="Main-picture">
+                    <source srcset="assets/images/jpg/packages/packages_three_1500x1001.jpg" type="image/jpeg" media="(max-width:1024px)">
+                    <source srcset="assets/images/webp/packages/packages_three_1500x1001.webp" type="image/webp" media="(max-width:1024px)">
+                    <source srcset="assets/images/jpg/packages/packages_three_2000x1334.jpg" type="image/jpeg" media="(min-width:1600px)">
+                    <source srcset="assets/images/webp/packages/packages_three_2000x1334.webp" type="image/webp" media="(min-width:1600px)">
+                    <img src="assets/images/jpg/packages/packages_three_2000x1334.jpg" alt="View of the nature in Mahé Island" class="Main-cardImage" loading="lazy">
+                </picture>
+                <div class="Main-content">
+                    <h3 class="Main-h3 Main-h3--green">6 nights package</h3>
+                    <h4 class="Main-h4">Seychelles</h4>
+                    <p class="Main-p Main-p--section">Your package includes:</p>
+                    <p class="Main-p Main-p--packages">Oceanfront villa accommodation</p>
+                    <p class="Main-p Main-p--packages">All-inclusive meal plan</p>
+                    <p class="Main-p Main-p--packages">Private airport transfers</p>
+                    <p class="Main-p Main-p--packages">Full-day island hopping tour</p>
+                    <p class="Main-p Main-p--packages">Snorkeling and diving excursions</p>
+                    <p class="Main-p Main-p--packages">Spa treatment package</p>
+                    <p class="Main-p Main-p--packages">Sunset catamaran cruise</p>
+                    <span class="Main-spanPrice">€4,800 per person</span>
+                    <div class="Main-button Main-button--bookNow">book now</div>  
+                </div>
+            </article>
+        </section>
+
+    </main>
 
 
     <!-- FOOTER -->
@@ -97,22 +240,25 @@
                 <span class="Footer-emailAddress">info@wanderlustvoyages.com</span>
             </div>
             <div class="Footer-address">
-                <!-- usar etiqueta address? -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" class="Footer-icon">
                     <path d="M14 1.75C11.4482 1.75289 9.0017 2.76788 7.19729 4.57229C5.39288 6.37671 4.37789 8.82318 4.375 11.375C4.375 19.6109 13.125 25.8311 13.498 26.0914C13.6451 26.1945 13.8204 26.2498 14 26.2498C14.1796 26.2498 14.3549 26.1945 14.502 26.0914C14.875 25.8311 23.625 19.6109 23.625 11.375C23.6221 8.82318 22.6071 6.37671 20.8027 4.57229C18.9983 2.76788 16.5518 1.75289 14 1.75ZM14 7.875C14.6922 7.875 15.3689 8.08027 15.9445 8.46486C16.5201 8.84944 16.9687 9.39607 17.2336 10.0356C17.4985 10.6751 17.5678 11.3789 17.4327 12.0578C17.2977 12.7367 16.9644 13.3604 16.4749 13.8499C15.9854 14.3394 15.3617 14.6727 14.6828 14.8077C14.0039 14.9428 13.3001 14.8735 12.6606 14.6086C12.0211 14.3437 11.4744 13.8951 11.0899 13.3195C10.7053 12.7439 10.5 12.0672 10.5 11.375C10.5 10.4467 10.8687 9.5565 11.5251 8.90013C12.1815 8.24375 13.0717 7.875 14 7.875Z" fill="white"/>
                   </svg>
-                <span class="Footer-direction">123 Luxury Lane, Paradise City, NY 10001, USA</span>
+                <address class="Footer-direction">123 Luxury Lane, Paradise City, NY 10001, USA</address>
             </div>
         </div>
         <div class="Footer-subscribe">
             <span class="Footer-spanSubscribe">Subscribe to our newsletter for more updates & news!</span>
+
             <!-- FORMULARIO -->
             <form action="#" method="get" class="Footer-form">
                 <input type="email" name="email" placeholder="Enter your email" required class="Footer-input">
             </form>
-            <!-- falta href enlace -->
-            <a href="#" class="Footer-a Footer-a--button" title="Subscribe">Subscribe</a>
+
+            <!-- Este div tiene apariencia de botón pero no es un botón ni un enlace porque no nos lleva a ninguna parte -->
+            <div class="Footer-a Footer-a--button">Subscribe</div>
+
             <div class="Footer-social">
+
                 <!-- Aqui tenemos enlaces externos así que tienen target="_blank" para que el enlace se abra en otra pestaña
                  y el atributo rel"noreferrer" por razones de seguridad y privacidad -->
                 <a href="https://es-la.facebook.com/" class="Footer-a" target="_blank" rel="noreferrer" title="Follow us on Facebook">

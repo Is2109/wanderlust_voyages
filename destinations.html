@@ -8,25 +8,24 @@
     <!-- Meta Tags Generated with https://metatags.io -->
     
     <!-- Primary Meta Tags -->
-    <title>Wanderlust Voyages - Luxury Travel Agency</title>
-    <meta name="title" content="Wanderlust Voyages - Luxury Travel Agency" >
-    <meta name="description" content="Experience the ultimate in luxury travel with Wanderlust Voyages. We specialize in crafting bespoke travel experiences to the world's most exquisite destinations. From serene beach getaways to opulent retreats, let us turn your travel dreams into reality." >
+    <title>Explore Top Luxury Travel Destinations</title>
+    <meta name="title" content="Explore Top Luxury Travel Destinations" >
+    <meta name="description" content="Discover the world's most exquisite travel destinations with Paradise Escapes. From the azure waters of Bora Bora to the scenic cliffs of the Amalfi Coast, explore the best in luxury travel." >
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" >
     <meta property="og:url" content="https://metatags.io/" >
-    <meta property="og:title" content="Wanderlust Voyages - Luxury Travel Agency" >
-    <meta property="og:description" content="Experience the ultimate in luxury travel with Wanderlust Voyages. We specialize in crafting bespoke travel experiences to the world's most exquisite destinations. From serene beach getaways to opulent retreats, let us turn your travel dreams into reality." >
+    <meta property="og:title" content="Explore Top Luxury Travel Destinations" >
+    <meta property="og:description" content="Discover the world's most exquisite travel destinations with Paradise Escapes. From the azure waters of Bora Bora to the scenic cliffs of the Amalfi Coast, explore the best in luxury travel." >
     <meta property="og:image" content="https://metatags.io/images/meta-tags.png" >
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" >
     <meta property="twitter:url" content="https://metatags.io/" >
-    <meta property="twitter:title" content="Wanderlust Voyages - Luxury Travel Agency" >
-    <meta property="twitter:description" content="Experience the ultimate in luxury travel with Wanderlust Voyages. We specialize in crafting bespoke travel experiences to the world's most exquisite destinations. From serene beach getaways to opulent retreats, let us turn your travel dreams into reality." >
+    <meta property="twitter:title" content="Explore Top Luxury Travel Destinations" >
+    <meta property="twitter:description" content="Discover the world's most exquisite travel destinations with Paradise Escapes. From the azure waters of Bora Bora to the scenic cliffs of the Amalfi Coast, explore the best in luxury travel." >
     <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" >
 
-    
     <!-- Enlaces a hojas de estilo CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
@@ -48,9 +47,9 @@
 </head>
 <body>
 
-    <!-- HEADER -->
+     <!-- HEADER -->
 
-    <header class="Header">
+     <header class="Header">
         <div class="Header-div">
             <!-- Tenemos dos tipos de enlaces en el Header que tendrán diferentes propiedades así que usé modificadores para diferenciarlos.
             Tenemos "Header-a(modificador)home" y "Header-a(modificador)nav" -->
@@ -73,7 +72,7 @@
         </div>
 
         <!-- Aquí es un button porque activa Javascript -->
-        <button class="Header-button">
+        <button class="Header-button" title="responsive menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="Header-hamburger" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
               </svg>
@@ -108,119 +107,123 @@
                 <h2 class="Main-h2">Discover Your Next Dream Destination</h2>
                 <p class="Main-p Main-p--hero">Embark on a journey to some of the world's most breathtaking and luxurious locations. Whether you're seeking the serenity of a tropical paradise, the charm of a historical region, or the romance of a coastal escape, our curated destinations offer something for every traveler. </p>
             </div>
+            <picture class="Main-pictureHero">
+                <source srcset="assets/images/jpg/destinations_page/destinations_hero_1500x1125.jpg" type="image/jpeg" media="(max-width:1024px)">
+                <source srcset="assets/images/webp/destinations_page/destinations_hero_1500x1125.webp" type="image/webp" media="(max-width:1024px)">
+                <source srcset="assets/images/jpg/destinations_page/destinations_hero_2000x1500.jpg" type="image/jpeg" media="(min-width:1600px)">
+                <source srcset="assets/images/webp/destinations_page/destinations_hero_2000x1500.webp" type="image/webp" media="(min-width:1600px)">
+                <img src="assets/images/jpg/destinations_page/destinations_hero_2000x1500.jpg" alt="View of a tropical ocean and sky" class="Main-imgHero">
+                <!-- Esta imagen en concreto no tiene loading lazy porque es la primera que aparece al abrir la pagina web -->
+            </picture>
         </section>
 
-        <!-- TABS DESTINATIONS -->
+        <!-- DESTINATIONS SECTION -->
 
-        <section class="Main-sectionTabs">
-
-            <div class="Main-tabsContainer">
-                <ul class="Main-ul">
-                    <li class="Main-li"><button class="Main-button">All</button></li>
-                    <li class="Main-li"><button class="Main-button">Africa</button></li>
-                    <li class="Main-li"><button class="Main-button">Asia</button></li>
-                    <li class="Main-li"><button class="Main-button">Europe</button></li>
-                    <li class="Main-li"><button class="Main-button">Oceania</button></li>
-                </ul>
-        
-                <div class="Main-contentContainer">
-
-                    <!-- TAB ALL -->
-                    <div class="Main-content">
-                        <!-- CARD 1 -->
-                        <article class="Main-cardDestination">
-                            <!-- <picture class="Main-picture">
-                                <source srcset="assets/images/jpg/popular_destinations/popular_destinations_one_1500x1013.jpg" type="image/jpeg" media="(max-width:1024px)">
-                                <source srcset="assets/images/webp/popular_destinations/popular_destinations_one_1500x1013.webp" type="image/webp" media="(max-width:1024px)">
-                                <source srcset="assets/images/jpg/popular_destinations/popular_destinations_one_2000x1351.jpg" type="image/jpeg" media="(min-width:1600px)">
-                                <source srcset="assets/images/webp/popular_destinations/popular_destinations_one_2000x1351.webp" type="image/webp" media="(min-width:1600px)">
-                                <img src="assets/images/jpg/popular_destinations/popular_destinations_one_2000x1351.jpg" alt="Beach at the Maldives" class="Main-cardImage" loading="lazy">
-                            </picture> -->
-                            <h6 class="Main-h6">Maldives</h6>
-                            <h5 class="Main-h5">Malé Atoll</h5>
-                            <p class="Main-p Main-p--destinations">Malé Atoll offers pristine beaches, crystal-clear waters, and luxurious resorts for an unforgettable escape.</p>
-                        </article>
-
-                        <!-- CARD 2 -->
-                        <article class="Main-cardDestination">
-                            <!-- <picture class="Main-picture">
-                                <source srcset="assets/images/jpg/popular_destinations/popular_destinations_two_1200x1500.jpg" type="image/jpeg" media="(max-width:1024px)">
-                                <source srcset="assets/images/webp/popular_destinations/popular_destinations_two_1200x1500.webp" type="image/webp" media="(max-width:1024px)">
-                                <source srcset="assets/images/jpg/popular_destinations/popular_destinations_two_1600x2000.jpg" type="image/jpeg" media="(min-width:1600px)">
-                                <source srcset="assets/images/webp/popular_destinations/popular_destinations_two_1600x2000.webp" type="image/webp" media="(min-width:1600px)">
-                                <img src="assets/images/jpg/popular_destinations/popular_destinations_two_1600x2000.jpg" alt="View of Positano at sunset" class="Main-cardImage" loading="lazy">
-                            </picture>  -->
-                            <h6 class="Main-h6">Italy</h6>
-                            <h5 class="Main-h5">Amalfi Coast</h5>
-                            <p class="Main-p Main-p--destinations">The Amalfi Coast boasts picturesque coastal towns, cliffside villas, and exquisite Mediterranean cuisine.</p>
-                        </article>
-                        
-                        <!-- CARD 3 -->
-                        <article class="Main-cardDestination">
-                            <!-- <picture class="Main-picture">
-                                <source srcset="assets/images/jpg/popular_destinations/popular_destinations_three_1500x1000.jpg" type="image/jpeg" media="(max-width:1024px)">
-                                <source srcset="assets/images/webp/popular_destinations/popular_destinations_three_1500x1000.webp" type="image/webp" media="(max-width:1024px)">
-                                <source srcset="assets/images/jpg/popular_destinations/popular_destinations_three_2000x1333.jpg" type="image/jpeg" media="(min-width:1600px)">
-                                <source srcset="assets/images/webp/popular_destinations/popular_destinations_three_2000x1333.webp" type="image/webp" media="(min-width:1600px)">
-                                <img src="assets/images/jpg/popular_destinations/popular_destinations_three_2000x1333.jpg" alt="Overwater bungalows at Bora Bora" class="Main-cardImage" loading="lazy">
-                            </picture> -->
-                            <h6 class="Main-h6">French Polynesia</h6>
-                            <h5 class="Main-h5">Bora Bora</h5>
-                            <p class="Main-p Main-p--destinations">Bora Bora is renowned for its stunning overwater bungalows, turquoise lagoons, and breathtaking views.</p>
-                        </article>
-    
-                        <!-- CARD 4 -->
-                        <article class="Main-cardDestination">
-                            <!-- <picture class="Main-picture">
-                                <source srcset="assets/images/jpg/popular_destinations/popular_destinations_four_1125x1500.jpg" type="image/jpeg" media="(max-width:1024px)">
-                                <source srcset="assets/images/webp/popular_destinations/popular_destinations_four_1125x1500.webp" type="image/webp" media="(max-width:1024px)">
-                                <source srcset="assets/images/jpg/popular_destinations/popular_destinations_four_1500x2000.jpg" type="image/jpeg" media="(min-width:1600px)">
-                                <source srcset="assets/images/webp/popular_destinations/popular_destinations_four_1500x2000.webp" type="image/webp" media="(min-width:1600px)">
-                                <img src="assets/images/jpg/popular_destinations/popular_destinations_four_1500x2000.jpg" alt="Typical greek white houses in Santorini at susnset" class="Main-cardImage" loading="lazy">
-                            </picture>     -->
-                            <h6 class="Main-h6">Greece</h6>
-                            <h5 class="Main-h5">Santorini</h5>
-                            <p class="Main-p Main-p--destinations">Enjoy the iconic white-washed buildings, azure domes, and spectacular sunsets over the caldera.</p>
-                            
-                        </article>
-                        
-                        <!-- CARD 5 -->
-                        <article class="Main-cardDestination">
-                            <!-- <picture class="Main-picture">
-                                <source srcset="assets/images/jpg/popular_destinations/popular_destinations_five_1500x999.jpg" type="image/jpeg" media="(max-width:1024px)">
-                                <source srcset="assets/images/webp/popular_destinations/popular_destinations_five_1500x999.webp" type="image/webp" media="(max-width:1024px)">
-                                <source srcset="assets/images/jpg/popular_destinations/popular_destinations_five_2000x1332.jpg" type="image/jpeg" media="(min-width:1600px)">
-                                <source srcset="assets/images/webp/popular_destinations/popular_destinations_five_2000x1332.webp" type="image/webp" media="(min-width:1600px)">
-                                <img src="assets/images/jpg/popular_destinations/popular_destinations_five_2000x1332.jpg" alt="View of a beach at the Seychelles" class="Main-cardImage" loading="lazy">
-                            </picture> -->
-                            <h6 class="Main-h6">Seychelles</h6>
-                            <h5 class="Main-h5">Mahé Island</h5>
-                            <p class="Main-p Main-p--destinations">Discover secluded beaches, granite boulders, and luxurious resorts set amidst lush tropical landscapes.</p>
-                        </article>
-                        
-                        <!-- CARD 6 -->
-                        <article class="Main-cardDestination">
-                            <!-- <picture class="Main-picture">
-                                <source srcset="assets/images/jpg/popular_destinations/popular_destinations_six_1000x1500.jpg" type="image/jpeg" media="(max-width:1024px)">
-                                <source srcset="assets/images/webp/popular_destinations/popular_destinations_six_1000x1500.webp" type="image/webp" media="(max-width:1024px)">
-                                <source srcset="assets/images/jpg/popular_destinations/popular_destinations_six_1333x2000.jpg" type="image/jpeg" media="(min-width:1600px)">
-                                <source srcset="assets/images/webp/popular_destinations/popular_destinations_six_1333x2000.webp" type="image/webp" media="(min-width:1600px)">
-                                <img src="assets/images/jpg/popular_destinations/popular_destinations_six_1333x2000.jpg" alt="View of a chateau at the Loire Valley" class="Main-cardImage" loading="lazy">
-                            </picture> -->
-                            <h6 class="Main-h6">France</h6>
-                            <h5 class="Main-h5">Loire Valley</h5>
-                            <p class="Main-p Main-p--destinations">The Loire Valley is famed for its  chateaux, vineyards, and elegant gardens, offering a picturesque retreat.</p>
-                        </article>
-                    </div>
-
-                    <div class="Main-content"></div>
-                    <div class="Main-content"></div>
-                    <div class="Main-content"></div>
-                    <div class="Main-content"></div>
-                </div>
+        <section class="Main-sectionDestinations">
+            <div class="Main-sectionWrapper">
+                <h3 class="Main-h3 Main-h3--green">ENCHANTING DESTINATIONS FOR EVERY TRAVELER</h3>
+                <h4 class="Main-h4">EXPLORE OUR EXCLUSIVE DESTINATIONS</h4>
+                <p class="Main-p Main-p--section">Uncover the world's most captivating destinations with our expertly selected locales, each offering a unique blend of beauty, culture, and adventure. Our exclusive selection of destinations ensures an unforgettable journey tailored to your every wish. Discover the wonders of the world with Wanderlust Voyages, where every destination promises elegance, sophistication, and unparalleled experiences. Embark on your next adventure with us, and let the world become your playground.</p>
             </div>
 
+            <!-- DESTINATION 1 -->
+            <article class="Main-destinationRow">
+                <picture class="Main-picture">
+                    <source srcset="assets/images/jpg/popular_destinations/popular_destinations_one_1500x1013.jpg" type="image/jpeg" media="(max-width:1024px)">
+                    <source srcset="assets/images/webp/popular_destinations/popular_destinations_one_1500x1013.webp" type="image/webp" media="(max-width:1024px)">
+                    <source srcset="assets/images/jpg/popular_destinations/popular_destinations_one_2000x1351.jpg" type="image/jpeg" media="(min-width:1600px)">
+                    <source srcset="assets/images/webp/popular_destinations/popular_destinations_one_2000x1351.webp" type="image/webp" media="(min-width:1600px)">
+                    <img src="assets/images/jpg/popular_destinations/popular_destinations_one_2000x1351.jpg" alt="Beach at the Maldives" class="Main-cardImage" loading="lazy">
+                </picture>
+                <div class="Main-content">
+                    <h3 class="Main-h3 Main-h3--green">Maldives</h3>
+                    <h4 class="Main-h4">Malé Atoll</h4>
+                    <p class="Main-p Main-p--destinations">Malé Atoll, situated in the mesmerizing Maldives, is a tropical paradise renowned for its breathtaking beauty and serene ambiance. This idyllic destination is divided into two parts: North Malé Atoll and South Malé Atoll, each offering a unique blend of natural splendor and luxurious experiences. Its blend of cultural richness, luxurious accommodations, and stunning natural beauty makes it a must-visit destination for travelers seeking an unforgettable getaway in the Maldives.</p>
+                </div>         
+            </article>
+
+            <!-- DESTINATION 2 -->
+            <article class="Main-destinationRowReverse">
+                <picture class="Main-picture">
+                    <source srcset="assets/images/jpg/popular_destinations/popular_destinations_two_1200x1500.jpg" type="image/jpeg" media="(max-width:1024px)">
+                    <source srcset="assets/images/webp/popular_destinations/popular_destinations_two_1200x1500.webp" type="image/webp" media="(max-width:1024px)">
+                    <source srcset="assets/images/jpg/popular_destinations/popular_destinations_two_1600x2000.jpg" type="image/jpeg" media="(min-width:1600px)">
+                    <source srcset="assets/images/webp/popular_destinations/popular_destinations_two_1600x2000.webp" type="image/webp" media="(min-width:1600px)">
+                    <img src="assets/images/jpg/popular_destinations/popular_destinations_two_1600x2000.jpg" alt="View of Positano at sunset" class="Main-cardImage" loading="lazy">
+                </picture>
+                <div class="Main-content">
+                    <h3 class="Main-h3 Main-h3--green">Italy</h3>
+                    <h4 class="Main-h4">Amalfi Coast</h4>
+                    <p class="Main-p Main-p--destinations">The Amalfi Coast, a UNESCO World Heritage site, is a breathtaking stretch of coastline in southern Italy known for its dramatic cliffs, colorful villages, and stunning seascapes. Nestled between the azure waters of the Tyrrhenian Sea and the rugged mountains, towns like Positano, Amalfi, and Ravello captivate visitors with their charming architecture, winding streets, and delectable cuisine. This region is a haven for those seeking a blend of relaxation, culture, and natural beauty.</p>
+                </div>
+            </article>
+            
+            <!-- DESTINATION 3 -->
+            <article class="Main-destinationRow">
+                <picture class="Main-picture">
+                    <source srcset="assets/images/jpg/popular_destinations/popular_destinations_three_1500x1000.jpg" type="image/jpeg" media="(max-width:1024px)">
+                    <source srcset="assets/images/webp/popular_destinations/popular_destinations_three_1500x1000.webp" type="image/webp" media="(max-width:1024px)">
+                    <source srcset="assets/images/jpg/popular_destinations/popular_destinations_three_2000x1333.jpg" type="image/jpeg" media="(min-width:1600px)">
+                    <source srcset="assets/images/webp/popular_destinations/popular_destinations_three_2000x1333.webp" type="image/webp" media="(min-width:1600px)">
+                    <img src="assets/images/jpg/popular_destinations/popular_destinations_three_2000x1333.jpg" alt="Overwater bungalows at Bora Bora" class="Main-cardImage" loading="lazy">
+                </picture>
+                <div class="Main-content">
+                    <h3 class="Main-h3 Main-h3--green">French Polynesia</h3>
+                    <h4 class="Main-h4">Bora Bora</h4>
+                    <p class="Main-p Main-p--destinations">Bora Bora, an island paradise in French Polynesia, is famed for its crystal-clear lagoons, overwater bungalows, and stunning coral reefs. Surrounded by a vibrant turquoise lagoon and protected by a barrier reef, Bora Bora offers a perfect setting for water sports, snorkeling, and diving. The island's lush landscape, with its iconic Mount Otemanu, creates a serene and romantic atmosphere, making it a popular destination for honeymooners and luxury travelers seeking a tropical escape.</p>
+                </div>
+            </article>
+
+            <!-- DESTINATION 4 -->
+            <article class="Main-destinationRowReverse">
+                <picture class="Main-picture">
+                    <source srcset="assets/images/jpg/popular_destinations/popular_destinations_four_1125x1500.jpg" type="image/jpeg" media="(max-width:1024px)">
+                    <source srcset="assets/images/webp/popular_destinations/popular_destinations_four_1125x1500.webp" type="image/webp" media="(max-width:1024px)">
+                    <source srcset="assets/images/jpg/popular_destinations/popular_destinations_four_1500x2000.jpg" type="image/jpeg" media="(min-width:1600px)">
+                    <source srcset="assets/images/webp/popular_destinations/popular_destinations_four_1500x2000.webp" type="image/webp" media="(min-width:1600px)">
+                    <img src="assets/images/jpg/popular_destinations/popular_destinations_four_1500x2000.jpg" alt="Typical greek white houses in Santorini at susnset" class="Main-cardImage" loading="lazy">
+                </picture>
+                <div class="Main-content">
+                    <h3 class="Main-h3 Main-h3--green">Greece</h3>
+                    <h4 class="Main-h4">Santorini</h4>
+                    <p class="Main-p Main-p--destinations">Santorini, a jewel of the Aegean Sea, is an iconic destination renowned for its stunning sunsets, white-washed buildings, and crystal-clear waters. This Greek island is a part of the Cyclades group and is famous for its dramatic views, volcanic beaches, and vibrant nightlife. Visitors are captivated by the picturesque towns of Fira and Oia, where narrow streets are lined with charming shops, cafes, and cliffside hotels offering breathtaking views of the caldera and the deep blue sea.</p>
+                </div>
+            </article>
+            
+            <!-- DESTINATION 5 -->
+            <article class="Main-destinationRow">
+                <picture class="Main-picture">
+                    <source srcset="assets/images/jpg/popular_destinations/popular_destinations_five_1500x999.jpg" type="image/jpeg" media="(max-width:1024px)">
+                    <source srcset="assets/images/webp/popular_destinations/popular_destinations_five_1500x999.webp" type="image/webp" media="(max-width:1024px)">
+                    <source srcset="assets/images/jpg/popular_destinations/popular_destinations_five_2000x1332.jpg" type="image/jpeg" media="(min-width:1600px)">
+                    <source srcset="assets/images/webp/popular_destinations/popular_destinations_five_2000x1332.webp" type="image/webp" media="(min-width:1600px)">
+                    <img src="assets/images/jpg/popular_destinations/popular_destinations_five_2000x1332.jpg" alt="View of a beach at the Seychelles" class="Main-cardImage" loading="lazy">
+                </picture>
+                <div class="Main-content">
+                    <h3 class="Main-h3 Main-h3--green">Seychelles</h3>
+                    <h4 class="Main-h4">Mahé Island</h4>
+                    <p class="Main-p Main-p--destinations">Mahé Island, the largest and most populated island in the Seychelles, is a tropical paradise renowned for its stunning beaches, lush mountains, and vibrant Creole culture. Located in the Indian Ocean, Mahé is home to the capital city, Victoria, and offers a diverse array of experiences from its bustling markets and botanical gardens to its serene beaches and nature trails. Visitors can explore the island’s pristine coastline, snorkel in crystal-clear waters, and hike through Morne Seychellois National Park, making Mahé a captivating destination for both relaxation and adventure.</p>
+                </div>
+            </article>
+
+            <!-- DESTINATION 6 -->
+            <article class="Main-destinationRowReverse">
+                <picture class="Main-picture">
+                    <source srcset="assets/images/jpg/popular_destinations/popular_destinations_six_1000x1500.jpg" type="image/jpeg" media="(max-width:1024px)">
+                    <source srcset="assets/images/webp/popular_destinations/popular_destinations_six_1000x1500.webp" type="image/webp" media="(max-width:1024px)">
+                    <source srcset="assets/images/jpg/popular_destinations/popular_destinations_six_1333x2000.jpg" type="image/jpeg" media="(min-width:1600px)">
+                    <source srcset="assets/images/webp/popular_destinations/popular_destinations_six_1333x2000.webp" type="image/webp" media="(min-width:1600px)">
+                    <img src="assets/images/jpg/popular_destinations/popular_destinations_six_1333x2000.jpg" alt="View of a chateau at the Loire Valley" class="Main-cardImage" loading="lazy">
+                </picture>
+                <div class="Main-content">
+                    <h3 class="Main-h3 Main-h3--green">France</h3>
+                    <h4 class="Main-h4">Loire Valley</h4>
+                    <p class="Main-p Main-p--destinations">The Loire Valley, often referred to as the "Garden of France," is a region of stunning natural beauty and historical grandeur. Located in central France, this UNESCO World Heritage site is renowned for its magnificent châteaux, lush vineyards, and charming villages. Visitors can explore the opulent castles like Château de Chambord and Château de Chenonceau, enjoy wine tastings at world-famous vineyards, and stroll through the picturesque gardens and rolling countryside.</p>
+                </div> 
+            </article>
+
         </section>
+    </main>
 
     
     <!-- FOOTER -->
@@ -253,22 +256,25 @@
                 <span class="Footer-emailAddress">info@wanderlustvoyages.com</span>
             </div>
             <div class="Footer-address">
-                <!-- usar etiqueta address? -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" class="Footer-icon">
                     <path d="M14 1.75C11.4482 1.75289 9.0017 2.76788 7.19729 4.57229C5.39288 6.37671 4.37789 8.82318 4.375 11.375C4.375 19.6109 13.125 25.8311 13.498 26.0914C13.6451 26.1945 13.8204 26.2498 14 26.2498C14.1796 26.2498 14.3549 26.1945 14.502 26.0914C14.875 25.8311 23.625 19.6109 23.625 11.375C23.6221 8.82318 22.6071 6.37671 20.8027 4.57229C18.9983 2.76788 16.5518 1.75289 14 1.75ZM14 7.875C14.6922 7.875 15.3689 8.08027 15.9445 8.46486C16.5201 8.84944 16.9687 9.39607 17.2336 10.0356C17.4985 10.6751 17.5678 11.3789 17.4327 12.0578C17.2977 12.7367 16.9644 13.3604 16.4749 13.8499C15.9854 14.3394 15.3617 14.6727 14.6828 14.8077C14.0039 14.9428 13.3001 14.8735 12.6606 14.6086C12.0211 14.3437 11.4744 13.8951 11.0899 13.3195C10.7053 12.7439 10.5 12.0672 10.5 11.375C10.5 10.4467 10.8687 9.5565 11.5251 8.90013C12.1815 8.24375 13.0717 7.875 14 7.875Z" fill="white"/>
                   </svg>
-                <span class="Footer-direction">123 Luxury Lane, Paradise City, NY 10001, USA</span>
+                <address class="Footer-direction">123 Luxury Lane, Paradise City, NY 10001, USA</address>
             </div>
         </div>
         <div class="Footer-subscribe">
             <span class="Footer-spanSubscribe">Subscribe to our newsletter for more updates & news!</span>
+
             <!-- FORMULARIO -->
             <form action="#" method="get" class="Footer-form">
                 <input type="email" name="email" placeholder="Enter your email" required class="Footer-input">
             </form>
-            <!-- falta href enlace -->
-            <a href="#" class="Footer-a Footer-a--button" title="Subscribe">Subscribe</a>
+
+            <!-- Este div tiene apariencia de botón pero no es un botón ni un enlace porque no nos lleva a ninguna parte -->
+            <div class="Footer-a Footer-a--button">Subscribe</div>
+
             <div class="Footer-social">
+
                 <!-- Aqui tenemos enlaces externos así que tienen target="_blank" para que el enlace se abra en otra pestaña
                  y el atributo rel"noreferrer" por razones de seguridad y privacidad -->
                 <a href="https://es-la.facebook.com/" class="Footer-a" target="_blank" rel="noreferrer" title="Follow us on Facebook">

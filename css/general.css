@@ -8,6 +8,215 @@ estilos iguales,
 keyframes,
 animaciones*/
 
+/* BODY */
+
+body{
+    background-color: var(--color-white);
+}
+
+/* TIPOGRAFÍAS */
+/* En cuanto a las tipografías, descargué las que eran necesarias para poder autohospedarlas y mejorar el rendimiento de la página */
+
+ /* antic-didone-regular */
+ @font-face {
+    font-display: swap; 
+    font-family: 'Antic Didone';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/antic_didone/antic-didone-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* montserrat-400 - regular */
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/montserrat/montserrat-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* montserrat-500 - medium */
+  @font-face {
+    font-display: swap; 
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../assets/fonts/montserrat/montserrat-v26-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* montserrat-600 - semi-bold */
+  @font-face {
+    font-display: swap; 
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../assets/fonts/montserrat/montserrat-v26-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* montserrat-700 - bold */
+  @font-face {
+    font-display: swap; 
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/montserrat/montserrat-v26-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+
+/* ROOT */
+
+:root{
+    font-size: 100%;
+
+    /* --- CSS CUSTOM PROPERTIES --- */
+    /* Creé custom properties de CSS dentro del root para hacer el diseño más profesional y versátil. 
+    En caso de que sea necesario realizar cambios a gran escala, esto será muy útil. */
+
+    /* Fonts types */
+    --primary-font: 'Montserrat';
+    --secondary-font: 'Antic Didone';
+
+    /* Font weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Font Sizes */
+    /* Para los tamaños de las tipografías utilicé la función clamp para que la tipografía se pueda adaptar automáticamente 
+    a diferentes tamaños de pantalla dándole a cada font-size un valor máximo, mínimo y preferido. */
+    --font-size-64: clamp(2.25rem, 5vw, 4rem);
+    --font-size-48: clamp(2rem, 3.5vw, 3rem);
+    --font-size-36: clamp(1.5rem, 3vw, 2.25rem);
+    --font-size-32: clamp(1.25rem, 2.5vw, 2rem);
+    --font-size-24: clamp(0.875rem, 2vw, 1.5rem);
+    --font-size-20: clamp(1rem, 1.5vw, 1.25rem);
+    --font-size-16: 16px;
+
+    /* Border radius */
+    --border-radius-big: 2.5rem;
+    --border-radius-small: 1.5625rem;
+
+    /* Colors */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-green: #1B828D;
+    --color-grey: #737373;
+    --color-lightgreen: rgba(1, 158, 169, 0.25);
+    --color-card-background: #FAFAFA;
+
+    /* Padding */
+    --padding-section-desktop: 6.25rem;
+    --padding-section-tablet: 3.4375rem;
+    --padding-section-mobile: 2rem;
+    --padding-section: 10%;
+
+}
+
+/* ESTILOS DE TEXTO QUE SE REPITEN */
+
+    /* ENCABEZADOS */
+
+.Main-h2{
+    font-family: var(--secondary-font);
+    color: var(--color-white);
+    font-size: var(--font-size-64);
+    text-align: center;
+    text-transform: uppercase;
+}
+.Main-h3{
+    font-family: var(--primary-font);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+}
+.Main-h3--green{
+    color: var(--color-green);
+    text-align: center;
+}
+.Main-h3--white{
+    color: var(--color-white);
+    text-align: left;
+}
+.Main-h3--black{
+    width: 100%;
+    color: var(--color-black);
+    text-align: left;
+    font-weight: var(--font-weight-bold);
+}
+.Main-h4{
+    font-family: var(--secondary-font);
+    color: var(--color-black);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--font-size-48);
+}
+.Main-h5{
+    font-family: var(--primary-font);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-green);
+    text-transform: uppercase;
+}
+.Main-h6{
+    font-family: var(--primary-font);
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-black);
+    text-transform: uppercase;
+}
+.Main-h6--white{
+    color: var(--color-white);
+    text-align: left;
+}
+
+    /* PÁRRAFOS */
+
+.Main-p{
+    font-family: var(--primary-font);
+}
+.Main-p--hero{
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+    color: var(--color-white);
+    line-height: 2.5rem;
+}
+.Main-p--section{
+    color: var(--color-black);
+    font-size: var(--font-size-20);
+    text-align: center;
+}
+.Main-p--destinations{
+    font-size: var(--font-size-16);
+    color: var(--color-black);
+}
+.Main-p--packages{
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-grey);
+    text-align: left;
+}
+
+    /* ELEMENTOS CON APARIENCIA DE BOTÓN */
+
+.Main-button{
+    background-color: var(--color-green);
+    color: var(--color-white);
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: var(--border-radius-big);
+    border: solid .0625rem var(--color-white);
+    padding: 1.25rem 1rem;
+    font-family: var(--primary-font);
+    font-size: var(--font-size-16);
+}
+
+.Main-button--form{
+    width: 13.625rem;
+    min-height: 4rem;
+}
+
+.Main-button--section{
+    width: 14.5rem;
+}
+
 
 
 /* HEADER */
@@ -34,7 +243,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     /* Quiero que el Header esté encima de la "imagen hero" y pegada de los bordes de la ventana, así que le di una posición absoluta 
     y z-index de 2. La "imagen hero" tendrá un z-index de 1.  */
     /* A la hora de hacer responsive tuve que cambiar el z-index del Header a 3 porque en pantallas más pequeñas el .Main-wrapper cubria
-    el menu hamburguesa cuando este estaba abierto */
+    el menu hamburguesa (que es parte del header) cuando este estaba abierto */
 }
 .Header-a--home{
     display: flex;
@@ -61,7 +270,6 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 }
 .Header-hamburger{
     color: var(--color-white);
-    /* transition? */
 }
 .Header-ul{
     display: flex;
@@ -84,6 +292,8 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     text-underline-offset: .25rem;
     /* Efecto de hover y active sobre los items del nav */
 }
+
+/* @media HEADER*/
 
 @media(max-width:960px){
     .Header-ul{
@@ -222,7 +432,10 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     font-family: var(--primary-font);
     font-size: var(--font-size-16);
 }
-
+.Footer-direction{
+    font-style: normal;
+    /* Como usé la etiqueta "address", el texto estaba en cursiva y esta declaración es para que parezca normal. */
+}
 .Footer-subscribe{
     width: 100%;
     gap: 2rem;
@@ -248,7 +461,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     font-family: var(--primary-font);
     font-size: var(--font-size-20);
 }
-.Footer-a--button{
+.Footer-button{
     width: 100%;
     padding: 0.625rem 1rem;
     background-color: var(--color-green);
@@ -290,6 +503,8 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     padding: 1rem 0rem;
 }
 
+/* @media FOOTER*/
+
 @media(max-width:1130px){
     .Footer-wanderlust,
     .Footer-contacts,
@@ -297,7 +512,6 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
         width: 15.625rem;
     }
 }
-
 
 @media(max-width:960px){
     .Footer{

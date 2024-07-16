@@ -1,0 +1,186 @@
+/* HERO SECTION */
+
+.Main-sectionHero{
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    /* Etiqueta contenedora tiene posición relative para poder darle a las hijas posición absolute */
+   
+}
+.Main-wrapper{
+    max-width: 65%;
+    /* Para que no se extienda más en pantallas más grandes */
+    gap: 1.5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    z-index: 3;
+    /* Para que el wrapper quede encima de la "imagen hero" */
+}
+.Main-pictureHero{
+    width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+}
+.Main-imgHero{
+    width: 100%;
+    min-height: 100vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Para que esta imagen quede abajo del Header y del Wrapper */
+
+    overflow: hidden;
+    object-fit: cover;
+}
+.Main-overlay{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    z-index: 2;
+}
+
+
+/* @media HERO SECTION*/
+
+@media(max-width:480px){
+.Main-h2{
+    font-size: var(--font-size-48);
+}
+.Main-p--hero{
+    font-size: var(--font-size-20);
+    line-height: 1.5rem;
+}
+}
+
+/* PACKAGES SECTION */
+
+.Main-sectionPackages{
+    width: 100%;
+    background-color: var(--color-lightgreen);
+    padding: var(--padding-section);
+    gap: 4rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main-sectionWrapper{
+    width: 80%;
+    gap: 2.5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main-packageRow{
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-big);
+    padding: 2rem;
+    gap: 2.5rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.Main-packageRowReverse{
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-big);
+    padding: 2rem;
+    gap: 2.5rem;
+
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.Main-content{
+    width: 50%;
+    gap: 1.25rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Main-picture{
+    width: 50%;
+    height: 21.875rem;
+    border-radius: var(--border-radius-big);
+
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.Main-cardImage{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.Main-spanPrice{
+    font-family: var(--primary-font);
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-green);
+    text-align: center;
+}
+
+.Main-button--bookNow{
+    width: 100%;
+}
+
+@media(max-width:768px){
+    .Main-packageRow,
+    .Main-packageRowReverse{
+        flex-direction: column;
+    }
+    .Main-picture,
+    .Main-content{
+        width: 100%;
+    }
+}
+
+@media(max-width:480px){
+    .Main-sectionPackages{
+        padding: var(--padding-section) var(--padding-section-mobile);
+    }
+}
+
+
+

@@ -1,224 +1,171 @@
-/* HERO SECTION */
 
-.Main-sectionHero{
-    width: 100%;
-    min-height: 100vh;
-    background-image: url(../assets/images/webp/destinations/destinations_hero_2000x1500.webp);
+    /* HERO SECTION */
 
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-    /* Etiqueta contenedora tiene posición relative para poder darle a las hijas posición absolute */
-   
-}
-.Main-wrapper{
-    max-width: 65%;
-    /* Para que no se extienda más en pantallas más grandes */
-    gap: 1.5rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-
-    /* position: absolute;
-    z-index: 2; */
-    /* Para que el wrapper quede encima de la "imagen hero" */
-}
-.Main-h2{
-    font-family: var(--secondary-font);
-    color: var(--color-white);
-    font-size: var(--font-size-64);
-    text-align: center;
-    text-transform: uppercase;
-}
-.Main-p{
-    font-family: var(--primary-font);
-}
-.Main-p--hero{
-    font-size: var(--font-size-24);
-    font-weight: var(--font-weight-medium);
-    text-align: center;
-    color: var(--color-white);
-    line-height: 2.5rem;
-}
-
-/* TABS DESTINATIONS */
-
-.Main-sectionTabs{
-    background-color: lightblue;
-    width: 100%;
-    padding: 6.25rem var(--padding-section);
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-.Main-tabsContainer{
-    width: 100%;
-}
-.Main-ul{
-    background-color: lightcoral;
-    width: 100%;
-    gap: 1.25rem;
-
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-}
-.Main-li{
-    background-color: lightgoldenrodyellow;
-    width: 30%;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-.Main-button{
-    background-color: lightgray;
-    width: 150px;
-    min-height: 75px;
+    .Main-sectionHero{
+        width: 100%;
+        min-height: 100vh;
     
-    transition: text-decoration 0.5s ease;
-
-}
-.Main-button.isClicked{
-    text-decoration: underline;
-    text-underline-offset: .25rem;
-}
-
-.Main-contentContainer{
-    background-color: lightpink;
-    width: 100%;
-    position: relative;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-content: center;
-}
-.Main-content{
-    background-color: lightsalmon;
-    padding: 1rem;
-    gap: 1.25rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    opacity: 1;
-
-    transition: opacity 0.5s ease;
-
-}
-.Main-content.isVisible{
-    opacity: 1;
-}
-
-.Main-cardDestination{
-    width: 100%;
-    gap: 1rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-start;
-}
-.Main-picture{
-    width: 20%;
-    min-height: 25rem;
-    object-fit: cover;
-    overflow: hidden;
-}
-.Main-h5,
-.Main-h6,
-.Main-p--destinations{
-    width: 100%;
-}
-
-
-
-
-
-@media(max-width:960px){
-    .Header-ul{
-        gap: 1.5rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    
+        position: relative;
+        /* Etiqueta contenedora tiene posición relative para poder darle a las hijas posición absolute */
+       
     }
+    .Main-wrapper{
+        max-width: 65%;
+        /* Para que no se extienda más en pantallas más grandes */
+        gap: 1.5rem;
     
-    .Footer{
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        align-items: flex-start;
-
-        gap: 3.125rem;
+        align-items: center;
+    
+        position: absolute;
+        z-index: 2;
+        /* Para que el wrapper quede encima de la "imagen hero" */
     }
-    .Footer-wanderlust,
-    .Footer-contacts,
-    .Footer-subscribe{
+    .Main-pictureHero{
         width: 100%;
-        gap: 1rem;
+        min-height: 100vh;
+    
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
     }
-  
+    .Main-imgHero{
+        width: 100%;
+        min-height: 100vh;
+    
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        /* Para que esta imagen quede abajo del Header y del Wrapper */
+    
+        overflow: hidden;
+        object-fit: cover;
+    }
+    
+
+/* @media HERO SECTION*/
+
+@media(max-width:480px){
+    .Main-h2{
+        font-size: var(--font-size-48);
+    }
+    .Main-p--hero{
+        font-size: var(--font-size-20);
+        line-height: 1.5rem;
+    }
+}
+
+
+
+
+/* DESTINATIONS SECTION */
+
+.Main-sectionDestinations{
+    width: 100%;
+    background-color: var(--color-lightgreen);
+    padding: var(--padding-section);
+    gap: 4rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main-sectionWrapper{
+    width: 80%;
+    gap: 2.5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main-destinationRow{
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-big);
+    padding: 2rem;
+    gap: 2.5rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.Main-destinationRowReverse{
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-big);
+    padding: 2rem;
+    gap: 2.5rem;
+
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.Main-content{
+    width: 50%;
+    gap: .625rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Main-picture{
+    width: 50%;
+    height: 21.875rem;
+    border-radius: var(--border-radius-big);
+
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.Main-cardImage{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 @media(max-width:768px){
-    .Header{
-        flex-wrap: wrap;
-    }
-    .Header-svg{
-        width: 1.5rem;
-        min-height: 1.5rem;
-    }
-    .Header-button{
-        display: block;
-    }
-    .Header-nav{
-        background-color: var(--color-green);
-        width: 100%;
-
-        position: absolute;
-        top: 6.25rem;
-        left: 0;
-
-        transform: translateY(-100%);
-        transition: transform 1s ease, opacity 1s ease;
-
-        opacity: 0;
-        pointer-events: none;
-    }
-    .Header-nav.isVisible{
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0%);
-    }
-    .Header-ul{
+    .Main-destinationRow,
+    .Main-destinationRowReverse{
         flex-direction: column;
-        margin: 1.25rem 0rem;
     }
-
+    .Main-picture,
+    .Main-content{
+        width: 100%;
+    }
 }
-
 
 @media(max-width:480px){
-    .Header-svg{
-        width: 1rem;
-        min-height: 1rem;
+    .Main-sectionDestinations{
+        padding: var(--padding-section) var(--padding-section-mobile);
     }
-
-    .Footer{
-        flex-direction: column;
-    }
-
 }
+
+
+
+

@@ -3,23 +3,43 @@
 // por lo que puedo agrupar cada "módulo" por separado y javascript solo ejecutará el código si ese "modulo" existe. 
 // Esto hará que la página sea más eficiente.
 
+
+
 // MENU HAMBURGUESA RESPONSIVE
 
     // Cuando hago CLICK en .Header-button
-        // Al .Header-nav le hace un TOGGLE de la clase isVisible
-
+        // Al .Header-nav le TOGGLE la clase isVisible
+        
         (() => {
-
-        const headerButton = document.querySelector('.Header-button')
-        const headerNav = document.querySelector('.Header-nav')
-
-        headerButton.addEventListener('click' , () => {
-            headerNav.classList.toggle('isVisible')
-        })
-
-        })();
         
+            const header = document.querySelector('.Header')
+            const headerButton = header.querySelector('.Header-button')
+            const headerNav = header.querySelector('.Header-nav')
+
+            let menuToggleHandler = () => {
+                headerNav.classList.toggle('isVisible')
+            }
+    
+            headerButton.addEventListener('click' , menuToggleHandler); 
+    
+            })();
+
+    
+    // ANTES DE LA OPTIMIZACIÓN
+        // (() => {
         
+        // const headerButton = document.querySelector('.Header-button')
+        // const headerNav = document.querySelector('.Header-nav')
+
+        // headerButton.addEventListener('click' , () => {
+        //     headerNav.classList.toggle('isVisible')
+        // })
+
+        // })();
+
+
+
+
 
 // CAROUSEL POPULAR DESTINATIONS
 
@@ -29,10 +49,12 @@
         // REMOVE la clase .isClicked a todos los puntos
         // ADD la clase .isClicked al punto que esta "clicado"
 
+
         (() => {
 
-            const carouselDot = document.querySelectorAll('.Main-carouselDot')
-            const carouselContainer = document.querySelector('.Main-carouselContainer')
+            const carouselMain = document.querySelector('.Main-carousel')
+            const carouselDot = carouselMain.querySelectorAll('.Main-carouselDot')
+            const carouselContainer =carouselMain.querySelector('.Main-carouselContainer')
             
             if(carouselDot){
             
@@ -66,13 +88,13 @@
                 
                     })
                 })
-            
-            
             }
-            
             })();
 
-    
+            // Nota: en este "módulo" la unica optimización que hice fue crear una constante para la contenedora y luego seleccionar 
+            // los elementos dentro de la contenedora. Como este código es más complejo preferí no cambiarlo y dejarlo así.
+
+
 // CLIENT REVIEWS CAROUSEL
 
     // Cuando hago click en .Main-carouselReviewsDot (cada punto)
@@ -81,31 +103,57 @@
         // REMOVE la clase .isClicked a todos los puntos
         // ADD la clase .isClicked al punto que esta "clicado"
 
+
         (() => {
-
-        const carouselReviewsDot = document.querySelectorAll('.Main-carouselReviewsDot')
-        const carouselReviewsContainer = document.querySelector('.Main-carouselReviewsContainer')
+            const carouselReviewsMain = document.querySelector('.Main-carouselReviews');
+            const carouselReviewsDots = carouselReviewsMain.querySelectorAll('.Main-carouselReviewsDot');
+            const carouselReviewsContainer = carouselReviewsMain.querySelector('.Main-carouselReviewsContainer');
         
-        if(carouselReviewsContainer){
-
-            carouselReviewsDot.forEach(( _ , index) =>{
-                carouselReviewsDot[index].addEventListener('click' , ()=>{
-            
-                    let counter = index
-                    let operation = counter * ( -100 / 3 )
-            
-                    carouselReviewsContainer.style.transform = `translateX(${operation}%)`
-            
-                    carouselReviewsDot.forEach(( _ , index ) =>{
-                        carouselReviewsDot[index].classList.remove('isClicked')
-                    })
-            
-                    carouselReviewsDot[index].classList.add('isClicked')
-            
-                })
-            })
-        }
+            let dotClickHandler = (index) => {
+                let operation = index * (-100 / 3);
+                carouselReviewsContainer.style.transform = `translateX(${operation}%)`;
+        
+                carouselReviewsDots.forEach((dot) => dot.classList.remove('isClicked'));
+                carouselReviewsDots[index].classList.add('isClicked');
+            };
+        
+            if (carouselReviewsContainer) {
+                carouselReviewsDots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => dotClickHandler(index));
+                });
+            }
         })();
+
+
+    // ANTES DE LA OPTIMIZACIÓN
+        // (() => {
+
+        // const carouselReviewsMain = document.querySelector('.Main-carouselReviews')    
+        // const carouselReviewsDot = carouselReviewsMain.querySelectorAll('.Main-carouselReviewsDot')
+        // const carouselReviewsContainer = carouselReviewsMain.querySelector('.Main-carouselReviewsContainer')
+            
+        // if(carouselReviewsContainer){
+
+        //     carouselReviewsDot.forEach(( _ , index) =>{
+        //         carouselReviewsDot[index].addEventListener('click' , ()=>{
+                
+        //             let counter = index
+        //             let operation = counter * ( -100 / 3 )
+                
+        //             carouselReviewsContainer.style.transform = `translateX(${operation}%)`
+                
+        //             carouselReviewsDot.forEach(( _ , index ) =>{
+        //                 carouselReviewsDot[index].classList.remove('isClicked')
+        //             })
+                
+        //             carouselReviewsDot[index].classList.add('isClicked')
+                
+        //         })
+        //     })
+        // }
+        // })();
+
+        
 
 
 // ACORDEON PREGUNTAS PRECUENTES
@@ -118,27 +166,86 @@
 
 
         (() => {
-
-            const block = document.querySelectorAll('.Main-accordionBlock')
-            const answer = document.querySelectorAll('.Main-p--accordion')
-            const icon = document.querySelectorAll('.Main-accordionIcon')
+            const accordionContainer = document.querySelector('.Main-accordionContainer')
+            const blocks = accordionContainer.querySelectorAll('.Main-accordionBlock');
+            const answers = accordionContainer.querySelectorAll('.Main-p--accordion');
+            const icons = accordionContainer.querySelectorAll('.Main-accordionIcon');
         
-            block.forEach(( _ , index ) =>{
-                block[index].addEventListener('click' , () => {
-            
-                    if(answer[index].classList.contains('isVisible')){
-                        answer[index].classList.remove('isVisible')
-                    }else{
-                        answer.forEach(( _ , index ) => {
-                            answer[index].classList.remove('isVisible')
-                        })
-                        answer[index].classList.add('isVisible')
-                    }
-                    
-                    icon[index].classList.toggle('isClicked')
-                })
-            })
+            let blockClickHandler = (index) => {
+                if (answers[index].classList.contains('isVisible')) {
+                    answers[index].classList.remove('isVisible');
+                } else {
+                    answers.forEach((answer) => answer.classList.remove('isVisible'));
+                    answers[index].classList.add('isVisible');
+                }
+                icons[index].classList.toggle('isClicked');
+            };
+        
+            blocks.forEach((block, index) => {
+                block.addEventListener('click', () => blockClickHandler(index));
+            });
         })();
+        
+
+
+    // ANTES DE LA OPTIMIZACIÓN
+        // (() => {
+
+        //     const block = document.querySelectorAll('.Main-accordionBlock')
+        //     const answer = document.querySelectorAll('.Main-p--accordion')
+        //     const icon = document.querySelectorAll('.Main-accordionIcon')
+        
+        //     block.forEach(( _ , index ) =>{
+        //         block[index].addEventListener('click' , () => {
+            
+        //             if(answer[index].classList.contains('isVisible')){
+        //                 answer[index].classList.remove('isVisible')
+        //             }else{
+        //                 answer.forEach(( _ , index ) => {
+        //                     answer[index].classList.remove('isVisible')
+        //                 })
+        //                 answer[index].classList.add('isVisible')
+        //             }
+                    
+        //             icon[index].classList.toggle('isClicked')
+        //         })
+        //     })
+        // })();
+
+
+// TABS DESTINATIONS
+
+    // Cuando hago CLICK en .Main-button
+    // REMOVE todas las clases .isVisible de .Main-content
+    // REMOVE todas las clases .isClicked de .Main-button
+    // ADD la clase isClicked en .Main-button [index]
+    // ADD la clase isVisible en .Main-content [index]
+
+    // (() => {
+
+    // const buttons = document.querySelectorAll('.Main-button');
+    // const content = document.querySelectorAll('.Main-content');
+
+    // buttons.forEach((_ , index) =>{
+    //     buttons[index].addEventListener('click' , () => {
+    
+    //         content.forEach((_ , index) =>{
+    //             content[index].classList.remove('isVisible')
+    //         })
+    
+    //         buttons.forEach((_ , index) =>{
+    //             buttons[index].classList.remove('isClicked')
+    //         })
+    
+    //         buttons[index].classList.add('isClicked')
+    //         content[index].classList.add('isVisible')
+    
+    //     })    
+    // })
+
+    // })();
+
+    
             
     
 
