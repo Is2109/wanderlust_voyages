@@ -1,18 +1,28 @@
-/* header + footer */
-/* todo lo que es igual en todas las paginas
+/* En esta hoja de estilos tenemos todos los estilos que se repiten a lo largo de todas las páginas del proyecto */
 
-las variables del root,
-botones que siempre son iguales,
-custom properties,
-estilos iguales,
-keyframes,
-animaciones*/
+/* Estructura de general.css:
+    - Propiedades del BODY
+    - TIPOGRAFÍAS
+    - VARIABLES DEL ROOT - CSS CUSTOM PROPERTIES
+    - ESTILOS DE TEXTO QUE SE REPITEN - ENCABEZADOS, PÁRRAFOS
+    - ESTILOS DEL HEADER
+    - ESTILOS DEL FOOTER */
+
+
+/* -------------------------------------- */
+
+
 
 /* BODY */
 
 body{
     background-color: var(--color-white);
 }
+
+
+/* -------------------------------------- */
+
+
 
 /* TIPOGRAFÍAS */
 /* En cuanto a las tipografías, descargué las que eran necesarias para poder autohospedarlas y mejorar el rendimiento de la página */
@@ -57,6 +67,11 @@ body{
     font-weight: 700;
     src: url('../assets/fonts/montserrat/montserrat-v26-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+
+
+
+/* -------------------------------------- */
+
 
 
 /* ROOT */
@@ -109,7 +124,13 @@ body{
 
 }
 
-/* ESTILOS DE TEXTO QUE SE REPITEN */
+
+
+/* -------------------------------------- */
+
+
+
+/* ESTILOS DE TEXTO QUE SE REPITEN EN TODAS LAS PÁGINAS DEL PROYECTO*/
 
     /* ENCABEZADOS */
 
@@ -220,6 +241,9 @@ body{
 }
 
 
+/* -------------------------------------- */
+
+
 
 /* HEADER */
 
@@ -231,22 +255,27 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     background-color: transparent;
     padding: 1.875rem var(--padding-section);
 }
+
 .Header{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
 }
+
 .Header{
     position: absolute;
     top: 0;
     left: 0;
     z-index: 4;
     /* Quiero que el Header esté encima de la "imagen hero" y pegada de los bordes de la ventana, así que le di una posición absoluta 
-    y z-index de 2. La "imagen hero" tendrá un z-index de 1.  */
+    y z-index de 4. La "imagen hero" tendrá un z-index de 1.  */
     /* A la hora de hacer responsive tuve que cambiar el z-index del Header a 3 porque en pantallas más pequeñas el .Main-wrapper cubria
     el menu hamburguesa (que es parte del header) cuando este estaba abierto */
+    /* Más tarde cambié el z-index a 4 porque en las páginas de packages.html y about.html, en la hero section, añadi un div que queda por
+    encima de la "imagen hero" que funciona como un "overlay" para que la imagen se vea más oscura y este div tiene z-index de 3 */
 }
+
 .Header-a--home{
     display: flex;
     flex-flow: row nowrap;
@@ -255,24 +284,29 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
     gap: .5rem;
 }
+
 .Header-svg{
     width: 2.5rem;
     min-height: 2.5rem;
 }
+
 .Header-h1{
     font-family: var(--secondary-font);
     font-size: var(--font-size-24);
     color: var(--color-white);
 }
+
 .Header-button{
     width: 1.25rem;
     min-height: 1.25rem;
 
     display: none;
 }
+
 .Header-hamburger{
     color: var(--color-white);
 }
+
 .Header-ul{
     display: flex;
     flex-flow: row nowrap;
@@ -281,6 +315,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     
     gap: 3rem;
 }
+
 .Header-li{
     font-family: var(--primary-font);
     font-size: var(--font-size-20);
@@ -288,11 +323,12 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     color: var(--color-white);
     text-transform: uppercase;
 }
+
+/* Efecto de hover y active sobre los items del nav */
 .Header-li:hover,
 .Header-li:active{
     text-decoration: underline;
     text-underline-offset: .25rem;
-    /* Efecto de hover y active sobre los items del nav */
 }
 
 /* @media HEADER*/
@@ -347,6 +383,12 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 }
 
 
+
+/* -------------------------------------- */
+
+
+
+
 /* FOOTER */
 
 .Footer{
@@ -358,8 +400,8 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 2rem;
-    
 }
+
 .Footer-wanderlust{
     width: 100%;
     gap: 2.5rem;
@@ -369,6 +411,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: flex-start;
     align-items: flex-start;
 }
+
 .Footer-logo{
     display: flex;
     flex-flow: row nowrap;
@@ -377,15 +420,18 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
     gap: .5rem;
 }
+
 .Footer-h2{
     font-family: var(--secondary-font);
     color: var(--color-white);
     font-size: var(--font-size-32);
 }
+
 .Footer-p{
     font-family: var(--primary-font);
     font-size: var(--font-size-16);
 }
+
 .Footer-h4{
     font-family: var(--primary-font);
     font-size: var(--font-size-20);
@@ -393,15 +439,18 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     text-transform: uppercase;
     color: var(--color-white);
 }
+
 .Footer-span{
     font-family: var(--primary-font);
     font-size: var(--font-size-20);
     color: var(--color-white);
 }
+
 .Footer-icon{
     width: 1.5rem;
     height: 1.5rem;
 }
+
 .Footer-world{
     width: 2.5rem;
     height: 2.5rem;
@@ -416,6 +465,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: flex-start;
     align-items: flex-start;
 }
+
 .Footer-phone,
 .Footer-email,
 .Footer-address{
@@ -427,6 +477,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: flex-start;
     align-items: center;
 }
+
 .Footer-phoneNumber,
 .Footer-emailAddress,
 .Footer-direction{
@@ -434,10 +485,12 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     font-family: var(--primary-font);
     font-size: var(--font-size-16);
 }
+
 .Footer-direction{
-    font-style: normal;
     /* Como usé la etiqueta "address", el texto estaba en cursiva y esta declaración es para que parezca normal. */
+    font-style: normal;
 }
+
 .Footer-subscribe{
     width: 100%;
     gap: 2rem;
@@ -447,13 +500,16 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: flex-start;
     align-items: flex-start;
 }
+
 .Footer-spanSubscribe{
     font-family: var(--primary-font);
     font-size: var(--font-size-16);
 }
+
 .Footer-form{
     width: 100%;
 }
+
 .Footer-input{
     width: 100%;
     background-color: var(--color-white);
@@ -463,6 +519,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     font-family: var(--primary-font);
     font-size: var(--font-size-20);
 }
+
 .Footer-button{
     width: 100%;
     padding: 0.625rem 1rem;
@@ -477,6 +534,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     font-size: var(--font-size-20);
     font-weight: var(--font-weight-medium);
 }
+
 .Footer-social{
     width: 100%;
     gap: 1.5rem;
@@ -486,6 +544,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: flex-start;
     align-items: center;
 }
+
 .Footer-svg{
     width: 2rem;
     height: 2rem;
@@ -493,9 +552,11 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
     transition: transform 0.5s ease;
 }
+
 .Footer-svg:hover{
     transform: scale(1.2);
 }
+
 .Copyright{
     font-family: var(--primary-font);
     font-size: var(--font-size-16);

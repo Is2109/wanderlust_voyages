@@ -10,9 +10,11 @@
 /* Los @media están situados despues de cada sección */
 
 
-/* Los estilos que se reutilizan en todas las páginas se encuentran en la hoja de estilos general.css. Esto sucede con los títulos, párrafos, 
-elementos con la apariencia de boton y hero section.  */
+/* Los estilos que se reutilizan en todas las páginas se encuentran en la hoja de estilos general.css. Esto sucede con los títulos, párrafos y 
+elementos con la apariencia de boton.  */
+/* Estilos del HEADER Y FOOTER tambien están en general.css */
 
+/* -------------------------------------- */
 
 /* HERO SECTION */
 
@@ -25,12 +27,13 @@ elementos con la apariencia de boton y hero section.  */
     justify-content: center;
     align-items: center;
     
-    position: relative;
     /* Etiqueta contenedora tiene posición relative para poder darle a las hijas posición absolute */
+    position: relative;
 }
+
 .Main-wrapper{
-    max-width: 65%;
     /* Para que no se extienda más en pantallas más grandes */
+    max-width: 65%;
     gap: 1.5rem;
     
     display: flex;
@@ -39,9 +42,11 @@ elementos con la apariencia de boton y hero section.  */
     align-items: center;
     
     position: absolute;
-    z-index: 2;
     /* Para que el wrapper quede encima de la "imagen hero" */
+    z-index: 2;
+    
 }
+
 .Main-pictureHero{
     width: 100%;
     min-height: 85vh;
@@ -50,6 +55,7 @@ elementos con la apariencia de boton y hero section.  */
     overflow: hidden;
     object-fit: cover;
 }
+
 .Main-imgHero{
     width: 100%;
     min-height: 85vh;
@@ -57,8 +63,8 @@ elementos con la apariencia de boton y hero section.  */
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
     /* Para que esta imagen quede abajo del Header y del Wrapper */
+    z-index: 1;
     
     overflow: hidden;
     object-fit: cover;
@@ -76,8 +82,7 @@ elementos con la apariencia de boton y hero section.  */
     }
 }
     
-
-
+/* -------------------------------------- */
 
 
 /* FORMULARIO */
@@ -96,6 +101,7 @@ elementos con la apariencia de boton y hero section.  */
     font-family: var(--primary-font);
     font-size: var(--font-size-16);
 }
+
 .Main-destination,
 .Main-pax,
 .Main-checkin,
@@ -107,6 +113,7 @@ elementos con la apariencia de boton y hero section.  */
 
     gap: 1rem;
 }
+
 .Main-select,
 .Main-input,
 label{
@@ -115,6 +122,7 @@ label{
     padding-left: 1rem;
     
 }
+
 .Main-select,
 .Main-input{
     color: var(--color-grey);
@@ -123,14 +131,17 @@ label{
 
     padding: 1.25rem 1rem;
 }
+
 .Main-select{
     appearance: none;
     /* Para que no se vea la "flechita" del campo select porque se veía muy pegada del borde */
 }
+
 .Main-select,
 .Main-input{
     width: 13.625rem;
-    min-height: 4rem;
+    /* Aquí es una altura fija porque los campos de formulario no se veían bien en Safari y esta fué la solución */
+    height: 4rem;
 }
 
 
@@ -141,7 +152,6 @@ label{
     .Main-input,
     .Main-button--form{
         width: 11.25rem;
-        min-height: 4rem;
     }
 }
 
@@ -150,7 +160,6 @@ label{
     .Main-input,
     .Main-button--form{
         width: 10rem;
-        min-height: 4rem;
     }
 }
 
@@ -174,11 +183,6 @@ label{
         width: 100%;
         grid-column: span 2;
     }
-    .Main-select,
-    .Main-input,
-    .Main-button--form{
-        min-height: 1.5rem;
-    }
 }
 
 @media(max-width:480px){
@@ -189,14 +193,13 @@ label{
     .Main-select,
     .Main-input,
     .Main-button--form{
-        min-height: 2rem;
-        padding: 1rem 1rem;
         /* Para que los campos de input se vean un poco más pequeños */
+        padding: 1rem 1rem;
     }
 }
 
 
-
+/* -------------------------------------- */
 
 
 
@@ -211,10 +214,12 @@ label{
     justify-content: center;
     align-items: center;
 }
+
 .Main-section--white{
     background-color: var(--color-white);
     gap: 2.5rem;
 }
+
 .Main-sectionWrapper{
     width: 70%;
     gap: 2.5rem;
@@ -227,17 +232,15 @@ label{
 
 
 
-
-
-
 /* POPULAR DESTINATIONS CAROUSEL */
 
 .Main-carousel{
     width: 100%;
 
-    overflow: hidden;
     /* Para que no se vean las cards que están "fuera" del carousel  */
+    overflow: hidden;
 }
+
 .Main-carouselContainer{
     width: 200%;
     margin-bottom: 2.5rem;
@@ -249,6 +252,7 @@ label{
 
     transition: transform 1s ease;
 }
+
 .Main-carouselFrame{
     width: 100%;
     gap: 2rem;
@@ -258,6 +262,7 @@ label{
     justify-content: space-between;
     align-items: center;
 }
+
 .Main-carouselDots,
 .Main-carouselReviewsDots{
     display: flex;
@@ -274,17 +279,16 @@ label{
     border-radius: 50%;
     background-color: var(--color-grey);
 }
+
 .Main-carouselDot--tablet,
 .Main-carouselDot--mobile{
     display: none;
 }
+
 .Main-carouselDot.isClicked,
 .Main-carouselReviewsDot.isClicked{
     background-color: var(--color-green);
 }
-
-
-
 
 
 
@@ -319,12 +323,14 @@ así que en lugar de "min-height" añadi "height" a la etiqueta Main-picture y t
     overflow: hidden;
     z-index: 1;
 }
+
 .Main-cardImage{
     width: 100%;
     height: 100%;
 
     object-fit: cover;
 }
+
 /* Aquí tuve que dividir las propiedades de .Main-cardContent en varios fragmentos porque el validador CSS decía 
 que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 .Main-cardContent{
@@ -338,16 +344,18 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: center;
     align-items: flex-start;
 }
+
 .Main-cardContent{
     background-color: var(--color-white);
     border-radius: var(--border-radius-big);
 }
+
 .Main-cardContent{
     position: absolute;
     bottom: 1rem;
-    /* left: 1.5rem; */
     z-index: 2; 
 }
+
 /* Aquí tuve que dividir las propiedades de .Main-starRating en dos fragmentos porque el validador CSS decía 
 que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 .Main-starRating{
@@ -361,14 +369,15 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: center;
     align-items: center;
 }
+
 .Main-starRating{
     position: absolute;
-    top: calc(-23px/2);
     /* Quiero que la etiqueta .Main-starRating se coloque visualmente encima del borde superior de .Main-cardContent (su contenedora) 
     y que su height esté centrado con este borde. Es decir, para que la etiqueta .Main-starRating se pegue del borde superior de su 
     contenedora le daría un top = 0. Pero quiero que se "salga" un poco de su contenedora hacia arriba con una distancia equivalente 
     a mitad de su height. El height de .Main-starRating es de 23px. Así qué le tendré que dar un top con valor negativo y la distancia 
     que se tiene que "deslocar" es la mitad de 23px.*/
+    top: calc(-23px/2);
     right: 3.125rem;
     z-index: 3;
 }
@@ -429,6 +438,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
 
 
+/* -------------------------------------- */
 
 
 
@@ -438,6 +448,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     background-color: var(--color-lightgreen);
     gap: 2.5rem;
 }
+
 .Main-cardWrapper{
     width: 100%;
     gap: 5rem;
@@ -447,6 +458,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: center;
     align-items: center;
 }
+
 .Main-cardPackage{
     width: 100%;
     min-height: 20rem;
@@ -462,9 +474,11 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
     transition: transform 0.5s ease;
 }
+
 .Main-cardPackage:hover{
     transform: scale(1.05);
 }
+
 .Main-picturePackage{
     width: calc(100% / 3);
     /* Aquí tuve el mismo problema que con las imágenes de las "popular destination cards". 
@@ -477,6 +491,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     overflow: hidden;
     object-fit: cover;
 }
+
 .Main-cardInfo{
     width: calc(100% / 3);
     min-height: 20rem;
@@ -487,6 +502,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: center;
     align-items: center;
 }
+
 .Main-cardInfoWrapper{
     width: 90%;
     gap: 1.5rem;
@@ -510,6 +526,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: center;
     align-items: center;
 }
+
 .Main-cardNights,
 .Main-cardCountry{
     gap: .5rem;
@@ -519,22 +536,26 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: flex-start;
     align-items: center;
 }
+
 .Main-cardSpan{
     font-family: var(--primary-font);
     font-size: var(--font-size-16);
     font-weight: var(--font-weight-medium);
     color: var(--color-grey);
 }
+
 .Main-cardLine{
     width: 1px;
     min-height: 1rem;
     background-color: var(--color-grey);
 }
+
 .Main-cardClock,
 .Main-cardMap{
     width: 1.5rem;
     height: 1.5rem;
 }
+
 .Main-cardDetails{
     width: calc(100% / 3);
     min-height: 20rem;
@@ -548,6 +569,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: center;
     align-items: center;
 }
+
 .Main-cardRating{
     display: flex;
     flex-flow: row nowrap;
@@ -556,11 +578,13 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
     gap: .5rem;
 }
+
 .Main-cardReviews{
     font-family: var(--primary-font);
     font-size: var(--font-size-16);
     color: var(--color-white);
 }
+
 .Main-cardStars{
     display: flex;
     flex-flow: row nowrap;
@@ -569,6 +593,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
     gap: .25rem;
 }
+
 .Main-cardPriceInfo{
     display: flex;
     flex-flow: column nowrap;
@@ -577,6 +602,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
     gap: .5rem;
 }
+
 .Main-cardPrice{
     font-family: var(--primary-font);
     font-size: var(--font-size-36);
@@ -584,6 +610,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     color: var(--color-white);
     text-align: center;
 }
+
 .Main-cardPerPerson{
     font-family: var(--primary-font);
     font-size: var(--font-size-16);
@@ -635,6 +662,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
 
 
+/* -------------------------------------- */
 
 
 
@@ -645,6 +673,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
     overflow: hidden;
 }
+
 .Main-carouselReviewsContainer{
     width: 300%;
     margin-bottom: 2.5rem;
@@ -656,6 +685,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
     transition: transform 1s ease;
 }
+
 .Main-carouselReview{
     width: 100%;
     gap: 2.5rem;
@@ -665,15 +695,17 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: center;
     align-items: center;
 }
+
 .Main-carouselReviewImg{
     width: 6.25rem;
     min-height: 6.25rem;
-    border-radius: 50%;
     /* Para que la foto sea un círculo */
+    border-radius: 50%;
 
     object-fit: cover;
     overflow: hidden;
 }
+
 .Main-reviewSpan{
     font-family: var(--primary-font);
     font-size: var(--font-size-16);
@@ -684,6 +716,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
 
 
+/* -------------------------------------- */
 
 
 
@@ -698,6 +731,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: space-between;
     align-items: center;
 }
+
 .Main-callToActionWrapper{
     width: 100%;
 
@@ -708,6 +742,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
     gap: 2.5rem;
 }
+
 .Main-p--white{
     color: var(--color-white);
     text-align: left;
@@ -724,6 +759,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 
 
 
+/* -------------------------------------- */
 
 
 
@@ -738,6 +774,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: center;
     align-items: flex-start;
 }
+
 .Main-accordionBlock{
     width: 100%;
     background-color: var(--color-lightgreen);
@@ -749,6 +786,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     justify-content: center;
     align-items: flex-start;
 }
+
 .Main-accordionQuestion{
     width: 100%;
     gap: 1rem;
@@ -768,6 +806,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 .Main-accordionIcon.isClicked{
     transform: rotate(180deg);
 }
+
 .Main-p--accordion{
     width: 90%;
     text-align: left;
@@ -780,6 +819,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
                 height 1s ease;
     overflow: hidden;
 }
+
 .Main-p--accordion.isVisible{
     height: 4.5rem;
     opacity: 1;

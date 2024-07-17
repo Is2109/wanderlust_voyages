@@ -1,3 +1,24 @@
+/* NOTAS */
+
+/* @ media */
+/* Los principales breakpoints son
+        - Pantallas grandes: 1600px
+        - Desktop: 1024px
+        - Tablet: 768px
+        - Mobile: 480px */
+/* Además de los principales, tuve que crear breakpoints adicionales para arreglar ciertos elementos en ciertos tamaños que lo necesitaban. */
+/* Los @media están situados despues de cada sección */
+
+
+/* Los estilos que se reutilizan en todas las páginas se encuentran en la hoja de estilos general.css. Esto sucede con los títulos, párrafos y 
+elementos con la apariencia de boton.  */
+/* Estilos del HEADER Y FOOTER tambien están en general.css */
+
+
+/* -------------------------------------- */
+
+
+
 /* HERO SECTION */
 
 .Main-sectionHero{
@@ -9,13 +30,13 @@
     justify-content: center;
     align-items: center;
 
-    position: relative;
     /* Etiqueta contenedora tiene posición relative para poder darle a las hijas posición absolute */
-   
+    position: relative;
 }
+
 .Main-wrapper{
+     /* Para que no se extienda más en pantallas más grandes */
     max-width: 65%;
-    /* Para que no se extienda más en pantallas más grandes */
     gap: 1.5rem;
 
     display: flex;
@@ -24,9 +45,10 @@
     align-items: center;
 
     position: absolute;
-    z-index: 3;
     /* Para que el wrapper quede encima de la "imagen hero" */
+    z-index: 3;
 }
+
 .Main-pictureHero{
     width: 100%;
     min-height: 100vh;
@@ -35,6 +57,7 @@
     overflow: hidden;
     object-fit: cover;
 }
+
 .Main-imgHero{
     width: 100%;
     min-height: 100vh;
@@ -42,12 +65,13 @@
     position: absolute;
     top: 0;
     left: 0;
+     /* Para que esta imagen quede abajo del Header y del Wrapper */
     z-index: 1;
-    /* Para que esta imagen quede abajo del Header y del Wrapper */
 
     overflow: hidden;
     object-fit: cover;
 }
+
 .Main-overlay{
     width: 100%;
     min-height: 100vh;
@@ -69,6 +93,10 @@
     line-height: 1.5rem;
     }
 }
+
+
+/* -------------------------------------- */
+
 
 /* PACKAGES SECTION */
 
