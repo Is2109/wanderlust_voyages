@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/packages.css">
 
-    <!-- Enlaces a archivos de Javascript -->
+    <!-- ENLACES A ARCHIVOS JAVASCRIPT -->
     <!-- Utilizamos el atributo "defer" para permitir que la página HTML se cargue completamente antes de ejecutar Javascript -->
     <script src="js/app.js" defer></script>
 
@@ -114,7 +114,7 @@
                 <source srcset="assets/images/webp/packages_page/packages_hero_1500x1000.webp" type="image/webp" media="(max-width:1024px)">
                 <source srcset="assets/images/jpg/packages_page/packages_hero_2000x1333.jpg" type="image/jpeg" media="(min-width:1600px)">
                 <source srcset="assets/images/webp/packages_page/packages_hero_2000x1333.webp" type="image/webp" media="(min-width:1600px)">
-                <img src="assets/images/jpg/packages_page/packages_hero_2000x1333.jpg" alt="View of a plam tree leave" class="Main-imgHero">
+                <img src="assets/images/webp/packages_page/packages_hero_2000x1333.webp" alt="View of a plam tree leave" class="Main-imgHero">
                 <!-- Esta imagen en concreto no tiene loading lazy porque es la primera que aparece al abrir la pagina web -->
             </picture>
             <!-- Añadi este "overlay" para hacer la imagen más oscura porque el texto no era muy legible -->
@@ -137,7 +137,7 @@
                     <source srcset="assets/images/webp/packages/packages_one_1500x1000.webp" type="image/webp" media="(max-width:1024px)">
                     <source srcset="assets/images/jpg/packages/packages_one_2000x1333.jpg" type="image/jpeg" media="(min-width:1600px)">
                     <source srcset="assets/images/webp/packages/packages_one_2000x1333.webp" type="image/webp" media="(min-width:1600px)">
-                    <img src="assets/images/jpg/packages/packages_one_2000x1333.jpg" alt="View of a beach and nature in Bora Bora" class="Main-cardImage" loading="lazy">
+                    <img src="assets/images/webp/packages/packages_one_2000x1333.webp" alt="View of a beach and nature in Bora Bora" class="Main-cardImage" loading="lazy">
                 </picture>
                 <div class="Main-content">
                     <h3 class="Main-h3 Main-h3--green">7 nights package</h3>
@@ -163,7 +163,7 @@
                     <source srcset="assets/images/webp/packages/packages_two_1500x1127.webp" type="image/webp" media="(max-width:1024px)">
                     <source srcset="assets/images/jpg/packages/packages_two_2000x1502.jpg" type="image/jpeg" media="(min-width:1600px)">
                     <source srcset="assets/images/webp/packages/packages_two_2000x1502.webp" type="image/webp" media="(min-width:1600px)">
-                    <img src="assets/images/jpg/packages/packages_two_2000x1502.jpg" alt="View of the Amalfi Coast during the day" class="Main-cardImage" loading="lazy">
+                    <img src="assets/images/webp/packages/packages_two_2000x1502.webp" alt="View of the Amalfi Coast during the day" class="Main-cardImage" loading="lazy">
                 </picture>
                 <div class="Main-content">
                     <h3 class="Main-h3 Main-h3--green">5 nights package</h3>
@@ -188,7 +188,7 @@
                     <source srcset="assets/images/webp/packages/packages_three_1500x1001.webp" type="image/webp" media="(max-width:1024px)">
                     <source srcset="assets/images/jpg/packages/packages_three_2000x1334.jpg" type="image/jpeg" media="(min-width:1600px)">
                     <source srcset="assets/images/webp/packages/packages_three_2000x1334.webp" type="image/webp" media="(min-width:1600px)">
-                    <img src="assets/images/jpg/packages/packages_three_2000x1334.jpg" alt="View of the nature in Mahé Island" class="Main-cardImage" loading="lazy">
+                    <img src="assets/images/webp/packages/packages_three_2000x1334.webp" alt="View of the nature in Mahé Island" class="Main-cardImage" loading="lazy">
                 </picture>
                 <div class="Main-content">
                     <h3 class="Main-h3 Main-h3--green">6 nights package</h3>
@@ -254,8 +254,8 @@
                 <input type="email" name="email" placeholder="Enter your email" required class="Footer-input">
             </form>
 
-            <!-- Este div tiene apariencia de botón pero no es un botón ni un enlace porque no nos lleva a ninguna parte -->
-            <div class="Footer-a Footer-a--button">Subscribe</div>
+            <!-- Como se trata de un formulario, el elemento siguiente es un button de tipo submit. -->
+            <button type="submit" class="Footer-button" title="submit form">Subscribe</button>
 
             <div class="Footer-social">
 

@@ -61,13 +61,13 @@
 /* @media HERO SECTION*/
 
 @media(max-width:480px){
-.Main-h2{
+    .Main-h2{
     font-size: var(--font-size-48);
-}
-.Main-p--hero{
+    }
+    .Main-p--hero{
     font-size: var(--font-size-20);
     line-height: 1.5rem;
-}
+    }
 }
 
 /* PACKAGES SECTION */

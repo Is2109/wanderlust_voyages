@@ -31,13 +31,15 @@ h1 , h2 , h3 , h4 , h5 , h6{
     text-decoration: none;
     background-color: inherit;
 }
-p , strong , em , mark{
+p , strong , em , mark, span{
     font-size: inherit;
     font-style: inherit;
     font-weight: inherit;
     color:inherit;
     text-decoration: none;
     background-color: inherit;
+    word-break: break-word;
+    white-space: normal;
 }
 a{
     font-size: inherit;

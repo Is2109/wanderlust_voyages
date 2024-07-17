@@ -3,248 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
+    <!-- Para mejorar el SEO de la página y renderizarla en diferentes dispositivos y navegadores, crée metatags en la página metatags.io -->
+    <!-- Meta Tags Generated with https://metatags.io -->
+    
+    <!-- Primary Meta Tags -->
+    <title>About Us | Wanderlust Voyages</title>
+    <meta name="title" content="About Us | Wanderlust Voyages" />
+    <meta name="description" content="Learn more about Wanderlust Voyages, your premier travel partner. Discover our mission, values, and the dedicated team committed to crafting unforgettable travel experiences tailored to your desires." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="About Us | Wanderlust Voyages" />
+    <meta property="og:description" content="Learn more about Wanderlust Voyages, your premier travel partner. Discover our mission, values, and the dedicated team committed to crafting unforgettable travel experiences tailored to your desires." />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="About Us | Wanderlust Voyages" />
+    <meta property="twitter:description" content="Learn more about Wanderlust Voyages, your premier travel partner. Discover our mission, values, and the dedicated team committed to crafting unforgettable travel experiences tailored to your desires." />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Enlaces a hojas de estilo CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/about.css">
 
-    <script src="js/carousel_popular_destinations.js" defer></script>
+    <!-- ENLACES A ARCHIVOS JAVASCRIPT -->
+    <!-- Utilizamos el atributo "defer" para permitir que la página HTML se cargue completamente antes de ejecutar Javascript -->
+    <script src="js/app.js" defer></script>
+
+    <!-- Para mejorar el rendimiento de la página le añadi el preload de las tipografías -->
+    <!-- Nota: Al final no usé estos "preloads" porque estaba en conflicto con "font-display: swap" que usé en "@font-face" en CSS -->
+
+    <!-- <link rel="preload" href="Assets/Fonts/Antic_Didone/antic-didone-v16-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="Assets/Fonts/Montserrat/montserrat-v26-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="Assets/Fonts/Montserrat/montserrat-v26-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="Assets/Fonts/Montserrat/montserrat-v26-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="Assets/Fonts/Montserrat/montserrat-v26-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
 
 </head>
 <body>
 
 
-    <section class="Main-section Main-section--white">
-        <div class="Main-sectionWrapper">
-            <h4 class="Main-h4 Main-h4--green">Exclusive Escapes, Crafted Just for You</h4>
-            <h3 class="Main-h3">Popular Destinations</h3>
-            <p class="Main-p Main-p--section">At Wanderlust Travels, we specialize in creating bespoke travel experiences that cater to your every desire, ensuring an unforgettable journey filled with elegance, comfort, and unparalleled service.</p>
+    <!-- HEADER -->
+
+    <header class="Header">
+        <div class="Header-div">
+            <!-- Tenemos dos tipos de enlaces en el Header que tendrán diferentes propiedades así que usé modificadores para diferenciarlos.
+            Tenemos "Header-a(modificador)home" y "Header-a(modificador)nav" -->
+            <a href="index.html" class="Header-a Header-a--home" title="Home">
+
+                <!-- PREGUNTAR SI ESTO ESTA BIEN!!! -->
+                <!-- <svg class="Header-svg" width="40" height="40">
+                    <use href="#GlobeHemisphereEast"></use>
+                </svg> -->
+
+                <!-- Lo que estaba antes -->
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="Header-svg">
+                    <g id="GlobeHemisphereEast">
+                    <path id="Vector" d="M20 4.375C16.9097 4.375 13.8887 5.29139 11.3192 7.00829C8.7497 8.72518 6.74701 11.1655 5.56439 14.0206C4.38177 16.8757 4.07234 20.0173 4.67524 23.0483C5.27813 26.0792 6.76627 28.8633 8.95146 31.0485C11.1367 33.2337 13.9208 34.7219 16.9517 35.3248C19.9827 35.9277 23.1243 35.6182 25.9794 34.4356C28.8345 33.253 31.2748 31.2503 32.9917 28.6808C34.7086 26.1113 35.625 23.0903 35.625 20C35.6205 15.8574 33.9728 11.8858 31.0435 8.95648C28.1143 6.02721 24.1426 4.37955 20 4.375ZM20 5.625C22.9017 5.62194 25.7356 6.50209 28.125 8.14844V11.5625C28.1237 11.7128 28.0682 11.8576 27.9688 11.9703L24.5047 15.9953C24.4051 16.1107 24.2667 16.1857 24.1156 16.2063L19.2031 16.875C19.0442 16.8976 18.8827 16.8572 18.7531 16.7625L18.7281 16.7453L15.6453 14.7219C15.4409 14.5765 15.2095 14.4737 14.9647 14.4194C14.7198 14.3651 14.4666 14.3605 14.22 14.4058C13.9733 14.4511 13.7383 14.5454 13.5287 14.6832C13.3192 14.8209 13.1394 14.9993 13 15.2078L9.71876 20.0984C9.51534 20.4039 9.40663 20.7627 9.40626 21.1297L9.37501 26.7906C9.37473 26.8938 9.3489 26.9954 9.29983 27.0862C9.25075 27.1769 9.17995 27.2542 9.09376 27.3109L8.05469 27.9922C6.60722 25.8282 5.77461 23.3117 5.64576 20.7114C5.51692 18.1111 6.09667 15.5247 7.32313 13.2282C8.54958 10.9317 10.3767 9.01136 12.6094 7.67227C14.8421 6.33317 17.3965 5.62557 20 5.625ZM8.80001 29L9.78282 28.3547C10.0419 28.1844 10.2547 27.9526 10.4023 27.6799C10.5498 27.4072 10.6274 27.1022 10.6281 26.7922L10.6609 21.1313C10.6614 21.0089 10.6978 20.8894 10.7656 20.7875L14.0391 15.8969C14.086 15.8272 14.1465 15.7678 14.2169 15.722C14.2873 15.6763 14.3662 15.6452 14.4489 15.6306C14.5315 15.616 14.6163 15.6182 14.6981 15.6371C14.7799 15.656 14.8571 15.6912 14.925 15.7406L14.9484 15.7578L18.0328 17.775C18.4207 18.0506 18.8988 18.1685 19.3703 18.1047L24.2875 17.4391C24.7421 17.3779 25.1584 17.1522 25.4578 16.8047L28.9219 12.7828C29.2138 12.4432 29.3745 12.0103 29.375 11.5625V9.11094C31.6436 11.0602 33.247 13.6692 33.9613 16.5738C34.6756 19.4783 34.4652 22.5333 33.3594 25.3125L30.1453 22.3719C29.8818 22.1312 29.5552 21.9708 29.2037 21.9093C28.8522 21.8479 28.4904 21.888 28.1609 22.025L23.4031 24.0031C23.1045 24.1281 22.8431 24.3279 22.6442 24.5832C22.4452 24.8385 22.3154 25.1408 22.2672 25.4609L21.8953 27.9906C21.8298 28.4473 21.935 28.912 22.1907 29.296C22.4464 29.68 22.8347 29.9562 23.2813 30.0719L26.6328 30.9516C26.7397 30.9777 26.8378 31.0316 26.9172 31.1078L27.8453 32.0453C24.8597 33.9941 21.2555 34.7618 17.7348 34.1989C14.2142 33.6359 11.0291 31.7826 8.80001 29ZM28.8672 31.3062L27.7953 30.2312C27.56 29.9955 27.266 29.8267 26.9438 29.7422L23.5938 28.8625C23.4433 28.8253 23.3121 28.7336 23.2255 28.6051C23.1389 28.4766 23.1031 28.3206 23.125 28.1672L23.4984 25.6359C23.5142 25.5292 23.5573 25.4283 23.6235 25.3432C23.6898 25.258 23.777 25.1915 23.8766 25.15L28.6344 23.1734C28.7443 23.1276 28.8651 23.1141 28.9825 23.1345C29.0999 23.155 29.209 23.2086 29.2969 23.2891L32.8125 26.5031C31.8616 28.3715 30.5153 30.0105 28.8672 31.3062Z" fill="white"/>
+                    </g>
+                </svg>
+
+                <h1 class="Header-h1">Wanderlust Voyages</h1>
+            </a>
         </div>
 
-        <!-- POPULAR DESTINATIONS CAROUSEL -->
+        <!-- Aquí es un button porque activa Javascript -->
+        <button class="Header-button" title="responsive menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="Header-hamburger" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+        </button>
 
-        <div class="Main-carousel">
-            <div class="Main-carouselContainer">
+        <nav class="Header-nav">
+            <ul class="Header-ul">
+                <li class="Header-li">
+                    <a href="index.html" class="Header-a Header-a--nav" title="Home">Home</a>
+                </li>
+                <li class="Header-li">
+                    <a href="destinations.html" class="Header-a Header-a--nav" title="Destinations">Destinations</a>
+                </li>
+                <li class="Header-li">
+                    <a href="packages.html" class="Header-a Header-a--nav" title="Packages">Packages</a>
+                </li>
+                <li class="Header-li">
+                    <a href="about.html" class="Header-a Header-a--nav" title="About Us">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-                <!-- FIRST "FRAME" OF THE CAROUSEL 
-                 (Tengo 6 cards de "popular destinations". El carousel tendrá 2 "frames" con 3 cards en cada "frame") -->
-                
-                <div class="Main-carouselFrame">
-                    
-                    <!-- CARD 1 -->
-                    <article class="Main-cardDestination">
-                        <picture class="Main-picture">
-                            <source srcset="assets/images/jpg/popular_destinations/popular_destinations_one_1500x1013.jpg" type="image/jpeg" media="(max-width:1024px)">
-                            <source srcset="assets/images/webp/popular_destinations/popular_destinations_one_1500x1013.webp" type="image/webp" media="(max-width:1024px)">
-                            <source srcset="assets/images/jpg/popular_destinations/popular_destinations_one_2000x1351.jpg" type="image/jpeg" media="(min-width:1600px)">
-                            <source srcset="assets/images/webp/popular_destinations/popular_destinations_one_2000x1351.webp" type="image/webp" media="(min-width:1600px)">
-                            <img src="assets/images/jpg/popular_destinations/popular_destinations_one_2000x1351.jpg" alt="Beach at the Maldives" class="Main-cardImage" loading="lazy">
-                        </picture>
-                        <div class="Main-cardContent">
-                            <div class="Main-starRating">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                            </div>
-                            <h6 class="Main-h6">Maldives</h6>
-                            <h5 class="Main-h5">Malé Atoll</h5>
-                            <p class="Main-p Main-p--destinations">Malé Atoll offers pristine beaches, crystal-clear waters, and luxurious resorts for an unforgettable escape.</p>
-                        </div>
-                    </article>
-                    
-                    <!-- CARD 2 -->
-                    <article class="Main-cardDestination">
-                        <picture class="Main-picture">
-                            <source srcset="assets/images/jpg/popular_destinations/popular_destinations_two_1200x1500.jpg" type="image/jpeg" media="(max-width:1024px)">
-                            <source srcset="assets/images/webp/popular_destinations/popular_destinations_two_1200x1500.webp" type="image/webp" media="(max-width:1024px)">
-                            <source srcset="assets/images/jpg/popular_destinations/popular_destinations_two_1600x2000.jpg" type="image/jpeg" media="(min-width:1600px)">
-                            <source srcset="assets/images/webp/popular_destinations/popular_destinations_two_1600x2000.webp" type="image/webp" media="(min-width:1600px)">
-                            <img src="assets/images/jpg/popular_destinations/popular_destinations_two_1600x2000.jpg" alt="View of Positano at sunset" class="Main-cardImage" loading="lazy">
-                        </picture>
-                        <div class="Main-cardContent">
-                            <div class="Main-starRating">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                            </div>
-                            <h6 class="Main-h6">Italy</h6>
-                            <h5 class="Main-h5">Amalfi Coast</h5>
-                            <p class="Main-p Main-p--destinations">The Amalfi Coast boasts picturesque coastal towns, cliffside villas, and exquisite Mediterranean cuisine.</p>
-                        </div>
-                    </article>
-                    
-                    <!-- CARD 3 -->
-                    <article class="Main-cardDestination">
-                        <picture class="Main-picture">
-                            <source srcset="assets/images/jpg/popular_destinations/popular_destinations_three_1500x1000.jpg" type="image/jpeg" media="(max-width:1024px)">
-                            <source srcset="assets/images/webp/popular_destinations/popular_destinations_three_1500x1000.webp" type="image/webp" media="(max-width:1024px)">
-                            <source srcset="assets/images/jpg/popular_destinations/popular_destinations_three_2000x1333.jpg" type="image/jpeg" media="(min-width:1600px)">
-                            <source srcset="assets/images/webp/popular_destinations/popular_destinations_three_2000x1333.webp" type="image/webp" media="(min-width:1600px)">
-                            <img src="assets/images/jpg/popular_destinations/popular_destinations_three_2000x1333.jpg" alt="Overwater bungalows at Bora Bora" class="Main-cardImage" loading="lazy">
-                        </picture>
-                        <div class="Main-cardContent">
-                            <div class="Main-starRating">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                            </div>
-                            <h6 class="Main-h6">French Polynesia</h6>
-                            <h5 class="Main-h5">Bora Bora</h5>
-                            <p class="Main-p Main-p--destinations">Bora Bora is renowned for its stunning overwater bungalows, turquoise lagoons, and breathtaking views.</p>
-                        </div>
-                    </article>
 
-                    <!-- CARD 4 -->
-                    <article class="Main-cardDestination">
-                        <picture class="Main-picture">
-                            <source srcset="assets/images/jpg/popular_destinations/popular_destinations_four_1125x1500.jpg" type="image/jpeg" media="(max-width:1024px)">
-                            <source srcset="assets/images/webp/popular_destinations/popular_destinations_four_1125x1500.webp" type="image/webp" media="(max-width:1024px)">
-                            <source srcset="assets/images/jpg/popular_destinations/popular_destinations_four_1500x2000.jpg" type="image/jpeg" media="(min-width:1600px)">
-                            <source srcset="assets/images/webp/popular_destinations/popular_destinations_four_1500x2000.webp" type="image/webp" media="(min-width:1600px)">
-                            <img src="assets/images/jpg/popular_destinations/popular_destinations_four_1500x2000.jpg" alt="Typical greek white houses in Santorini at susnset" class="Main-cardImage" loading="lazy">
-                        </picture>
-                        <div class="Main-cardContent">
-                            <div class="Main-starRating">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                            </div>
-                            <h6 class="Main-h6">Greece</h6>
-                            <h5 class="Main-h5">Santorini</h5>
-                            <p class="Main-p Main-p--destinations">Enjoy the iconic white-washed buildings, azure domes, and spectacular sunsets over the caldera.</p>
-                        </div>
-                    </article>
-                    
-                    <!-- CARD 5 -->
-                    <article class="Main-cardDestination">
-                        <picture class="Main-picture">
-                            <source srcset="assets/images/jpg/popular_destinations/popular_destinations_five_1500x999.jpg" type="image/jpeg" media="(max-width:1024px)">
-                            <source srcset="assets/images/webp/popular_destinations/popular_destinations_five_1500x999.webp" type="image/webp" media="(max-width:1024px)">
-                            <source srcset="assets/images/jpg/popular_destinations/popular_destinations_five_2000x1332.jpg" type="image/jpeg" media="(min-width:1600px)">
-                            <source srcset="assets/images/webp/popular_destinations/popular_destinations_five_2000x1332.webp" type="image/webp" media="(min-width:1600px)">
-                            <img src="assets/images/jpg/popular_destinations/popular_destinations_five_2000x1332.jpg" alt="View of a beach at the Seychelles" class="Main-cardImage" loading="lazy">
-                        </picture>
-                        <div class="Main-cardContent">
-                            <div class="Main-starRating">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                            </div>
-                            <h6 class="Main-h6">Seychelles</h6>
-                            <h5 class="Main-h5">Mahé Island</h5>
-                            <p class="Main-p Main-p--destinations">Discover secluded beaches, granite boulders, and luxurious resorts set amidst lush tropical landscapes.</p>
-                        </div>
-                    </article>
-                    
-                    <!-- CARD 6 -->
-                    <article class="Main-cardDestination">
-                        <picture class="Main-picture">
-                            <source srcset="assets/images/jpg/popular_destinations/popular_destinations_six_1000x1500.jpg" type="image/jpeg" media="(max-width:1024px)">
-                            <source srcset="assets/images/webp/popular_destinations/popular_destinations_six_1000x1500.webp" type="image/webp" media="(max-width:1024px)">
-                            <source srcset="assets/images/jpg/popular_destinations/popular_destinations_six_1333x2000.jpg" type="image/jpeg" media="(min-width:1600px)">
-                            <source srcset="assets/images/webp/popular_destinations/popular_destinations_six_1333x2000.webp" type="image/webp" media="(min-width:1600px)">
-                            <img src="assets/images/jpg/popular_destinations/popular_destinations_six_1333x2000.jpg" alt="View of a chateau at the Loire Valley" class="Main-cardImage" loading="lazy">
-                        </picture>
-                        <div class="Main-cardContent">
-                            <div class="Main-starRating">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
-                                </svg>
-                            </div>
-                            <h6 class="Main-h6">France</h6>
-                            <h5 class="Main-h5">Loire Valley</h5>
-                            <p class="Main-p Main-p--destinations">The Loire Valley is famed for its  chateaux, vineyards, and elegant gardens, offering a picturesque retreat.</p>
-                        </div>
-                    </article>
-                </div> 
+    <!-- MAIN -->
+
+        <!-- HERO SECTION -->
+
+        <section class="Main-sectionHero">
+            <div class="Main-wrapper">
+                <h2 class="Main-h2">Get to Know Wanderlust Voyages</h2>
+                <p class="Main-p Main-p--hero">At Wanderlust Voyages, we are more than just a travel agency; we are your partners in crafting unforgettable adventures. With a passion for exploration and a commitment to excellence, our dedicated team works tirelessly to create personalized travel experiences that exceed your expectations.  </p>
+            </div>
+            <picture class="Main-pictureHero">
+                <source srcset="assets/images/jpg/packages_page/packages_hero_1500x1000.jpg" type="image/jpeg" media="(max-width:1024px)">
+                <source srcset="assets/images/webp/packages_page/packages_hero_1500x1000.webp" type="image/webp" media="(max-width:1024px)">
+                <source srcset="assets/images/jpg/packages_page/packages_hero_2000x1333.jpg" type="image/jpeg" media="(min-width:1600px)">
+                <source srcset="assets/images/webp/packages_page/packages_hero_2000x1333.webp" type="image/webp" media="(min-width:1600px)">
+                <img src="assets/images/webp/about_us_page/about_us_2000x1333.webp" alt="Person holding a globe in their hand" class="Main-imgHero">
+                <!-- Esta imagen en concreto no tiene loading lazy porque es la primera que aparece al abrir la pagina web -->
+            </picture>
+            <!-- Añadi este "overlay" para hacer la imagen más oscura porque el texto no era muy legible -->
+            <div class="Main-overlay"></div>
+        </section>
+
+        <!-- ABOUT US SECTION -->
+
+        <section class="Main-sectionAboutUs">
+            <div class="Main-sectionWrapper">
+                <h3 class="Main-h3 Main-h3--green">Experience the World with Wanderlust Voyages</h3>
+                <h4 class="Main-h4">Our Story and Mission</h4>
+                <p class="Main-p Main-p--section">Wanderlust Voyages was founded with a simple yet powerful mission: to make travel dreams come true. 
+                    Our journey began with a passion for exploration and a commitment to providing exceptional travel experiences. Over the years, we 
+                    have grown into a leading travel agency known for our personalized itineraries, attention to detail, and unwavering dedication to 
+                    our clients. <br><br> We specialize in crafting bespoke travel packages that cater to a diverse range of interests and preferences. Whether 
+                    you're seeking a luxurious beach getaway, an adventurous trek through the mountains, or a cultural immersion in historic cities, 
+                    Wanderlust Voyages has the expertise to make it happen. Our team of seasoned travel experts works tirelessly to curate unique and 
+                    unforgettable journeys, ensuring that every aspect of your trip is meticulously planned and flawlessly executed. </p>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US SECTION -->
+        <section class="Main-sectionContactUs">
+
+            <h4 class="Main-h4">Contact Us</h4>
+
+            <div class="Main-mapContainer">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.9742286168043!2d-3.708165388616443!3d40.43156955461725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228605f560a2d%3A0x48fd98922227ee73!2sC.%20de%20Rodr%C3%ADguez%20San%20Pedro%2C%202%2C%20Chamber%C3%AD%2C%2028015%20Madrid%2C%20Espanha!5e0!3m2!1spt-PT!2spt!4v1721222136610!5m2!1spt-PT!2spt" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0" class="Main-iframe"></iframe>
             </div>
 
-            <div class="Main-carouselDots">
-                <div class="Main-carouselDot"></div>
-                <div class="Main-carouselDot"></div>
-                <div class="Main-carouselDot Main-carouselDot--tablet"></div>
-                <div class="Main-carouselDot Main-carouselDot--mobile"></div>
-                <div class="Main-carouselDot Main-carouselDot--mobile"></div>
-                <div class="Main-carouselDot Main-carouselDot--mobile"></div>
+            <div class="Main-gridContainer">
+                <!-- CARD CHAT TO SALES -->
+                <div class="Main-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" class="Main-cardIcon">
+                        <path d="M24.5 5.25H3.5C3.26794 5.25 3.04538 5.34219 2.88128 5.50628C2.71719 5.67038 2.625 5.89294 2.625 6.125V21C2.625 21.4641 2.80937 21.9092 3.13756 22.2374C3.46575 22.5656 3.91087 22.75 4.375 22.75H23.625C24.0891 22.75 24.5342 22.5656 24.8624 22.2374C25.1906 21.9092 25.375 21.4641 25.375 21V6.125C25.375 5.89294 25.2828 5.67038 25.1187 5.50628C24.9546 5.34219 24.7321 5.25 24.5 5.25ZM23.625 21H4.375V8.11453L13.4083 16.3953C13.5697 16.5435 13.7809 16.6257 14 16.6257C14.2191 16.6257 14.4303 16.5435 14.5917 16.3953L23.625 8.11453V21Z" fill="#1B828D"/>
+                      </svg>
+                    <h5 class="Main-h5About">Chat to Sales</h5>
+                    <p class="Main-p Main-p--left">Speak to our friendly team. <br><br> info@wanderlustvoyages.com</p>
+                </div>
+                <!-- CARD VISIT US -->
+                <div class="Main-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="Main-cardIcon">
+                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.598-.49L10.5.99 5.598.01a.5.5 0 0 0-.196 0l-5 1A.5.5 0 0 0 0 1.5v14a.5.5 0 0 0 .598.49l4.902-.98 4.902.98a.5.5 0 0 0 .196 0l5-1A.5.5 0 0 0 16 14.5zM5 14.09V1.11l.5-.1.5.1v12.98l-.402-.08a.5.5 0 0 0-.196 0zm5 .8V1.91l.402.08a.5.5 0 0 0 .196 0L11 1.91v12.98l-.5.1z" fill="#1B828D"/>
+                      </svg>
+                    <h5 class="Main-h5About">Visit us</h5>
+                    <p class="Main-p Main-p--left">Visit our office HQ. <br><br> 123 Luxury Lane, Paradise City, NY 10001, USA </p>
+                </div>
+                <!-- CARD CALL US -->
+                <div class="Main-card Main-card--callUs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" class="Main-cardIcon">
+                        <path d="M25.3619 19.1492C25.1669 20.6312 24.439 21.9916 23.3143 22.9763C22.1895 23.9609 20.7448 24.5025 19.25 24.4998C10.5656 24.4998 3.50001 17.4342 3.50001 8.74978C3.49733 7.25494 4.03889 5.81024 5.02353 4.68551C6.00817 3.56078 7.36857 2.83293 8.85063 2.6379C9.22541 2.59214 9.60494 2.66882 9.93256 2.85648C10.2602 3.04414 10.5183 3.33272 10.6684 3.67915L12.9784 8.83618V8.84931C13.0934 9.11449 13.1409 9.40402 13.1166 9.69202C13.0924 9.98002 12.9972 10.2575 12.8395 10.4998C12.8199 10.5293 12.7991 10.5567 12.7772 10.584L10.5 13.2834C11.3192 14.9481 13.0605 16.674 14.747 17.4954L17.4092 15.2302C17.4354 15.2083 17.4628 15.1878 17.4913 15.169C17.7333 15.0076 18.0118 14.909 18.3015 14.8823C18.5912 14.8555 18.883 14.9015 19.1505 15.0159L19.1647 15.0224L24.3174 17.3313C24.6644 17.4809 24.9537 17.7388 25.142 18.0665C25.3302 18.3942 25.4074 18.774 25.3619 19.1492Z" fill="#1B828D"/>
+                      </svg>
+                    <h5 class="Main-h5About">Call us</h5>
+                    <p class="Main-p Main-p--left">Mon-Fri from 8am to 5pm. <br><br> +1 (800) 555-1234</p>
+                </div>
             </div>
-        </div>
+        </section>
         
-        <a href="destinations.html" class="Main-a" title="View more destinations">More Destinations</a>
-    
-    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="Footer">
+
+        <div class="Footer-wanderlust">
+            <div class="Footer-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" class="Footer-world">
+                    <path d="M24 5.25C20.2916 5.25 16.6665 6.34967 13.5831 8.40994C10.4996 10.4702 8.09641 13.3986 6.67727 16.8247C5.25812 20.2508 4.88681 24.0208 5.61028 27.6579C6.33376 31.2951 8.11952 34.636 10.7418 37.2583C13.364 39.8805 16.7049 41.6662 20.3421 42.3897C23.9792 43.1132 27.7492 42.7419 31.1753 41.3227C34.6014 39.9036 37.5298 37.5004 39.5901 34.4169C41.6503 31.3335 42.75 27.7084 42.75 24C42.7445 19.0289 40.7674 14.2629 37.2522 10.7478C33.7371 7.23265 28.9711 5.25546 24 5.25ZM24 6.75C27.482 6.74633 30.8827 7.8025 33.75 9.77813V13.875C33.7484 14.0554 33.6818 14.2291 33.5625 14.3644L29.4056 19.1944C29.2861 19.3329 29.12 19.4229 28.9388 19.4475L23.0438 20.25C22.853 20.2771 22.6593 20.2287 22.5038 20.115L22.4738 20.0944L18.7744 17.6663C18.5291 17.4919 18.2514 17.3684 17.9576 17.3033C17.6638 17.2381 17.3599 17.2326 17.064 17.2869C16.768 17.3413 16.4859 17.4545 16.2345 17.6198C15.983 17.7851 15.7673 17.9992 15.6 18.2494L11.6625 24.1181C11.4184 24.4847 11.288 24.9152 11.2875 25.3556L11.25 32.1488C11.2497 32.2726 11.2187 32.3944 11.1598 32.5034C11.1009 32.6123 11.0159 32.705 10.9125 32.7731L9.66563 33.5906C7.92866 30.9938 6.92953 27.974 6.77492 24.8537C6.6203 21.7334 7.31601 18.6296 8.78775 15.8738C10.2595 13.118 12.452 10.8136 15.1313 9.20672C17.8105 7.59981 20.8758 6.75068 24 6.75ZM10.56 34.8L11.7394 34.0256C12.0503 33.8213 12.3057 33.5431 12.4827 33.2159C12.6597 32.8887 12.7529 32.5227 12.7538 32.1506L12.7931 25.3575C12.7937 25.2107 12.8374 25.0672 12.9188 24.945L16.8469 19.0763C16.9032 18.9927 16.9757 18.9213 17.0602 18.8664C17.1447 18.8115 17.2394 18.7742 17.3386 18.7567C17.4379 18.7392 17.5396 18.7419 17.6378 18.7646C17.7359 18.7873 17.8285 18.8295 17.91 18.8888L17.9381 18.9094L21.6394 21.33C22.1048 21.6607 22.6786 21.8022 23.2444 21.7256L29.145 20.9269C29.6905 20.8534 30.1901 20.5826 30.5494 20.1656L34.7063 15.3394C35.0566 14.9318 35.2495 14.4124 35.25 13.875V10.9331C37.9724 13.2723 39.8964 16.4031 40.7536 19.8885C41.6107 23.3739 41.3582 27.04 40.0313 30.375L36.1744 26.8462C35.8582 26.5575 35.4662 26.3649 35.0444 26.2912C34.6226 26.2174 34.1885 26.2656 33.7931 26.43L28.0838 28.8037C27.7254 28.9537 27.4118 29.1934 27.173 29.4999C26.9342 29.8063 26.7785 30.169 26.7206 30.5531L26.2744 33.5887C26.1958 34.1367 26.322 34.6944 26.6288 35.1552C26.9357 35.616 27.4016 35.9475 27.9375 36.0863L31.9594 37.1419C32.0877 37.1732 32.2054 37.2379 32.3006 37.3294L33.4144 38.4544C29.8316 40.793 25.5066 41.7142 21.2818 41.0387C17.057 40.3631 13.2349 38.1392 10.56 34.8ZM34.6406 37.5675L33.3544 36.2775C33.0719 35.9946 32.7192 35.792 32.3325 35.6906L28.3125 34.635C28.132 34.5904 27.9745 34.4803 27.8706 34.3261C27.7666 34.172 27.7237 33.9847 27.75 33.8006L28.1981 30.7631C28.217 30.635 28.2687 30.514 28.3482 30.4118C28.4277 30.3096 28.5323 30.2298 28.6519 30.18L34.3613 27.8081C34.4932 27.7531 34.6382 27.7369 34.779 27.7615C34.9199 27.786 35.0508 27.8504 35.1563 27.9469L39.375 31.8037C38.2339 34.0459 36.6184 36.0127 34.6406 37.5675Z" fill="white"/>
+                  </svg>
+                <h2 class="Footer-h2">Wanderlust Voyages</h2>
+            </div>
+            <p class="Footer-p">At Wanderlust Voyages, we specialize in crafting unforgettable travel experiences that cater to your every desire. From luxury accommodations to bespoke itineraries, we ensure your journey is nothing short of extraordinary. Let us turn your travel dreams into reality.</p>
+        </div>
+
+        <div class="Footer-contacts">
+            <h4 class="Footer-h4">Contact Us</h4>
+            <span class="Footer-span">Feel free to contact and reach us!!</span>
+            <div class="Footer-phone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" class="Footer-icon">
+                    <path d="M25.3619 19.1492C25.1669 20.6312 24.439 21.9916 23.3143 22.9763C22.1895 23.9609 20.7448 24.5025 19.25 24.4998C10.5656 24.4998 3.50001 17.4342 3.50001 8.74978C3.49733 7.25494 4.03889 5.81024 5.02353 4.68551C6.00817 3.56078 7.36857 2.83293 8.85063 2.6379C9.22541 2.59214 9.60494 2.66882 9.93256 2.85648C10.2602 3.04414 10.5183 3.33272 10.6684 3.67915L12.9784 8.83618V8.84931C13.0934 9.11449 13.1409 9.40402 13.1166 9.69202C13.0924 9.98002 12.9972 10.2575 12.8395 10.4998C12.8199 10.5293 12.7991 10.5567 12.7772 10.584L10.5 13.2834C11.3192 14.9481 13.0605 16.674 14.747 17.4954L17.4092 15.2302C17.4354 15.2083 17.4628 15.1878 17.4913 15.169C17.7333 15.0076 18.0118 14.909 18.3015 14.8823C18.5912 14.8555 18.883 14.9015 19.1505 15.0159L19.1647 15.0224L24.3174 17.3313C24.6644 17.4809 24.9537 17.7388 25.142 18.0665C25.3302 18.3942 25.4074 18.774 25.3619 19.1492Z" fill="white"/>
+                  </svg>
+                  <span class="Footer-phoneNumber">+1 (800) 555-1234</span>
+            </div>
+            <div class="Footer-email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" class="Footer-icon">
+                    <path d="M24.5 5.25H3.5C3.26794 5.25 3.04538 5.34219 2.88128 5.50628C2.71719 5.67038 2.625 5.89294 2.625 6.125V21C2.625 21.4641 2.80937 21.9092 3.13756 22.2374C3.46575 22.5656 3.91087 22.75 4.375 22.75H23.625C24.0891 22.75 24.5342 22.5656 24.8624 22.2374C25.1906 21.9092 25.375 21.4641 25.375 21V6.125C25.375 5.89294 25.2828 5.67038 25.1187 5.50628C24.9546 5.34219 24.7321 5.25 24.5 5.25ZM23.625 21H4.375V8.11453L13.4083 16.3953C13.5697 16.5435 13.7809 16.6257 14 16.6257C14.2191 16.6257 14.4303 16.5435 14.5917 16.3953L23.625 8.11453V21Z" fill="white"/>
+                  </svg>
+                <span class="Footer-emailAddress">info@wanderlustvoyages.com</span>
+            </div>
+            <div class="Footer-address">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" class="Footer-icon">
+                    <path d="M14 1.75C11.4482 1.75289 9.0017 2.76788 7.19729 4.57229C5.39288 6.37671 4.37789 8.82318 4.375 11.375C4.375 19.6109 13.125 25.8311 13.498 26.0914C13.6451 26.1945 13.8204 26.2498 14 26.2498C14.1796 26.2498 14.3549 26.1945 14.502 26.0914C14.875 25.8311 23.625 19.6109 23.625 11.375C23.6221 8.82318 22.6071 6.37671 20.8027 4.57229C18.9983 2.76788 16.5518 1.75289 14 1.75ZM14 7.875C14.6922 7.875 15.3689 8.08027 15.9445 8.46486C16.5201 8.84944 16.9687 9.39607 17.2336 10.0356C17.4985 10.6751 17.5678 11.3789 17.4327 12.0578C17.2977 12.7367 16.9644 13.3604 16.4749 13.8499C15.9854 14.3394 15.3617 14.6727 14.6828 14.8077C14.0039 14.9428 13.3001 14.8735 12.6606 14.6086C12.0211 14.3437 11.4744 13.8951 11.0899 13.3195C10.7053 12.7439 10.5 12.0672 10.5 11.375C10.5 10.4467 10.8687 9.5565 11.5251 8.90013C12.1815 8.24375 13.0717 7.875 14 7.875Z" fill="white"/>
+                  </svg>
+                <address class="Footer-direction">123 Luxury Lane, Paradise City, NY 10001, USA</address>
+            </div>
+        </div>
+        <div class="Footer-subscribe">
+            <span class="Footer-spanSubscribe">Subscribe to our newsletter for more updates & news!</span>
+
+            <!-- FORMULARIO -->
+            <form action="#" method="get" class="Footer-form">
+                <input type="email" name="email" placeholder="Enter your email" required class="Footer-input">
+            </form>
+
+            <!-- Como se trata de un formulario, el elemento siguiente es un button de tipo submit. -->
+            <button type="submit" class="Footer-button" title="submit form">Subscribe</button>
+
+            <div class="Footer-social">
+
+                <!-- Aqui tenemos enlaces externos así que tienen target="_blank" para que el enlace se abra en otra pestaña
+                 y el atributo rel"noreferrer" por razones de seguridad y privacidad -->
+                <a href="https://es-la.facebook.com/" class="Footer-a" target="_blank" rel="noreferrer" title="Follow us on Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="Footer-svg">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                      </svg>
+                </a>
+                <a href="https://www.instagram.com/" class="Footer-a" target="_blank" rel="noreferrer" title="Follow us on Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="Footer-svg">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                      </svg>
+                </a>
+                <a href="https://x.com/?lang=es" class="Footer-a" target="_blank" rel="noreferrer" title="Follow us on Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="Footer-svg">
+                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                      </svg>
+                </a>
+                <a href="https://www.youtube.com/?app=desktop&hl=es" class="Footer-a" target="_blank" rel="noreferrer" title="Follow us on Youtube">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="Footer-svg">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                      </svg>
+                </a>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="Copyright">© 2024 Wanderlust Voyages. All rights reserved.</div>
+
+
  
     
 </body>

@@ -153,6 +153,7 @@ body{
     font-weight: var(--font-weight-medium);
     color: var(--color-green);
     text-transform: uppercase;
+    background-color: transparent;
 }
 .Main-h6{
     font-family: var(--primary-font);
@@ -193,6 +194,7 @@ body{
     color: var(--color-grey);
     text-align: left;
 }
+
 
     /* ELEMENTOS CON APARIENCIA DE BOTÓN */
 
@@ -239,7 +241,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 4;
     /* Quiero que el Header esté encima de la "imagen hero" y pegada de los bordes de la ventana, así que le di una posición absoluta 
     y z-index de 2. La "imagen hero" tendrá un z-index de 1.  */
     /* A la hora de hacer responsive tuve que cambiar el z-index del Header a 3 porque en pantallas más pequeñas el .Main-wrapper cubria

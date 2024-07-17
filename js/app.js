@@ -92,7 +92,7 @@
             })();
 
             // Nota: en este "módulo" la unica optimización que hice fue crear una constante para la contenedora y luego seleccionar 
-            // los elementos dentro de la contenedora. Como este código es más complejo preferí no cambiarlo y dejarlo así.
+            // los elementos dentro de la contenedora. Como este código es más complejo preferí no cambiarlo y dejarlo así para que funcione.
 
 
 // CLIENT REVIEWS CAROUSEL
