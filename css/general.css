@@ -520,6 +520,10 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     font-size: var(--font-size-20);
 }
 
+.Footer-formLabel{
+    display: none;
+}
+
 .Footer-button{
     width: 100%;
     padding: 0.625rem 1rem;

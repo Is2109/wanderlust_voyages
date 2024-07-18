@@ -797,11 +797,22 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     align-items: center;
 }
 
+.Main-accordionSpan{
+    width: 100%;
+    font-family: var(--primary-font);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    color: var(--color-black);
+    text-align: left;
+    font-weight: var(--font-weight-bold);
+}
+
 .Main-accordionIcon{
     width: 1.5rem;
     height: 1.5rem;
 
-    transition: all 1s ease;
+    transition: transform 1s ease;
 }
 .Main-accordionIcon.isClicked{
     transform: rotate(180deg);

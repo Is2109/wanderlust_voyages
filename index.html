@@ -425,8 +425,8 @@
 
         <section class="Main-section Main-section--lightgreen">
             <div class="Main-sectionWrapper">
-                <h3 class="Main-h3 Main-h3--green">HANDPICKED JOURNEYS FOR UNFORGETTABLE EXPERIENCES</h4>
-                <h4 class="Main-h4">OUR EXCLUSIVE TRAVEL PACKAGES</h3>
+                <h3 class="Main-h3 Main-h3--green">HANDPICKED JOURNEYS FOR UNFORGETTABLE EXPERIENCES</h3>
+                <h4 class="Main-h4">OUR EXCLUSIVE TRAVEL PACKAGES</h4>
                 <p class="Main-p Main-p--section">Discover our meticulously curated travel packages that promise unparalleled luxury and unforgettable experiences. Our exclusive itineraries are designed to cater to your every desire. Embark on a journey of a lifetime with Wanderlust Voyages, where every detail is crafted with elegance and sophistication.</p>
             </div>
 
@@ -704,64 +704,74 @@
             <h4 class="Main-h4">FREQUENTLY ASKED QUESTIONS</h4>
             
             <!-- ACCORDION -->
+            <!-- Al principio determiné que .Main-accordionBlock sería un botón para activar Javascript, pero el validador de html me dijo que 
+             "div" y "p" no están permitidos como "child elements" de un button, por lo que tuve que cambiar la estructura de cada bloque. 
+             Main-accordionQuestion ahora es el botón y esto significa que siempre tenemos que hacer clic en la pregunta para abrir y cerrar 
+             cada bloque. La pregunta tambien la tenía defifinida como un h3 pero los encabezados tambien no son permitidos dentro de un button
+             así que lo cambié a span -->
 
             <div class="Main-accordionContainer">
 
                 <!-- BLOCK 1 -->
-                 <!-- Todos los Main-accordionBlock son buttons porque activan Javascript -->
-                <button class="Main-accordionBlock" title="show answer">
-                    <div class="Main-accordionQuestion">
-                        <h3 class="Main-h3 Main-h3--black">What destinations do you offer packages for?</h3>
+                <div class="Main-accordionBlock">
+                    <!-- Todos los Main-accordionQuestion son buttons porque activan Javascript -->
+                    <button class="Main-accordionQuestion" title="show answer">
+                        <span class="Main-accordionSpan">What destinations do you offer packages for?</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="Main-accordionIcon">
                             <path d="M13 0C10.4288 0 7.91543 0.762437 5.77759 2.1909C3.63975 3.61935 1.97351 5.64968 0.989572 8.02512C0.0056327 10.4006 -0.251811 13.0144 0.249797 15.5362C0.751405 18.0579 1.98953 20.3743 3.80762 22.1924C5.6257 24.0105 7.94208 25.2486 10.4638 25.7502C12.9856 26.2518 15.5995 25.9944 17.9749 25.0104C20.3503 24.0265 22.3807 22.3603 23.8091 20.2224C25.2376 18.0846 26 15.5712 26 13C25.9964 9.5533 24.6256 6.24882 22.1884 3.81163C19.7512 1.37445 16.4467 0.00363977 13 0ZM18.7075 11.7075L13.7075 16.7075C13.6146 16.8005 13.5043 16.8742 13.3829 16.9246C13.2615 16.9749 13.1314 17.0008 13 17.0008C12.8686 17.0008 12.7385 16.9749 12.6171 16.9246C12.4957 16.8742 12.3854 16.8005 12.2925 16.7075L7.29251 11.7075C7.10486 11.5199 6.99945 11.2654 6.99945 11C6.99945 10.7346 7.10486 10.4801 7.29251 10.2925C7.48015 10.1049 7.73464 9.99944 8.00001 9.99944C8.26537 9.99944 8.51987 10.1049 8.70751 10.2925L13 14.5863L17.2925 10.2925C17.3854 10.1996 17.4957 10.1259 17.6171 10.0756C17.7385 10.0253 17.8686 9.99944 18 9.99944C18.1314 9.99944 18.2615 10.0253 18.3829 10.0756C18.5043 10.1259 18.6146 10.1996 18.7075 10.2925C18.8004 10.3854 18.8741 10.4957 18.9244 10.6171C18.9747 10.7385 19.0006 10.8686 19.0006 11C19.0006 11.1314 18.9747 11.2615 18.9244 11.3829C18.8741 11.5043 18.8004 11.6146 18.7075 11.7075Z" fill="#019EA9"/>
                         </svg>
-                    </div>
+                    </button>
                     <p class="Main-p Main-p--accordion">Wanderlust Voyages offers a variety of luxury travel packages to destinations around the world, including the Maldives, Bora Bora, the Amalfi Coast, Santorini, the Loire Valley, and Seychelles.</p>
-                </button>
+                </div>
 
                 <!-- BLOCK 2 -->
-                <button class="Main-accordionBlock" title="show answer">
-                    <div class="Main-accordionQuestion">
-                        <h3 class="Main-h3 Main-h3--black">How can I book a package with Wanderlust Voyages?</h3>
+                <div class="Main-accordionBlock">
+                    <!-- Todos los Main-accordionQuestion son buttons porque activan Javascript -->
+                    <button class="Main-accordionQuestion" title="show answer">
+                        <span class="Main-accordionSpan">How can I book a package with Wanderlust Voyages?</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="Main-accordionIcon">
                             <path d="M13 0C10.4288 0 7.91543 0.762437 5.77759 2.1909C3.63975 3.61935 1.97351 5.64968 0.989572 8.02512C0.0056327 10.4006 -0.251811 13.0144 0.249797 15.5362C0.751405 18.0579 1.98953 20.3743 3.80762 22.1924C5.6257 24.0105 7.94208 25.2486 10.4638 25.7502C12.9856 26.2518 15.5995 25.9944 17.9749 25.0104C20.3503 24.0265 22.3807 22.3603 23.8091 20.2224C25.2376 18.0846 26 15.5712 26 13C25.9964 9.5533 24.6256 6.24882 22.1884 3.81163C19.7512 1.37445 16.4467 0.00363977 13 0ZM18.7075 11.7075L13.7075 16.7075C13.6146 16.8005 13.5043 16.8742 13.3829 16.9246C13.2615 16.9749 13.1314 17.0008 13 17.0008C12.8686 17.0008 12.7385 16.9749 12.6171 16.9246C12.4957 16.8742 12.3854 16.8005 12.2925 16.7075L7.29251 11.7075C7.10486 11.5199 6.99945 11.2654 6.99945 11C6.99945 10.7346 7.10486 10.4801 7.29251 10.2925C7.48015 10.1049 7.73464 9.99944 8.00001 9.99944C8.26537 9.99944 8.51987 10.1049 8.70751 10.2925L13 14.5863L17.2925 10.2925C17.3854 10.1996 17.4957 10.1259 17.6171 10.0756C17.7385 10.0253 17.8686 9.99944 18 9.99944C18.1314 9.99944 18.2615 10.0253 18.3829 10.0756C18.5043 10.1259 18.6146 10.1996 18.7075 10.2925C18.8004 10.3854 18.8741 10.4957 18.9244 10.6171C18.9747 10.7385 19.0006 10.8686 19.0006 11C19.0006 11.1314 18.9747 11.2615 18.9244 11.3829C18.8741 11.5043 18.8004 11.6146 18.7075 11.7075Z" fill="#019EA9"/>
                         </svg>
-                    </div>
+                    </button>
                     <p class="Main-p Main-p--accordion">You can book a package by visiting the PACKAGES section our website and browsing our destinations. Once you find a package you like, you can contact us directly through our contact form, or call our customer service team to make a reservation.</p>
-                </button>
+                </div>
 
                 <!-- BLOCK 3 -->
-                <button class="Main-accordionBlock" title="show answer">
-                    <div class="Main-accordionQuestion">
-                        <h3 class="Main-h3 Main-h3--black">What is included in your travel packages?</h3>
+                <div class="Main-accordionBlock">
+                    <!-- Todos los Main-accordionQuestion son buttons porque activan Javascript -->
+                    <button class="Main-accordionQuestion" title="show answer">
+                        <span class="Main-accordionSpan">What is included in your travel packages?</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="Main-accordionIcon">
                             <path d="M13 0C10.4288 0 7.91543 0.762437 5.77759 2.1909C3.63975 3.61935 1.97351 5.64968 0.989572 8.02512C0.0056327 10.4006 -0.251811 13.0144 0.249797 15.5362C0.751405 18.0579 1.98953 20.3743 3.80762 22.1924C5.6257 24.0105 7.94208 25.2486 10.4638 25.7502C12.9856 26.2518 15.5995 25.9944 17.9749 25.0104C20.3503 24.0265 22.3807 22.3603 23.8091 20.2224C25.2376 18.0846 26 15.5712 26 13C25.9964 9.5533 24.6256 6.24882 22.1884 3.81163C19.7512 1.37445 16.4467 0.00363977 13 0ZM18.7075 11.7075L13.7075 16.7075C13.6146 16.8005 13.5043 16.8742 13.3829 16.9246C13.2615 16.9749 13.1314 17.0008 13 17.0008C12.8686 17.0008 12.7385 16.9749 12.6171 16.9246C12.4957 16.8742 12.3854 16.8005 12.2925 16.7075L7.29251 11.7075C7.10486 11.5199 6.99945 11.2654 6.99945 11C6.99945 10.7346 7.10486 10.4801 7.29251 10.2925C7.48015 10.1049 7.73464 9.99944 8.00001 9.99944C8.26537 9.99944 8.51987 10.1049 8.70751 10.2925L13 14.5863L17.2925 10.2925C17.3854 10.1996 17.4957 10.1259 17.6171 10.0756C17.7385 10.0253 17.8686 9.99944 18 9.99944C18.1314 9.99944 18.2615 10.0253 18.3829 10.0756C18.5043 10.1259 18.6146 10.1996 18.7075 10.2925C18.8004 10.3854 18.8741 10.4957 18.9244 10.6171C18.9747 10.7385 19.0006 10.8686 19.0006 11C19.0006 11.1314 18.9747 11.2615 18.9244 11.3829C18.8741 11.5043 18.8004 11.6146 18.7075 11.7075Z" fill="#019EA9"/>
                         </svg>
-                    </div>
+                    </button>
                     <p class="Main-p Main-p--accordion">Our travel packages include luxury accommodation, transportation, guided tours, and selected meals. Specific inclusions vary by package, so please check the details for each package or contact us for more information.</p>
-                </button>
+                </div>
 
                 <!-- BLOCK 4 -->
-                <button class="Main-accordionBlock" title="show answer">
-                    <div class="Main-accordionQuestion">
-                        <h3 class="Main-h3 Main-h3--black">Do you offer customized travel packages?</h3>
+                <div class="Main-accordionBlock">
+                    <!-- Todos los Main-accordionQuestion son buttons porque activan Javascript -->
+                    <button class="Main-accordionQuestion" title="show answer">
+                        <span class="Main-accordionSpan">Do you offer customized travel packages?</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="Main-accordionIcon">
                             <path d="M13 0C10.4288 0 7.91543 0.762437 5.77759 2.1909C3.63975 3.61935 1.97351 5.64968 0.989572 8.02512C0.0056327 10.4006 -0.251811 13.0144 0.249797 15.5362C0.751405 18.0579 1.98953 20.3743 3.80762 22.1924C5.6257 24.0105 7.94208 25.2486 10.4638 25.7502C12.9856 26.2518 15.5995 25.9944 17.9749 25.0104C20.3503 24.0265 22.3807 22.3603 23.8091 20.2224C25.2376 18.0846 26 15.5712 26 13C25.9964 9.5533 24.6256 6.24882 22.1884 3.81163C19.7512 1.37445 16.4467 0.00363977 13 0ZM18.7075 11.7075L13.7075 16.7075C13.6146 16.8005 13.5043 16.8742 13.3829 16.9246C13.2615 16.9749 13.1314 17.0008 13 17.0008C12.8686 17.0008 12.7385 16.9749 12.6171 16.9246C12.4957 16.8742 12.3854 16.8005 12.2925 16.7075L7.29251 11.7075C7.10486 11.5199 6.99945 11.2654 6.99945 11C6.99945 10.7346 7.10486 10.4801 7.29251 10.2925C7.48015 10.1049 7.73464 9.99944 8.00001 9.99944C8.26537 9.99944 8.51987 10.1049 8.70751 10.2925L13 14.5863L17.2925 10.2925C17.3854 10.1996 17.4957 10.1259 17.6171 10.0756C17.7385 10.0253 17.8686 9.99944 18 9.99944C18.1314 9.99944 18.2615 10.0253 18.3829 10.0756C18.5043 10.1259 18.6146 10.1996 18.7075 10.2925C18.8004 10.3854 18.8741 10.4957 18.9244 10.6171C18.9747 10.7385 19.0006 10.8686 19.0006 11C19.0006 11.1314 18.9747 11.2615 18.9244 11.3829C18.8741 11.5043 18.8004 11.6146 18.7075 11.7075Z" fill="#019EA9"/>
                         </svg>
-                    </div>
+                    </button>
                     <p class="Main-p Main-p--accordion">Yes, we specialize in creating bespoke travel experiences tailored to your preferences. Contact our travel experts with your requirements, and we will craft a personalized itinerary just for you.</p>
-                </button>
+                </div>
 
                 <!-- BLOCK 5 -->
-                <button class="Main-accordionBlock" title="show answer">
-                    <div class="Main-accordionQuestion">
-                        <h3 class="Main-h3 Main-h3--black">What is your cancellation policy?</h3>
+                <div class="Main-accordionBlock">
+                    <!-- Todos los Main-accordionQuestion son buttons porque activan Javascript -->
+                    <button class="Main-accordionQuestion" title="show answer">
+                        <span class="Main-accordionSpan">What is your cancellation policy?</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="Main-accordionIcon">
                             <path d="M13 0C10.4288 0 7.91543 0.762437 5.77759 2.1909C3.63975 3.61935 1.97351 5.64968 0.989572 8.02512C0.0056327 10.4006 -0.251811 13.0144 0.249797 15.5362C0.751405 18.0579 1.98953 20.3743 3.80762 22.1924C5.6257 24.0105 7.94208 25.2486 10.4638 25.7502C12.9856 26.2518 15.5995 25.9944 17.9749 25.0104C20.3503 24.0265 22.3807 22.3603 23.8091 20.2224C25.2376 18.0846 26 15.5712 26 13C25.9964 9.5533 24.6256 6.24882 22.1884 3.81163C19.7512 1.37445 16.4467 0.00363977 13 0ZM18.7075 11.7075L13.7075 16.7075C13.6146 16.8005 13.5043 16.8742 13.3829 16.9246C13.2615 16.9749 13.1314 17.0008 13 17.0008C12.8686 17.0008 12.7385 16.9749 12.6171 16.9246C12.4957 16.8742 12.3854 16.8005 12.2925 16.7075L7.29251 11.7075C7.10486 11.5199 6.99945 11.2654 6.99945 11C6.99945 10.7346 7.10486 10.4801 7.29251 10.2925C7.48015 10.1049 7.73464 9.99944 8.00001 9.99944C8.26537 9.99944 8.51987 10.1049 8.70751 10.2925L13 14.5863L17.2925 10.2925C17.3854 10.1996 17.4957 10.1259 17.6171 10.0756C17.7385 10.0253 17.8686 9.99944 18 9.99944C18.1314 9.99944 18.2615 10.0253 18.3829 10.0756C18.5043 10.1259 18.6146 10.1996 18.7075 10.2925C18.8004 10.3854 18.8741 10.4957 18.9244 10.6171C18.9747 10.7385 19.0006 10.8686 19.0006 11C19.0006 11.1314 18.9747 11.2615 18.9244 11.3829C18.8741 11.5043 18.8004 11.6146 18.7075 11.7075Z" fill="#019EA9"/>
                         </svg>
-                    </div>
+                    </button>
                     <p class="Main-p Main-p--accordion">Our cancellation policy varies depending on the package and destination. Generally, we offer flexible cancellation options with full or partial refunds available within certain timeframes. Please refer to our terms and conditions or contact us for specific details related to your booking.</p>
-                </button>
+                </div>
+
             </div>
         </section>
 
@@ -808,7 +818,8 @@
 
             <!-- FORMULARIO -->
             <form action="#" method="get" class="Footer-form">
-                <input type="email" name="email" placeholder="Enter your email" required class="Footer-input">
+                <label for="email" class="Footer-formLabel">Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required class="Footer-input" id="email">
             </form>
 
             <!-- Como se trata de un formulario, el elemento siguiente es un button de tipo submit. -->

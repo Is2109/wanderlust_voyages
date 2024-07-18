@@ -158,7 +158,7 @@
 
 // ACORDEON PREGUNTAS PRECUENTES
 
-    // Cuando hago CLICK en .Main-accordionBlock
+    // Cuando hago CLICK en .Main-accordionQuestion
         // REMOVE todas las clases .isClicked a .Main-accordionIcon
         // REMOVE todas las clases .isVisible a .Main-p--accordion
         // ADD la clase .isClicked a .Main-accordionIcon (de acuerdo con su index) - esto hace que el icono hace un rotate de 180deg
@@ -167,11 +167,11 @@
 
         (() => {
             const accordionContainer = document.querySelector('.Main-accordionContainer')
-            const blocks = accordionContainer.querySelectorAll('.Main-accordionBlock');
+            const questions = accordionContainer.querySelectorAll('.Main-accordionQuestion')
             const answers = accordionContainer.querySelectorAll('.Main-p--accordion');
             const icons = accordionContainer.querySelectorAll('.Main-accordionIcon');
         
-            let blockClickHandler = (index) => {
+            let questionsClickHandler = (index) => {
                 if (answers[index].classList.contains('isVisible')) {
                     answers[index].classList.remove('isVisible');
                 } else {
@@ -181,8 +181,8 @@
                 icons[index].classList.toggle('isClicked');
             };
         
-            blocks.forEach((block, index) => {
-                block.addEventListener('click', () => blockClickHandler(index));
+            questions.forEach((questions, index) => {
+                questions.addEventListener('click', () => questionsClickHandler(index));
             });
         })();
         
