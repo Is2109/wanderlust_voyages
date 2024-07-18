@@ -213,37 +213,7 @@
         // })();
 
 
-// TABS DESTINATIONS
 
-    // Cuando hago CLICK en .Main-button
-    // REMOVE todas las clases .isVisible de .Main-content
-    // REMOVE todas las clases .isClicked de .Main-button
-    // ADD la clase isClicked en .Main-button [index]
-    // ADD la clase isVisible en .Main-content [index]
-
-    // (() => {
-
-    // const buttons = document.querySelectorAll('.Main-button');
-    // const content = document.querySelectorAll('.Main-content');
-
-    // buttons.forEach((_ , index) =>{
-    //     buttons[index].addEventListener('click' , () => {
-    
-    //         content.forEach((_ , index) =>{
-    //             content[index].classList.remove('isVisible')
-    //         })
-    
-    //         buttons.forEach((_ , index) =>{
-    //             buttons[index].classList.remove('isClicked')
-    //         })
-    
-    //         buttons[index].classList.add('isClicked')
-    //         content[index].classList.add('isVisible')
-    
-    //     })    
-    // })
-
-    // })();
 
     
             

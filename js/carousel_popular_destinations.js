@@ -1,4 +1,9 @@
-// CAROUSEL POPULAR DESTINATIONS 3 CARDS (PANTALLAS GRANDES)
+// Creé un solo archivo javascript para mi proyecto. 
+// Cada "módulo" de mi javascript está dentro de una función anónima auto ejecutable, 
+// por lo que puedo agrupar cada "módulo" por separado y javascript solo ejecutará el código si ese "modulo" existe. 
+// Esto hará que la página sea más eficiente.
+
+// CAROUSEL POPULAR DESTINATIONS
 
     // Cuando hago click en .Main-carouselDot (cada punto)
         // Conocer la posición del punto
@@ -6,112 +11,50 @@
         // REMOVE la clase .isClicked a todos los puntos
         // ADD la clase .isClicked al punto que esta "clicado"
 
-(() => {
 
-const carouselDot = document.querySelectorAll('.Main-carouselDot')
-const carouselContainer = document.querySelector('.Main-carouselContainer')
+        (() => {
 
-if(carouselDot){
+          const carouselMain = document.querySelector('.Main-carousel')
+          const carouselDot = carouselMain.querySelectorAll('.Main-carouselDot')
+          const carouselContainer =carouselMain.querySelector('.Main-carouselContainer')
+          
+          if(carouselDot){
+          
+              carouselDot.forEach(( _ , index) =>{
+                  carouselDot[index].addEventListener('click' , ()=>{
+              
+                      let counter = index
+                      // let operation = counter * -50
+                      let operation
+          
+                      if( window.innerWidth >= 1000 ){
+                        // Ordenador
+                        operation = counter * -50
+                      }else if( window.innerWidth >= 640 && window.innerWidth < 1000){
+                        // Tablet
+                       operation = counter * -33.333
+                      }else{
+                        // Móvil
+                        operation = counter * -16.666
+                      }
+              
+                      console.log({ counter , operation })
+                      
+                      carouselContainer.style.transform = `translateX(${operation}%)`
+              
+                      carouselDot.forEach(( _ , index ) =>{
+                          carouselDot[index].classList.remove('isClicked')
+                      })
+              
+                      carouselDot[index].classList.add('isClicked')
+              
+                  })
+              })
+          }
+          })();
 
-    carouselDot.forEach(( _ , index) =>{
-        carouselDot[index].addEventListener('click' , ()=>{
-    
-            let counter = index
-            // let operation = counter * -50
-            let operation
-
-            if( window.innerWidth >= 1000 ){
-              // Ordenador
-              operation = counter * -50
-            }else if( window.innerWidth >= 640 && window.innerWidth < 1000){
-              // Tablet
-             operation = counter * -33.3
-            }else{
-              // Móvil
-              operation = counter * -16.6
-            }
-    
-            console.log({ counter , operation })
-            
-            carouselContainer.style.transform = `translateX(${operation}%)`
-    
-            carouselDot.forEach(( _ , index ) =>{
-                carouselDot[index].classList.remove('isClicked')
-            })
-    
-            carouselDot[index].classList.add('isClicked')
-    
-        })
-    })
-
-
-}
-
-})();
-
-// CAROUSEL POPULAR DESTINATIONS 2 CARDS (TABLET)
-
-
-// (() => {
-
-// const carouselDot = document.querySelectorAll('.Main-carouselDot')
-// const carouselContainer = document.querySelector('.Main-carouselContainer')
-// const carouselDotTablet = document.querySelector('.Main-carouselDot Main-carouselDot--tablet')
-
-//     if(carouselDotTablet){
-
-//         carouselDot.forEach(( _ , index) =>{
-//             carouselDot[index].addEventListener('click' , ()=>{
-        
-//                 let counter = index
-//                 let operation = counter * -33.3
-        
-//                 carouselContainer.style.transform = `translateX(${operation}%)`
-        
-//                 carouselDot.forEach(( _ , index ) =>{
-//                     carouselDot[index].classList.remove('isClicked')
-//                 })
-        
-//                 carouselDot[index].classList.add('isClicked')
-        
-//             })
-//         })
-    
-//     }
-
-// })();
-
-// CAROUSEL POPULAR DESTINATIONS 1 CARD (MOBILE)
-
-
-// (() => {
-
-//     const carouselDot = document.querySelectorAll('.Main-carouselDot')
-//     const carouselContainer = document.querySelector('.Main-carouselContainer')
-//     const carouselDotMobile = document.querySelector('.Main-carouselDot Main-carouselDot--mobile')
-    
-//         if(carouselDotMobile){
-    
-//             carouselDot.forEach(( _ , index) =>{
-//                 carouselDot[index].addEventListener('click' , ()=>{
-            
-//                     let counter = index
-//                     let operation = counter * -16.6
-            
-//                     carouselContainer.style.transform = `translateX(${operation}%)`
-            
-//                     carouselDot.forEach(( _ , index ) =>{
-//                         carouselDot[index].classList.remove('isClicked')
-//                     })
-            
-//                     carouselDot[index].classList.add('isClicked')
-            
-//                 })
-//             })
-        
-//         }
-    
-//     })();
+          // Nota: en este "módulo" la unica optimización que hice fue crear una constante para la contenedora y luego seleccionar 
+          // los elementos dentro de la contenedora. Como este código es más complejo preferí no cambiarlo y dejarlo así para que funcione.
 
 
 

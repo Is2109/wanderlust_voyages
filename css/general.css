@@ -156,10 +156,8 @@ body{
     text-align: left;
 }
 .Main-h3--black{
-    width: 100%;
     color: var(--color-black);
-    text-align: left;
-    font-weight: var(--font-weight-bold);
+    text-align: center;
 }
 .Main-h4{
     font-family: var(--secondary-font);
@@ -432,7 +430,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     font-size: var(--font-size-16);
 }
 
-.Footer-h4{
+.Footer-contactUs{
     font-family: var(--primary-font);
     font-size: var(--font-size-20);
     font-weight: var(--font-weight-bold);

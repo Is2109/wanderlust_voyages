@@ -6,26 +6,54 @@
         // REMOVE la clase .isClicked a todos los puntos
         // ADD la clase .isClicked al punto que esta "clicado"
 
-const carouselReviewsDot = document.querySelectorAll('.Main-carouselReviewsDot')
-const carouselReviewsContainer = document.querySelector('.Main-carouselReviewsContainer')
 
-console.log(carouselReviewsDot)
-console.log(carouselReviewsContainer)
+        (() => {
+            const carouselReviewsMain = document.querySelector('.Main-carouselReviews');
+            const carouselReviewsDots = carouselReviewsMain.querySelectorAll('.Main-carouselReviewsDot');
+            const carouselReviewsContainer = carouselReviewsMain.querySelector('.Main-carouselReviewsContainer');
+        
+            let dotClickHandler = (index) => {
+                let operation = index * (-100 / 3);
+                carouselReviewsContainer.style.transform = `translateX(${operation}%)`;
+        
+                carouselReviewsDots.forEach((dot) => dot.classList.remove('isClicked'));
+                carouselReviewsDots[index].classList.add('isClicked');
+            };
+        
+            if (carouselReviewsContainer) {
+                carouselReviewsDots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => dotClickHandler(index));
+                });
+            }
+        })();
 
-carouselReviewsDot.forEach(( _ , index) =>{
-    carouselReviewsDot[index].addEventListener('click' , ()=>{
 
-        let counter = index
-        let operation = counter * ( -100 / 3 )
+    // ANTES DE LA OPTIMIZACIÓN
+        // (() => {
 
-        carouselReviewsContainer.style.transform = `translateX(${operation}%)`
+        // const carouselReviewsMain = document.querySelector('.Main-carouselReviews')    
+        // const carouselReviewsDot = carouselReviewsMain.querySelectorAll('.Main-carouselReviewsDot')
+        // const carouselReviewsContainer = carouselReviewsMain.querySelector('.Main-carouselReviewsContainer')
+            
+        // if(carouselReviewsContainer){
 
-        carouselReviewsDot.forEach(( _ , index ) =>{
-            carouselReviewsDot[index].classList.remove('isClicked')
-        })
+        //     carouselReviewsDot.forEach(( _ , index) =>{
+        //         carouselReviewsDot[index].addEventListener('click' , ()=>{
+                
+        //             let counter = index
+        //             let operation = counter * ( -100 / 3 )
+                
+        //             carouselReviewsContainer.style.transform = `translateX(${operation}%)`
+                
+        //             carouselReviewsDot.forEach(( _ , index ) =>{
+        //                 carouselReviewsDot[index].classList.remove('isClicked')
+        //             })
+                
+        //             carouselReviewsDot[index].classList.add('isClicked')
+                
+        //         })
+        //     })
+        // }
+        // })();
 
-        carouselReviewsDot[index].classList.add('isClicked')
-
-    })
-})
 

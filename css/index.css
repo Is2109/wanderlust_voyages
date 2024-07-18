@@ -503,6 +503,14 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     align-items: center;
 }
 
+.Main-h5Packages{
+    font-family: var(--primary-font);
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-black);
+    text-transform: uppercase;
+}
+
 .Main-cardInfoWrapper{
     width: 90%;
     gap: 1.5rem;
@@ -741,6 +749,16 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     align-items: flex-start;
 
     gap: 2.5rem;
+}
+
+.Main-h4CallToAction{
+    font-family: var(--primary-font);
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-black);
+    text-transform: uppercase;
+    color: var(--color-white);
+    text-align: left;
 }
 
 .Main-p--white{

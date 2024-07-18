@@ -35,7 +35,10 @@
 
     <!-- ENLACES A ARCHIVOS JAVASCRIPT -->
     <!-- Utilizamos el atributo "defer" para permitir que la página HTML se cargue completamente antes de ejecutar Javascript -->
-    <script src="js/app.js" defer></script>
+    <script src="js/hamburger_menu.js" defer></script>
+    <script src="js/carousel_popular_destinations.js" defer></script>
+    <script src="js/carousel_reviews.js" defer></script>
+    <script src="js/accordion_faq.js" defer></script>
     
     <!-- Para mejorar el rendimiento de la página le añadi el preload de las tipografías -->
     <!-- Nota: Al final no usé estos "preloads" porque estaba en conflicto con "font-display: swap" que usé en "@font-face" en CSS -->
@@ -425,7 +428,7 @@
 
         <section class="Main-section Main-section--lightgreen">
             <div class="Main-sectionWrapper">
-                <h3 class="Main-h3 Main-h3--green">HANDPICKED JOURNEYS FOR UNFORGETTABLE EXPERIENCES</h3>
+                <h3 class="Main-h3 Main-h3--black">HANDPICKED JOURNEYS FOR UNFORGETTABLE EXPERIENCES</h3>
                 <h4 class="Main-h4">OUR EXCLUSIVE TRAVEL PACKAGES</h4>
                 <p class="Main-p Main-p--section">Discover our meticulously curated travel packages that promise unparalleled luxury and unforgettable experiences. Our exclusive itineraries are designed to cater to your every desire. Embark on a journey of a lifetime with Wanderlust Voyages, where every detail is crafted with elegance and sophistication.</p>
             </div>
@@ -444,7 +447,7 @@
                    
                     <div class="Main-cardInfo">
                         <div class="Main-cardInfoWrapper">
-                            <h6 class="Main-h6">Discover paradise on earth</h6>
+                            <h5 class="Main-h5Packages">Discover paradise on earth</h5>
                             <p class="Main-p Main-p--packages">Escape to the stunning overwater bungalows and turquoise lagoons of Bora Bora for a serene and luxurious retreat.</p>
                             <div class="Main-cardLabel">
                                 <div class="Main-cardNights">
@@ -510,7 +513,7 @@
 
                     <div class="Main-cardInfo">
                         <div class="Main-cardInfoWrapper">
-                            <h6 class="Main-h6">feel the charm of the amalfi coast</h6>
+                            <h5 class="Main-h5Packages">feel the charm of the amalfi coast</h5>
                             <p class="Main-p Main-p--packages">Explore the picturesque coastal towns, cliffside villas, and exquisite Mediterranean cuisine on the Amalfi Coast.</p>
                             <div class="Main-cardLabel">
                                 <div class="Main-cardNights">
@@ -576,7 +579,7 @@
                    
                     <div class="Main-cardInfo">
                         <div class="Main-cardInfoWrapper">
-                            <h6 class="Main-h6">indulge in the beauty of mahé island</h6>
+                            <h5 class="Main-h5Packages">indulge in the beauty of mahé island</h5>
                             <p class="Main-p Main-p--packages">Relax on stunning beaches, explore lush mountains, and enjoy luxurious resorts on Mahé Island.</p>
                             <div class="Main-cardLabel">
                                 <div class="Main-cardNights">
@@ -690,7 +693,7 @@
         <section class="Main-section Main-section--callToAction">
             <div class="Main-callToActionWrapper">
                 <h3 class="Main-h3 Main-h3--white">Ready to Embark on Your Dream Vacation</h3>
-                <h6 class="Main-h6 Main-h6--white">Contact Wanderlust Voyages Today!</h6>
+                <h4 class="Main-h4CallToAction">Contact Wanderlust Voyages Today!</h4>
                 <p class="Main-p Main-p--white">Let us craft your perfect escape with our bespoke travel experiences. Whether you're dreaming of serene beaches, picturesque landscapes, or luxurious retreats, our expert team at Wanderlust Voyages is here to turn your travel fantasies into reality. Get in touch with us today and start planning the journey of a lifetime.</p>
             </div>
             
@@ -792,7 +795,7 @@
         </div>
 
         <div class="Footer-contacts">
-            <h4 class="Footer-h4">Contact Us</h4>
+            <span class="Footer-contactUs">Contact Us</span>
             <span class="Footer-span">Feel free to contact and reach us!!</span>
             <div class="Footer-phone">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" class="Footer-icon">
