@@ -126,8 +126,7 @@
             <!-- Cada imagen tiene diferentes tamaños de acuerdo con su breakpoint y está el los formatos webp y jpeg para que esté optimizada 
             a diferentes tipos de resoluciones y dispositivos.
             La imagen que esta dentro de la etiqueta "img" es la fallback o sea, la imagen por defecto que el navegador va a buscar si no puede 
-            cargar las demás.
-            Esta imagen en concreto no tiene loading lazy porque es la primera que aparece al abrir la pagina web -->
+            cargar las demás. -->
 
             <!-- Inicialmente creé imagenes para los breakpoints de 480px y 768px pero las imagenes se veían pixeladas así que no las voy 
             a usar -->
@@ -140,6 +139,7 @@
                 <source srcset="assets/images/webp/hero/hero_1500x1125.webp" type="image/webp" media="(max-width:1024px)">
                 <source srcset="assets/images/jpg/hero/hero_2000x1500.jpg" type="image/jpeg" media="(min-width:1600px)">
                 <source srcset="assets/images/webp/hero/hero_2000x1500.webp" type="image/webp" media="(min-width:1600px)">
+                <!-- Esta imagen en concreto no tiene loading lazy porque es la primera que aparece al abrir la pagina web -->
                 <img src="assets/images/webp/hero/hero_2000x1500.webp" alt="Aerial view of a tropical beach with turquoise water and white sand" class="Main-imgHero">
             </picture>
             
@@ -182,7 +182,8 @@
                  <input type="date" name="check-out" required class="Main-input" id="checkout" value="2024-07-23">
              </div>
 
-             <!-- Como se trata de un formulario, el elemento siguiente es un button de tipo submit.
+             <!-- Como se trata de un formulario, el elemento siguiente es un button de tipo submit, aún que este "button" 
+            no nos lleva a ninguna parte.
             A lo largo de la página tengo varios elementos que visualmente parecen un botón pero semánticamente algunos
             de ellos son botones, anclas o incluso divs. Como todos tienen el mismo estilo les daré a todos una clase de 
             "button" usando modificadores si es necesario.  -->
@@ -216,20 +217,20 @@
                             </picture>
                             <div class="Main-cardContent">
                                 <div class="Main-starRating">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
                                 </div>
                                 <h5 class="Main-h5">Maldives</h5>
@@ -249,20 +250,20 @@
                             </picture>
                             <div class="Main-cardContent">
                                 <div class="Main-starRating">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
                                 </div>
                                 <h5 class="Main-h5">Italy</h5>
@@ -282,20 +283,20 @@
                             </picture>
                             <div class="Main-cardContent">
                                 <div class="Main-starRating">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
                                 </div>
                                 <h5 class="Main-h5">French Polynesia</h5>
@@ -315,20 +316,20 @@
                             </picture>
                             <div class="Main-cardContent">
                                 <div class="Main-starRating">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
                                 </div>
                                 <h5 class="Main-h5">Greece</h5>
@@ -348,20 +349,20 @@
                             </picture>
                             <div class="Main-cardContent">
                                 <div class="Main-starRating">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
                                 </div>
                                 <h5 class="Main-h5">Seychelles</h5>
@@ -381,20 +382,20 @@
                             </picture>
                             <div class="Main-cardContent">
                                 <div class="Main-starRating">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                        <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" class="Main-svg">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                    <svg class="Main-svg">
+                                        <use href="#star-icon"></use>
                                     </svg>
                                 </div>
                                 <h5 class="Main-h5">France</h5>
@@ -451,16 +452,16 @@
                             <p class="Main-p Main-p--packages">Escape to the stunning overwater bungalows and turquoise lagoons of Bora Bora for a serene and luxurious retreat.</p>
                             <div class="Main-cardLabel">
                                 <div class="Main-cardNights">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="Main-cardClock">
-                                        <path d="M12 2.25C10.0716 2.25 8.18657 2.82183 6.58319 3.89317C4.97982 4.96452 3.73013 6.48726 2.99218 8.26884C2.25422 10.0504 2.06114 12.0108 2.43735 13.9021C2.81355 15.7934 3.74215 17.5307 5.10571 18.8943C6.46928 20.2579 8.20656 21.1865 10.0979 21.5627C11.9892 21.9389 13.9496 21.7458 15.7312 21.0078C17.5127 20.2699 19.0355 19.0202 20.1068 17.4168C21.1782 15.8134 21.75 13.9284 21.75 12C21.7473 9.41498 20.7192 6.93661 18.8913 5.10872C17.0634 3.28084 14.585 2.25273 12 2.25ZM17.25 12.75H12C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12V6.75C11.25 6.55109 11.329 6.36032 11.4697 6.21967C11.6103 6.07902 11.8011 6 12 6C12.1989 6 12.3897 6.07902 12.5303 6.21967C12.671 6.36032 12.75 6.55109 12.75 6.75V11.25H17.25C17.4489 11.25 17.6397 11.329 17.7803 11.4697C17.921 11.6103 18 11.8011 18 12C18 12.1989 17.921 12.3897 17.7803 12.5303C17.6397 12.671 17.4489 12.75 17.25 12.75Z" fill="#1B828D"/>
-                                    </svg>
+                                    <svg class="Main-cardClock">
+                                        <use href="#clock-icon"></use>
+                                    </svg>                                    
                                     <span class="Main-cardSpan">7 nights</span>
                                 </div>
                                 <div class="Main-cardLine"></div>
                                 <div class="Main-cardCountry">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="Main-cardMap">
-                                        <path d="M12 1.5C9.81273 1.50248 7.71575 2.37247 6.16911 3.91911C4.62247 5.46575 3.75248 7.56273 3.75 9.75C3.75 16.8094 11.25 22.1409 11.5697 22.3641C11.6958 22.4524 11.846 22.4998 12 22.4998C12.154 22.4998 12.3042 22.4524 12.4303 22.3641C12.75 22.1409 20.25 16.8094 20.25 9.75C20.2475 7.56273 19.3775 5.46575 17.8309 3.91911C16.2843 2.37247 14.1873 1.50248 12 1.5ZM12 6.75C12.5933 6.75 13.1734 6.92595 13.6667 7.25559C14.1601 7.58524 14.5446 8.05377 14.7716 8.60195C14.9987 9.15013 15.0581 9.75333 14.9424 10.3353C14.8266 10.9172 14.5409 11.4518 14.1213 11.8713C13.7018 12.2909 13.1672 12.5766 12.5853 12.6924C12.0033 12.8081 11.4001 12.7487 10.8519 12.5216C10.3038 12.2946 9.83524 11.9101 9.50559 11.4167C9.17595 10.9234 9 10.3433 9 9.75C9 8.95435 9.31607 8.19129 9.87868 7.62868C10.4413 7.06607 11.2044 6.75 12 6.75Z" fill="#1B828D"/>
-                                    </svg>
+                                    <svg class="Main-cardMap">
+                                        <use href="#map-icon"></use>
+                                    </svg>                                    
                                     <!-- Intenté redimensionar el icono de "mapPin" directamente en html pero no me funcionava así que le eliminé el "width" y el "height" en html, cree la clase ".Main-cardMap" y le di las propiedades de width y height en CSS -->
                                     <span class="Main-cardSpan">French Polynesia</span>
                                 </div>
@@ -472,20 +473,20 @@
                         <div class="Main-cardRating">
                             <span class="Main-cardReviews">(120 reviews)</span>
                             <div class="Main-cardStars">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
                             </div>
                         </div>
@@ -517,16 +518,16 @@
                             <p class="Main-p Main-p--packages">Explore the picturesque coastal towns, cliffside villas, and exquisite Mediterranean cuisine on the Amalfi Coast.</p>
                             <div class="Main-cardLabel">
                                 <div class="Main-cardNights">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="Main-cardClock">
-                                        <path d="M12 2.25C10.0716 2.25 8.18657 2.82183 6.58319 3.89317C4.97982 4.96452 3.73013 6.48726 2.99218 8.26884C2.25422 10.0504 2.06114 12.0108 2.43735 13.9021C2.81355 15.7934 3.74215 17.5307 5.10571 18.8943C6.46928 20.2579 8.20656 21.1865 10.0979 21.5627C11.9892 21.9389 13.9496 21.7458 15.7312 21.0078C17.5127 20.2699 19.0355 19.0202 20.1068 17.4168C21.1782 15.8134 21.75 13.9284 21.75 12C21.7473 9.41498 20.7192 6.93661 18.8913 5.10872C17.0634 3.28084 14.585 2.25273 12 2.25ZM17.25 12.75H12C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12V6.75C11.25 6.55109 11.329 6.36032 11.4697 6.21967C11.6103 6.07902 11.8011 6 12 6C12.1989 6 12.3897 6.07902 12.5303 6.21967C12.671 6.36032 12.75 6.55109 12.75 6.75V11.25H17.25C17.4489 11.25 17.6397 11.329 17.7803 11.4697C17.921 11.6103 18 11.8011 18 12C18 12.1989 17.921 12.3897 17.7803 12.5303C17.6397 12.671 17.4489 12.75 17.25 12.75Z" fill="#1B828D"/>
-                                    </svg>
+                                    <svg class="Main-cardClock">
+                                        <use href="#clock-icon"></use>
+                                    </svg>                                    
                                     <span class="Main-cardSpan">5 nights</span>
                                 </div>
                                 <div class="Main-cardLine"></div>
                                 <div class="Main-cardCountry">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="Main-cardMap">
-                                        <path d="M12 1.5C9.81273 1.50248 7.71575 2.37247 6.16911 3.91911C4.62247 5.46575 3.75248 7.56273 3.75 9.75C3.75 16.8094 11.25 22.1409 11.5697 22.3641C11.6958 22.4524 11.846 22.4998 12 22.4998C12.154 22.4998 12.3042 22.4524 12.4303 22.3641C12.75 22.1409 20.25 16.8094 20.25 9.75C20.2475 7.56273 19.3775 5.46575 17.8309 3.91911C16.2843 2.37247 14.1873 1.50248 12 1.5ZM12 6.75C12.5933 6.75 13.1734 6.92595 13.6667 7.25559C14.1601 7.58524 14.5446 8.05377 14.7716 8.60195C14.9987 9.15013 15.0581 9.75333 14.9424 10.3353C14.8266 10.9172 14.5409 11.4518 14.1213 11.8713C13.7018 12.2909 13.1672 12.5766 12.5853 12.6924C12.0033 12.8081 11.4001 12.7487 10.8519 12.5216C10.3038 12.2946 9.83524 11.9101 9.50559 11.4167C9.17595 10.9234 9 10.3433 9 9.75C9 8.95435 9.31607 8.19129 9.87868 7.62868C10.4413 7.06607 11.2044 6.75 12 6.75Z" fill="#1B828D"/>
-                                    </svg>
+                                    <svg class="Main-cardMap">
+                                        <use href="#map-icon"></use>
+                                    </svg>                                    
                                     <!-- Intenté redimensionar el icono de "mapPin" directamente en html pero no me funcionava así que le eliminé el "width" y el "height" en html, cree la clase ".Main-cardMap" y le di las propiedades de width y height en CSS -->
                                     <span class="Main-cardSpan">Italy</span>
                                 </div>
@@ -538,20 +539,20 @@
                         <div class="Main-cardRating">
                             <span class="Main-cardReviews">(98 reviews)</span>
                             <div class="Main-cardStars">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
                             </div>
                         </div>
@@ -583,16 +584,16 @@
                             <p class="Main-p Main-p--packages">Relax on stunning beaches, explore lush mountains, and enjoy luxurious resorts on Mahé Island.</p>
                             <div class="Main-cardLabel">
                                 <div class="Main-cardNights">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="Main-cardClock">
-                                        <path d="M12 2.25C10.0716 2.25 8.18657 2.82183 6.58319 3.89317C4.97982 4.96452 3.73013 6.48726 2.99218 8.26884C2.25422 10.0504 2.06114 12.0108 2.43735 13.9021C2.81355 15.7934 3.74215 17.5307 5.10571 18.8943C6.46928 20.2579 8.20656 21.1865 10.0979 21.5627C11.9892 21.9389 13.9496 21.7458 15.7312 21.0078C17.5127 20.2699 19.0355 19.0202 20.1068 17.4168C21.1782 15.8134 21.75 13.9284 21.75 12C21.7473 9.41498 20.7192 6.93661 18.8913 5.10872C17.0634 3.28084 14.585 2.25273 12 2.25ZM17.25 12.75H12C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12V6.75C11.25 6.55109 11.329 6.36032 11.4697 6.21967C11.6103 6.07902 11.8011 6 12 6C12.1989 6 12.3897 6.07902 12.5303 6.21967C12.671 6.36032 12.75 6.55109 12.75 6.75V11.25H17.25C17.4489 11.25 17.6397 11.329 17.7803 11.4697C17.921 11.6103 18 11.8011 18 12C18 12.1989 17.921 12.3897 17.7803 12.5303C17.6397 12.671 17.4489 12.75 17.25 12.75Z" fill="#1B828D"/>
-                                    </svg>
+                                    <svg class="Main-cardClock">
+                                        <use href="#clock-icon"></use>
+                                    </svg>                                    
                                     <span class="Main-cardSpan">6 nights</span>
                                 </div>
                                 <div class="Main-cardLine"></div>
                                 <div class="Main-cardCountry">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="Main-cardMap">
-                                        <path d="M12 1.5C9.81273 1.50248 7.71575 2.37247 6.16911 3.91911C4.62247 5.46575 3.75248 7.56273 3.75 9.75C3.75 16.8094 11.25 22.1409 11.5697 22.3641C11.6958 22.4524 11.846 22.4998 12 22.4998C12.154 22.4998 12.3042 22.4524 12.4303 22.3641C12.75 22.1409 20.25 16.8094 20.25 9.75C20.2475 7.56273 19.3775 5.46575 17.8309 3.91911C16.2843 2.37247 14.1873 1.50248 12 1.5ZM12 6.75C12.5933 6.75 13.1734 6.92595 13.6667 7.25559C14.1601 7.58524 14.5446 8.05377 14.7716 8.60195C14.9987 9.15013 15.0581 9.75333 14.9424 10.3353C14.8266 10.9172 14.5409 11.4518 14.1213 11.8713C13.7018 12.2909 13.1672 12.5766 12.5853 12.6924C12.0033 12.8081 11.4001 12.7487 10.8519 12.5216C10.3038 12.2946 9.83524 11.9101 9.50559 11.4167C9.17595 10.9234 9 10.3433 9 9.75C9 8.95435 9.31607 8.19129 9.87868 7.62868C10.4413 7.06607 11.2044 6.75 12 6.75Z" fill="#1B828D"/>
-                                    </svg>
+                                    <svg class="Main-cardMap">
+                                        <use href="#map-icon"></use>
+                                    </svg>                                    
                                     <!-- Intenté redimensionar el icono de "mapPin" directamente en html pero no me funcionava así que le eliminé el "width" y el "height" en html, cree la clase ".Main-cardMap" y le di las propiedades de width y height en CSS -->
                                     <span class="Main-cardSpan">Seychelles</span>
                                 </div>
@@ -604,20 +605,20 @@
                         <div class="Main-cardRating">
                             <span class="Main-cardReviews">(150 reviews)</span>
                             <div class="Main-cardStars">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                    <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-                                <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+                                <svg class="Main-starIcon">
+                                    <use href="#whitestar-icon"></use>
                                 </svg>
                             </div>
                         </div>
@@ -720,9 +721,9 @@
                     <!-- Todos los Main-accordionQuestion son buttons porque activan Javascript -->
                     <button class="Main-accordionQuestion" title="show answer">
                         <span class="Main-accordionSpan">What destinations do you offer packages for?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="Main-accordionIcon">
-                            <path d="M13 0C10.4288 0 7.91543 0.762437 5.77759 2.1909C3.63975 3.61935 1.97351 5.64968 0.989572 8.02512C0.0056327 10.4006 -0.251811 13.0144 0.249797 15.5362C0.751405 18.0579 1.98953 20.3743 3.80762 22.1924C5.6257 24.0105 7.94208 25.2486 10.4638 25.7502C12.9856 26.2518 15.5995 25.9944 17.9749 25.0104C20.3503 24.0265 22.3807 22.3603 23.8091 20.2224C25.2376 18.0846 26 15.5712 26 13C25.9964 9.5533 24.6256 6.24882 22.1884 3.81163C19.7512 1.37445 16.4467 0.00363977 13 0ZM18.7075 11.7075L13.7075 16.7075C13.6146 16.8005 13.5043 16.8742 13.3829 16.9246C13.2615 16.9749 13.1314 17.0008 13 17.0008C12.8686 17.0008 12.7385 16.9749 12.6171 16.9246C12.4957 16.8742 12.3854 16.8005 12.2925 16.7075L7.29251 11.7075C7.10486 11.5199 6.99945 11.2654 6.99945 11C6.99945 10.7346 7.10486 10.4801 7.29251 10.2925C7.48015 10.1049 7.73464 9.99944 8.00001 9.99944C8.26537 9.99944 8.51987 10.1049 8.70751 10.2925L13 14.5863L17.2925 10.2925C17.3854 10.1996 17.4957 10.1259 17.6171 10.0756C17.7385 10.0253 17.8686 9.99944 18 9.99944C18.1314 9.99944 18.2615 10.0253 18.3829 10.0756C18.5043 10.1259 18.6146 10.1996 18.7075 10.2925C18.8004 10.3854 18.8741 10.4957 18.9244 10.6171C18.9747 10.7385 19.0006 10.8686 19.0006 11C19.0006 11.1314 18.9747 11.2615 18.9244 11.3829C18.8741 11.5043 18.8004 11.6146 18.7075 11.7075Z" fill="#019EA9"/>
-                        </svg>
+                        <svg class="Main-accordionIcon">
+                            <use href="#accordion-icon"></use>
+                        </svg>                        
                     </button>
                     <p class="Main-p Main-p--accordion">Wanderlust Voyages offers a variety of luxury travel packages to destinations around the world, including the Maldives, Bora Bora, the Amalfi Coast, Santorini, the Loire Valley, and Seychelles.</p>
                 </div>
@@ -732,9 +733,9 @@
                     <!-- Todos los Main-accordionQuestion son buttons porque activan Javascript -->
                     <button class="Main-accordionQuestion" title="show answer">
                         <span class="Main-accordionSpan">How can I book a package with Wanderlust Voyages?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="Main-accordionIcon">
-                            <path d="M13 0C10.4288 0 7.91543 0.762437 5.77759 2.1909C3.63975 3.61935 1.97351 5.64968 0.989572 8.02512C0.0056327 10.4006 -0.251811 13.0144 0.249797 15.5362C0.751405 18.0579 1.98953 20.3743 3.80762 22.1924C5.6257 24.0105 7.94208 25.2486 10.4638 25.7502C12.9856 26.2518 15.5995 25.9944 17.9749 25.0104C20.3503 24.0265 22.3807 22.3603 23.8091 20.2224C25.2376 18.0846 26 15.5712 26 13C25.9964 9.5533 24.6256 6.24882 22.1884 3.81163C19.7512 1.37445 16.4467 0.00363977 13 0ZM18.7075 11.7075L13.7075 16.7075C13.6146 16.8005 13.5043 16.8742 13.3829 16.9246C13.2615 16.9749 13.1314 17.0008 13 17.0008C12.8686 17.0008 12.7385 16.9749 12.6171 16.9246C12.4957 16.8742 12.3854 16.8005 12.2925 16.7075L7.29251 11.7075C7.10486 11.5199 6.99945 11.2654 6.99945 11C6.99945 10.7346 7.10486 10.4801 7.29251 10.2925C7.48015 10.1049 7.73464 9.99944 8.00001 9.99944C8.26537 9.99944 8.51987 10.1049 8.70751 10.2925L13 14.5863L17.2925 10.2925C17.3854 10.1996 17.4957 10.1259 17.6171 10.0756C17.7385 10.0253 17.8686 9.99944 18 9.99944C18.1314 9.99944 18.2615 10.0253 18.3829 10.0756C18.5043 10.1259 18.6146 10.1996 18.7075 10.2925C18.8004 10.3854 18.8741 10.4957 18.9244 10.6171C18.9747 10.7385 19.0006 10.8686 19.0006 11C19.0006 11.1314 18.9747 11.2615 18.9244 11.3829C18.8741 11.5043 18.8004 11.6146 18.7075 11.7075Z" fill="#019EA9"/>
-                        </svg>
+                        <svg class="Main-accordionIcon">
+                            <use href="#accordion-icon"></use>
+                        </svg>                        
                     </button>
                     <p class="Main-p Main-p--accordion">You can book a package by visiting the PACKAGES section our website and browsing our destinations. Once you find a package you like, you can contact us directly through our contact form, or call our customer service team to make a reservation.</p>
                 </div>
@@ -744,9 +745,9 @@
                     <!-- Todos los Main-accordionQuestion son buttons porque activan Javascript -->
                     <button class="Main-accordionQuestion" title="show answer">
                         <span class="Main-accordionSpan">What is included in your travel packages?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="Main-accordionIcon">
-                            <path d="M13 0C10.4288 0 7.91543 0.762437 5.77759 2.1909C3.63975 3.61935 1.97351 5.64968 0.989572 8.02512C0.0056327 10.4006 -0.251811 13.0144 0.249797 15.5362C0.751405 18.0579 1.98953 20.3743 3.80762 22.1924C5.6257 24.0105 7.94208 25.2486 10.4638 25.7502C12.9856 26.2518 15.5995 25.9944 17.9749 25.0104C20.3503 24.0265 22.3807 22.3603 23.8091 20.2224C25.2376 18.0846 26 15.5712 26 13C25.9964 9.5533 24.6256 6.24882 22.1884 3.81163C19.7512 1.37445 16.4467 0.00363977 13 0ZM18.7075 11.7075L13.7075 16.7075C13.6146 16.8005 13.5043 16.8742 13.3829 16.9246C13.2615 16.9749 13.1314 17.0008 13 17.0008C12.8686 17.0008 12.7385 16.9749 12.6171 16.9246C12.4957 16.8742 12.3854 16.8005 12.2925 16.7075L7.29251 11.7075C7.10486 11.5199 6.99945 11.2654 6.99945 11C6.99945 10.7346 7.10486 10.4801 7.29251 10.2925C7.48015 10.1049 7.73464 9.99944 8.00001 9.99944C8.26537 9.99944 8.51987 10.1049 8.70751 10.2925L13 14.5863L17.2925 10.2925C17.3854 10.1996 17.4957 10.1259 17.6171 10.0756C17.7385 10.0253 17.8686 9.99944 18 9.99944C18.1314 9.99944 18.2615 10.0253 18.3829 10.0756C18.5043 10.1259 18.6146 10.1996 18.7075 10.2925C18.8004 10.3854 18.8741 10.4957 18.9244 10.6171C18.9747 10.7385 19.0006 10.8686 19.0006 11C19.0006 11.1314 18.9747 11.2615 18.9244 11.3829C18.8741 11.5043 18.8004 11.6146 18.7075 11.7075Z" fill="#019EA9"/>
-                        </svg>
+                        <svg class="Main-accordionIcon">
+                            <use href="#accordion-icon"></use>
+                        </svg>                        
                     </button>
                     <p class="Main-p Main-p--accordion">Our travel packages include luxury accommodation, transportation, guided tours, and selected meals. Specific inclusions vary by package, so please check the details for each package or contact us for more information.</p>
                 </div>
@@ -756,9 +757,9 @@
                     <!-- Todos los Main-accordionQuestion son buttons porque activan Javascript -->
                     <button class="Main-accordionQuestion" title="show answer">
                         <span class="Main-accordionSpan">Do you offer customized travel packages?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="Main-accordionIcon">
-                            <path d="M13 0C10.4288 0 7.91543 0.762437 5.77759 2.1909C3.63975 3.61935 1.97351 5.64968 0.989572 8.02512C0.0056327 10.4006 -0.251811 13.0144 0.249797 15.5362C0.751405 18.0579 1.98953 20.3743 3.80762 22.1924C5.6257 24.0105 7.94208 25.2486 10.4638 25.7502C12.9856 26.2518 15.5995 25.9944 17.9749 25.0104C20.3503 24.0265 22.3807 22.3603 23.8091 20.2224C25.2376 18.0846 26 15.5712 26 13C25.9964 9.5533 24.6256 6.24882 22.1884 3.81163C19.7512 1.37445 16.4467 0.00363977 13 0ZM18.7075 11.7075L13.7075 16.7075C13.6146 16.8005 13.5043 16.8742 13.3829 16.9246C13.2615 16.9749 13.1314 17.0008 13 17.0008C12.8686 17.0008 12.7385 16.9749 12.6171 16.9246C12.4957 16.8742 12.3854 16.8005 12.2925 16.7075L7.29251 11.7075C7.10486 11.5199 6.99945 11.2654 6.99945 11C6.99945 10.7346 7.10486 10.4801 7.29251 10.2925C7.48015 10.1049 7.73464 9.99944 8.00001 9.99944C8.26537 9.99944 8.51987 10.1049 8.70751 10.2925L13 14.5863L17.2925 10.2925C17.3854 10.1996 17.4957 10.1259 17.6171 10.0756C17.7385 10.0253 17.8686 9.99944 18 9.99944C18.1314 9.99944 18.2615 10.0253 18.3829 10.0756C18.5043 10.1259 18.6146 10.1996 18.7075 10.2925C18.8004 10.3854 18.8741 10.4957 18.9244 10.6171C18.9747 10.7385 19.0006 10.8686 19.0006 11C19.0006 11.1314 18.9747 11.2615 18.9244 11.3829C18.8741 11.5043 18.8004 11.6146 18.7075 11.7075Z" fill="#019EA9"/>
-                        </svg>
+                        <svg class="Main-accordionIcon">
+                            <use href="#accordion-icon"></use>
+                        </svg>                        
                     </button>
                     <p class="Main-p Main-p--accordion">Yes, we specialize in creating bespoke travel experiences tailored to your preferences. Contact our travel experts with your requirements, and we will craft a personalized itinerary just for you.</p>
                 </div>
@@ -768,9 +769,9 @@
                     <!-- Todos los Main-accordionQuestion son buttons porque activan Javascript -->
                     <button class="Main-accordionQuestion" title="show answer">
                         <span class="Main-accordionSpan">What is your cancellation policy?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="Main-accordionIcon">
-                            <path d="M13 0C10.4288 0 7.91543 0.762437 5.77759 2.1909C3.63975 3.61935 1.97351 5.64968 0.989572 8.02512C0.0056327 10.4006 -0.251811 13.0144 0.249797 15.5362C0.751405 18.0579 1.98953 20.3743 3.80762 22.1924C5.6257 24.0105 7.94208 25.2486 10.4638 25.7502C12.9856 26.2518 15.5995 25.9944 17.9749 25.0104C20.3503 24.0265 22.3807 22.3603 23.8091 20.2224C25.2376 18.0846 26 15.5712 26 13C25.9964 9.5533 24.6256 6.24882 22.1884 3.81163C19.7512 1.37445 16.4467 0.00363977 13 0ZM18.7075 11.7075L13.7075 16.7075C13.6146 16.8005 13.5043 16.8742 13.3829 16.9246C13.2615 16.9749 13.1314 17.0008 13 17.0008C12.8686 17.0008 12.7385 16.9749 12.6171 16.9246C12.4957 16.8742 12.3854 16.8005 12.2925 16.7075L7.29251 11.7075C7.10486 11.5199 6.99945 11.2654 6.99945 11C6.99945 10.7346 7.10486 10.4801 7.29251 10.2925C7.48015 10.1049 7.73464 9.99944 8.00001 9.99944C8.26537 9.99944 8.51987 10.1049 8.70751 10.2925L13 14.5863L17.2925 10.2925C17.3854 10.1996 17.4957 10.1259 17.6171 10.0756C17.7385 10.0253 17.8686 9.99944 18 9.99944C18.1314 9.99944 18.2615 10.0253 18.3829 10.0756C18.5043 10.1259 18.6146 10.1996 18.7075 10.2925C18.8004 10.3854 18.8741 10.4957 18.9244 10.6171C18.9747 10.7385 19.0006 10.8686 19.0006 11C19.0006 11.1314 18.9747 11.2615 18.9244 11.3829C18.8741 11.5043 18.8004 11.6146 18.7075 11.7075Z" fill="#019EA9"/>
-                        </svg>
+                        <svg class="Main-accordionIcon">
+                            <use href="#accordion-icon"></use>
+                        </svg>                        
                     </button>
                     <p class="Main-p Main-p--accordion">Our cancellation policy varies depending on the package and destination. Generally, we offer flexible cancellation options with full or partial refunds available within certain timeframes. Please refer to our terms and conditions or contact us for specific details related to your booking.</p>
                 </div>
@@ -798,21 +799,21 @@
             <span class="Footer-contactUs">Contact Us</span>
             <span class="Footer-span">Feel free to contact and reach us!!</span>
             <div class="Footer-phone">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" class="Footer-icon">
-                    <path d="M25.3619 19.1492C25.1669 20.6312 24.439 21.9916 23.3143 22.9763C22.1895 23.9609 20.7448 24.5025 19.25 24.4998C10.5656 24.4998 3.50001 17.4342 3.50001 8.74978C3.49733 7.25494 4.03889 5.81024 5.02353 4.68551C6.00817 3.56078 7.36857 2.83293 8.85063 2.6379C9.22541 2.59214 9.60494 2.66882 9.93256 2.85648C10.2602 3.04414 10.5183 3.33272 10.6684 3.67915L12.9784 8.83618V8.84931C13.0934 9.11449 13.1409 9.40402 13.1166 9.69202C13.0924 9.98002 12.9972 10.2575 12.8395 10.4998C12.8199 10.5293 12.7991 10.5567 12.7772 10.584L10.5 13.2834C11.3192 14.9481 13.0605 16.674 14.747 17.4954L17.4092 15.2302C17.4354 15.2083 17.4628 15.1878 17.4913 15.169C17.7333 15.0076 18.0118 14.909 18.3015 14.8823C18.5912 14.8555 18.883 14.9015 19.1505 15.0159L19.1647 15.0224L24.3174 17.3313C24.6644 17.4809 24.9537 17.7388 25.142 18.0665C25.3302 18.3942 25.4074 18.774 25.3619 19.1492Z" fill="white"/>
-                  </svg>
+                <svg class="Footer-icon">
+                    <use href="#footer-icon-phone"></use>
+                </svg>
                   <span class="Footer-phoneNumber">+1 (800) 555-1234</span>
             </div>
             <div class="Footer-email">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" class="Footer-icon">
-                    <path d="M24.5 5.25H3.5C3.26794 5.25 3.04538 5.34219 2.88128 5.50628C2.71719 5.67038 2.625 5.89294 2.625 6.125V21C2.625 21.4641 2.80937 21.9092 3.13756 22.2374C3.46575 22.5656 3.91087 22.75 4.375 22.75H23.625C24.0891 22.75 24.5342 22.5656 24.8624 22.2374C25.1906 21.9092 25.375 21.4641 25.375 21V6.125C25.375 5.89294 25.2828 5.67038 25.1187 5.50628C24.9546 5.34219 24.7321 5.25 24.5 5.25ZM23.625 21H4.375V8.11453L13.4083 16.3953C13.5697 16.5435 13.7809 16.6257 14 16.6257C14.2191 16.6257 14.4303 16.5435 14.5917 16.3953L23.625 8.11453V21Z" fill="white"/>
-                  </svg>
+                <svg class="Footer-icon">
+                    <use href="#footer-icon-email"></use>
+                </svg>
                 <span class="Footer-emailAddress">info@wanderlustvoyages.com</span>
             </div>
             <div class="Footer-address">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" class="Footer-icon">
-                    <path d="M14 1.75C11.4482 1.75289 9.0017 2.76788 7.19729 4.57229C5.39288 6.37671 4.37789 8.82318 4.375 11.375C4.375 19.6109 13.125 25.8311 13.498 26.0914C13.6451 26.1945 13.8204 26.2498 14 26.2498C14.1796 26.2498 14.3549 26.1945 14.502 26.0914C14.875 25.8311 23.625 19.6109 23.625 11.375C23.6221 8.82318 22.6071 6.37671 20.8027 4.57229C18.9983 2.76788 16.5518 1.75289 14 1.75ZM14 7.875C14.6922 7.875 15.3689 8.08027 15.9445 8.46486C16.5201 8.84944 16.9687 9.39607 17.2336 10.0356C17.4985 10.6751 17.5678 11.3789 17.4327 12.0578C17.2977 12.7367 16.9644 13.3604 16.4749 13.8499C15.9854 14.3394 15.3617 14.6727 14.6828 14.8077C14.0039 14.9428 13.3001 14.8735 12.6606 14.6086C12.0211 14.3437 11.4744 13.8951 11.0899 13.3195C10.7053 12.7439 10.5 12.0672 10.5 11.375C10.5 10.4467 10.8687 9.5565 11.5251 8.90013C12.1815 8.24375 13.0717 7.875 14 7.875Z" fill="white"/>
-                  </svg>
+                <svg class="Footer-icon">
+                    <use href="#footer-icon-location"></use>
+                </svg>
                 <address class="Footer-direction">123 Luxury Lane, Paradise City, NY 10001, USA</address>
             </div>
         </div>
@@ -825,7 +826,8 @@
                 <input type="email" name="email" placeholder="Enter your email" required class="Footer-input" id="email">
             </form>
 
-            <!-- Como se trata de un formulario, el elemento siguiente es un button de tipo submit. -->
+            <!-- Como se trata de un formulario, el elemento siguiente es un button de tipo submit, aún que este "button" 
+            no nos lleva a ninguna parte -->
             <button type="submit" class="Footer-button" title="submit form">Subscribe</button>
 
             <div class="Footer-social">
@@ -833,23 +835,23 @@
                 <!-- Aqui tenemos enlaces externos así que tienen target="_blank" para que el enlace se abra en otra pestaña
                  y el atributo rel"noreferrer" por razones de seguridad y privacidad -->
                 <a href="https://es-la.facebook.com/" class="Footer-a" target="_blank" rel="noreferrer" title="Follow us on Facebook">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="Footer-svg">
-                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    <svg width="16" height="16" fill="currentColor" class="Footer-svg">
+                        <use href="#icon-facebook"></use>
                       </svg>
                 </a>
                 <a href="https://www.instagram.com/" class="Footer-a" target="_blank" rel="noreferrer" title="Follow us on Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="Footer-svg">
-                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                    <svg width="16" height="16" fill="currentColor" class="Footer-svg">
+                        <use href="#icon-instagram"></use>
                       </svg>
                 </a>
                 <a href="https://x.com/?lang=es" class="Footer-a" target="_blank" rel="noreferrer" title="Follow us on Twitter">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="Footer-svg">
-                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                    <svg width="16" height="16" fill="currentColor" class="Footer-svg">
+                        <use href="#icon-twitter"></use>
                       </svg>
                 </a>
                 <a href="https://www.youtube.com/?app=desktop&hl=es" class="Footer-a" target="_blank" rel="noreferrer" title="Follow us on Youtube">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="Footer-svg">
-                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                    <svg width="16" height="16" fill="currentColor" class="Footer-svg">
+                        <use href="#icon-youtube"></use>
                       </svg>
                 </a>
             </div>
@@ -858,6 +860,93 @@
     </footer>
 
     <div class="Copyright">© 2024 Wanderlust Voyages. All rights reserved.</div>
+
+
+    <!-- DEFINICIONES DE SYMBOL PARA SVG -->
+
+        <!-- Símbolo "Estrella" -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="star-icon" viewBox="0 0 16 15">
+                <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+            </symbol>
+        </svg>
+
+        <!-- Símbolo "Reloj" -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="clock-icon" viewBox="0 0 24 24">
+                <path d="M12 2.25C10.0716 2.25 8.18657 2.82183 6.58319 3.89317C4.97982 4.96452 3.73013 6.48726 2.99218 8.26884C2.25422 10.0504 2.06114 12.0108 2.43735 13.9021C2.81355 15.7934 3.74215 17.5307 5.10571 18.8943C6.46928 20.2579 8.20656 21.1865 10.0979 21.5627C11.9892 21.9389 13.9496 21.7458 15.7312 21.0078C17.5127 20.2699 19.0355 19.0202 20.1068 17.4168C21.1782 15.8134 21.75 13.9284 21.75 12C21.7473 9.41498 20.7192 6.93661 18.8913 5.10872C17.0634 3.28084 14.585 2.25273 12 2.25ZM17.25 12.75H12C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12V6.75C11.25 6.55109 11.329 6.36032 11.4697 6.21967C11.6103 6.07902 11.8011 6 12 6C12.1989 6 12.3897 6.07902 12.5303 6.21967C12.671 6.36032 12.75 6.55109 12.75 6.75V11.25H17.25C17.4489 11.25 17.6397 11.329 17.7803 11.4697C17.921 11.6103 18 11.8011 18 12C18 12.1989 17.921 12.3897 17.7803 12.5303C17.6397 12.671 17.4489 12.75 17.25 12.75Z" fill="#1B828D"/>
+            </symbol>
+        </svg>
+
+        <!-- Símbolo "Location" -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="map-icon" viewBox="0 0 24 24">
+                <path d="M12 1.5C9.81273 1.50248 7.71575 2.37247 6.16911 3.91911C4.62247 5.46575 3.75248 7.56273 3.75 9.75C3.75 16.8094 11.25 22.1409 11.5697 22.3641C11.6958 22.4524 11.846 22.4998 12 22.4998C12.154 22.4998 12.3042 22.4524 12.4303 22.3641C12.75 22.1409 20.25 16.8094 20.25 9.75C20.2475 7.56273 19.3775 5.46575 17.8309 3.91911C16.2843 2.37247 14.1873 1.50248 12 1.5ZM12 6.75C12.5933 6.75 13.1734 6.92595 13.6667 7.25559C14.1601 7.58524 14.5446 8.05377 14.7716 8.60195C14.9987 9.15013 15.0581 9.75333 14.9424 10.3353C14.8266 10.9172 14.5409 11.4518 14.1213 11.8713C13.7018 12.2909 13.1672 12.5766 12.5853 12.6924C12.0033 12.8081 11.4001 12.7487 10.8519 12.5216C10.3038 12.2946 9.83524 11.9101 9.50559 11.4167C9.17595 10.9234 9 10.3433 9 9.75C9 8.95435 9.31607 8.19129 9.87868 7.62868C10.4413 7.06607 11.2044 6.75 12 6.75Z" fill="#1B828D"/>
+            </symbol>
+        </svg>
+
+        <!-- Símbolo "Estrella Blanca" -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="whitestar-icon" viewBox="0 0 16 15">
+                <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="white"/>
+            </symbol>
+        </svg>
+        
+        <!-- Símbolo "Flecha" en el acordeón -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="accordion-icon" viewBox="0 0 26 26">
+                <path d="M13 0C10.4288 0 7.91543 0.762437 5.77759 2.1909C3.63975 3.61935 1.97351 5.64968 0.989572 8.02512C0.0056327 10.4006 -0.251811 13.0144 0.249797 15.5362C0.751405 18.0579 1.98953 20.3743 3.80762 22.1924C5.6257 24.0105 7.94208 25.2486 10.4638 25.7502C12.9856 26.2518 15.5995 25.9944 17.9749 25.0104C20.3503 24.0265 22.3807 22.3603 23.8091 20.2224C25.2376 18.0846 26 15.5712 26 13C25.9964 9.5533 24.6256 6.24882 22.1884 3.81163C19.7512 1.37445 16.4467 0.00363977 13 0ZM18.7075 11.7075L13.7075 16.7075C13.6146 16.8005 13.5043 16.8742 13.3829 16.9246C13.2615 16.9749 13.1314 17.0008 13 17.0008C12.8686 17.0008 12.7385 16.9749 12.6171 16.9246C12.4957 16.8742 12.3854 16.8005 12.2925 16.7075L7.29251 11.7075C7.10486 11.5199 6.99945 11.2654 6.99945 11C6.99945 10.7346 7.10486 10.4801 7.29251 10.2925C7.48015 10.1049 7.73464 9.99944 8.00001 9.99944C8.26537 9.99944 8.51987 10.1049 8.70751 10.2925L13 14.5863L17.2925 10.2925C17.3854 10.1996 17.4957 10.1259 17.6171 10.0756C17.7385 10.0253 17.8686 9.99944 18 9.99944C18.1314 9.99944 18.2615 10.0253 18.3829 10.0756C18.5043 10.1259 18.6146 10.1996 18.7075 10.2925C18.8004 10.3854 18.8741 10.4957 18.9244 10.6171C18.9747 10.7385 19.0006 10.8686 19.0006 11C19.0006 11.1314 18.9747 11.2615 18.9244 11.3829C18.8741 11.5043 18.8004 11.6146 18.7075 11.7075Z" fill="#019EA9"/>
+            </symbol>
+        </svg>
+
+        <!-- Símbolo "Teléfono" en el footer -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="footer-icon-phone" viewBox="0 0 28 28">
+                <path d="M25.3619 19.1492C25.1669 20.6312 24.439 21.9916 23.3143 22.9763C22.1895 23.9609 20.7448 24.5025 19.25 24.4998C10.5656 24.4998 3.50001 17.4342 3.50001 8.74978C3.49733 7.25494 4.03889 5.81024 5.02353 4.68551C6.00817 3.56078 7.36857 2.83293 8.85063 2.6379C9.22541 2.59214 9.60494 2.66882 9.93256 2.85648C10.2602 3.04414 10.5183 3.33272 10.6684 3.67915L12.9784 8.83618V8.84931C13.0934 9.11449 13.1409 9.40402 13.1166 9.69202C13.0924 9.98002 12.9972 10.2575 12.8395 10.4998C12.8199 10.5293 12.7991 10.5567 12.7772 10.584L10.5 13.2834C11.3192 14.9481 13.0605 16.674 14.747 17.4954L17.4092 15.2302C17.4354 15.2083 17.4628 15.1878 17.4913 15.169C17.7333 15.0076 18.0118 14.909 18.3015 14.8823C18.5912 14.8555 18.883 14.9015 19.1505 15.0159L19.1647 15.0224L24.3174 17.3313C24.6644 17.4809 24.9537 17.7388 25.142 18.0665C25.3302 18.3942 25.4074 18.774 25.3619 19.1492Z" fill="white"/>
+            </symbol>
+        </svg>
+
+        <!-- Símbolo "Email" en el footer -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="footer-icon-email" viewBox="0 0 28 28">
+                <path d="M24.5 5.25H3.5C3.26794 5.25 3.04538 5.34219 2.88128 5.50628C2.71719 5.67038 2.625 5.89294 2.625 6.125V21C2.625 21.4641 2.80937 21.9092 3.13756 22.2374C3.46575 22.5656 3.91087 22.75 4.375 22.75H23.625C24.0891 22.75 24.5342 22.5656 24.8624 22.2374C25.1906 21.9092 25.375 21.4641 25.375 21V6.125C25.375 5.89294 25.2828 5.67038 25.1187 5.50628C24.9546 5.34219 24.7321 5.25 24.5 5.25ZM23.625 21H4.375V8.11453L13.4083 16.3953C13.5697 16.5435 13.7809 16.6257 14 16.6257C14.2191 16.6257 14.4303 16.5435 14.5917 16.3953L23.625 8.11453V21Z" fill="white"/>
+            </symbol>
+        </svg>
+
+        <!-- Símbolo "Location" en el footer -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="footer-icon-location" viewBox="0 0 28 28">
+                <path d="M14 1.75C11.4482 1.75289 9.0017 2.76788 7.19729 4.57229C5.39288 6.37671 4.37789 8.82318 4.375 11.375C4.375 19.6109 13.125 25.8311 13.498 26.0914C13.6451 26.1945 13.8204 26.2498 14 26.2498C14.1796 26.2498 14.3549 26.1945 14.502 26.0914C14.875 25.8311 23.625 19.6109 23.625 11.375C23.6221 8.82318 22.6071 6.37671 20.8027 4.57229C18.9983 2.76788 16.5518 1.75289 14 1.75ZM14 7.875C14.6922 7.875 15.3689 8.08027 15.9445 8.46486C16.5201 8.84944 16.9687 9.39607 17.2336 10.0356C17.4985 10.6751 17.5678 11.3789 17.4327 12.0578C17.2977 12.7367 16.9644 13.3604 16.4749 13.8499C15.9854 14.3394 15.3617 14.6727 14.6828 14.8077C14.0039 14.9428 13.3001 14.8735 12.6606 14.6086C12.0211 14.3437 11.4744 13.8951 11.0899 13.3195C10.7053 12.7439 10.5 12.0672 10.5 11.375C10.5 10.4467 10.8687 9.5565 11.5251 8.90013C12.1815 8.24375 13.0717 7.875 14 7.875Z" fill="white"/>
+            </symbol>
+        </svg>
+
+        <!-- Símbolo "Facebook" en el footer -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+            <symbol id="icon-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+            </symbol>
+        </svg>
+          
+        <!-- Símbolo "Instagram" en el footer -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+            <symbol id="icon-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </symbol>
+        </svg>
+
+        <!-- Símbolo "Twitter" en el footer -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+            <symbol id="icon-twitter" viewBox="0 0 16 16">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+              </symbol>
+        </svg>
+
+        <!-- Símbolo "Youtube" en el footer -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+            <symbol id="icon-youtube" viewBox="0 0 16 16">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+              </symbol>
+        </svg>
 
 
 </body>

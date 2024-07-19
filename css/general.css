@@ -102,7 +102,7 @@ body{
     --font-size-32: clamp(1.25rem, 2.5vw, 2rem);
     --font-size-24: clamp(0.875rem, 2vw, 1.5rem);
     --font-size-20: clamp(1rem, 1.5vw, 1.25rem);
-    --font-size-16: 16px;
+    --font-size-16: 1rem;
 
     /* Border radius */
     --border-radius-big: 2.5rem;
@@ -115,6 +115,7 @@ body{
     --color-grey: #737373;
     --color-lightgreen: rgba(1, 158, 169, 0.25);
     --color-card-background: #FAFAFA;
+    --color-hover: #dcdcdc;
 
     /* Padding */
     --padding-section-desktop: 6.25rem;
@@ -236,6 +237,12 @@ body{
 
 .Main-button--section{
     width: 14.5rem;
+    transition: transform 0.5s ease
+}
+
+/* Efecto hover sobre los elementos con apariencia de botón porque son interactivos */
+.Main-button--section:hover{
+    transform: scale(1.05);
 }
 
 
@@ -294,6 +301,11 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     color: var(--color-white);
 }
 
+/* Efecto hover sobre el logo porque es interactivo */
+.Header-h1:hover{
+    color: var(--color-hover);
+}
+
 .Header-button{
     width: 1.25rem;
     min-height: 1.25rem;
@@ -322,11 +334,10 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     text-transform: uppercase;
 }
 
-/* Efecto de hover y active sobre los items del nav */
+/* Efecto de hover y active sobre los items del nav porque son interactivos */
 .Header-li:hover,
 .Header-li:active{
-    text-decoration: underline;
-    text-underline-offset: .25rem;
+    color: var(--color-hover);
 }
 
 /* @media HEADER*/

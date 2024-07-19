@@ -119,8 +119,8 @@
                 <source srcset="assets/images/webp/destinations_page/destinations_hero_1500x1125.webp" type="image/webp" media="(max-width:1024px)">
                 <source srcset="assets/images/jpg/destinations_page/destinations_hero_2000x1500.jpg" type="image/jpeg" media="(min-width:1600px)">
                 <source srcset="assets/images/webp/destinations_page/destinations_hero_2000x1500.webp" type="image/webp" media="(min-width:1600px)">
+                 <!-- Esta imagen en concreto no tiene loading lazy porque es la primera que aparece al abrir la pagina web -->
                 <img src="assets/images/webp/destinations_page/destinations_hero_2000x1500.webp" alt="View of a tropical ocean and sky" class="Main-imgHero">
-                <!-- Esta imagen en concreto no tiene loading lazy porque es la primera que aparece al abrir la pagina web -->
             </picture>
         </section>
 
@@ -278,7 +278,8 @@
                 <input type="email" name="email" placeholder="Enter your email" required class="Footer-input" id="email">
             </form>
 
-            <!-- Como se trata de un formulario, el elemento siguiente es un button de tipo submit. -->
+            <!-- Como se trata de un formulario, el elemento siguiente es un button de tipo submit, aún que este "button" 
+            no nos lleva a ninguna parte -->
             <button type="submit" class="Footer-button" title="submit form">Subscribe</button>
 
             <div class="Footer-social">

@@ -1,6 +1,8 @@
-// Creé un solo archivo javascript para mi proyecto. 
-// Cada "módulo" de mi javascript está dentro de una función anónima auto ejecutable, 
-// por lo que puedo agrupar cada "módulo" por separado y javascript solo ejecutará el código si ese "modulo" existe. 
+// Al principio creé un solo archivo Javascript para mi proyecto pero al final decidi tener un documento Javascript para cada "modulo".
+// Esto porque index.html es la única página que usa todos los "modulos" de JS. Las demás páginas solo usan el menu hamburguesa y tenía 
+// errores en la consola que decían que algunos elementos no se podían leer porque no existían.
+
+// Cada "módulo" de mi javascript está dentro de una función anónima auto ejecutable IIFE
 // Esto hará que la página sea más eficiente.
 
 

@@ -278,6 +278,14 @@ label{
     min-height: 1rem;
     border-radius: 50%;
     background-color: var(--color-grey);
+
+    transition: background-color 0.5s ease
+}
+
+/* Efecto hover sobre los "puntos" porque son interactivos */
+.Main-carouselDot:hover,
+.Main-carouselReviewsDot:hover{
+    background-color: var(--color-lightgreen);
 }
 
 .Main-carouselDot--tablet,
@@ -289,6 +297,7 @@ label{
 .Main-carouselReviewsDot.isClicked{
     background-color: var(--color-green);
 }
+
 
 
 
@@ -361,7 +370,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 .Main-starRating{
     background-color: var(--color-green);
     padding: .25rem .5rem;
-    gap: 4px;
+    gap: .25rem;
     border-radius: var(--border-radius-big);
 
     display: flex;
@@ -380,6 +389,12 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     top: calc(-23px/2);
     right: 3.125rem;
     z-index: 3;
+}
+
+.Main-svg,
+.Main-starIcon{
+    width: 1rem;
+    height: .9375rem;
 }
 
 /* @media POPULAR DESTINATIONS SECTION*/
@@ -553,7 +568,7 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
 }
 
 .Main-cardLine{
-    width: 1px;
+    width: .0625rem;
     min-height: 1rem;
     background-color: var(--color-grey);
 }
@@ -803,6 +818,12 @@ que tenía demasiadas declaraciones en un solo conjunto de reglas. */
     flex-flow: column nowrap;
     justify-content: center;
     align-items: flex-start;
+
+    transition: transform 0.5s ease;
+}
+
+.Main-accordionBlock:hover{
+    transform: scale(1.02);
 }
 
 .Main-accordionQuestion{
